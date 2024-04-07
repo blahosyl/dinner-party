@@ -6,6 +6,9 @@ __pycache__/
 *.py[cod]
 node_modules/
 .github/
-**/.DS_Store
-creds.json
-/.idea
+**/.DS_Store # Mac-generated file for folders
+creds.json # Google Drive and Sheets API credentials
+/.idea # PyCharm #IntelliJ files
+gitpod.yml # GitPod
+packege-lock.json # GitPod
+
