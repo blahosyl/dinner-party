@@ -24,22 +24,23 @@ print(data)
 # row 0 is the type of dish: starter, main, dessert or drink
 # row 1 of `data` is the list of dishes
 # item 0 of each row is the ingredient
-# subsequent items of each row are the amount of ingredients needed for the corresponding dish
+# subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
 
 # select a dish – this will be done by user input in the final version
-selection = data[1][4]
-print(selection)
-
-# get the index of the selected dish
-selection_index = data[1].index(selection)
-print(selection_index)
+selected_dish = data[1][4]
+print(selected_dish)
 
 # Get list of ingredients for a selected dish
-# go through each row
-for row in data:
-    # if the cell in the row under the selected dish has content (ingredient amount)
-    if row[selection_index]:
-        # print the ingredient name and amount
-        print(row[0]+' '+row[selection_index])
+def get_ingredients(selection):
+    # get the index of the selected dish
+    selection_index = data[1].index(selection)
+    # go through each row
+    for row in data:
+        # if the cell in the row under the selected dish has content (ingredient quantity)
+        if row[selection_index]:
+            # print the ingredient name and amount
+            print(row[0]+' '+row[selection_index])
+
+get_ingredients(selected_dish)
