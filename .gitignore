@@ -13,7 +13,7 @@ creds.json
 # PyCharm / IntelliJ files
 /.idea 
 # GitPod
-gitpod.yml
+.gitpod.yml
 # GitPod
-packege-lock.json 
+package-lock.json 
 
