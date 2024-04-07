@@ -10,8 +10,8 @@ node_modules/
 **/.DS_Store
 # Google Drive and Sheets API credentials
 creds.json
-#IntelliJ files
-/.idea # PyCharm
+# PyCharm / IntelliJ files
+/.idea 
 # GitPod
 gitpod.yml
 # GitPod
