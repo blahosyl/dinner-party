@@ -33,8 +33,8 @@ shopping_list = []
 # select a dish – this will be done by user input in the final version
 selected_dish = data[1][4]
 
-# Get list of ingredients for a selected dish
 def get_ingredients(selection):
+    """Get list of ingredients for a selected dish, return a list of lists"""
     print(selected_dish)
     # empty list of ingredients
     ingredient_list = []
@@ -43,9 +43,11 @@ def get_ingredients(selection):
     # go through each row
     for row in data:
         # if the cell in the row under the selected dish has content (ingredient quantity)
+        # and it's not one of the first 2 rows
         if row[selection_index] and data.index(row) > 1:
             # print the ingredient name and amount
             print(row[0]+' '+row[selection_index])
+            # add the list of ingredient + quantity to the list of ingredients
             ingredient_list.append([row[0],row[selection_index]])
     return ingredient_list
 
