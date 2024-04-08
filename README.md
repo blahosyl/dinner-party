@@ -1,8 +1,7 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+[Go to the deployed app](https://dinner-party-planner-ee795b43bd35.herokuapp.com/)
+
 
 ## Reminders
 
@@ -11,6 +10,21 @@ This is the Code Institute student template for deploying your third portfolio p
 - Do not edit any of the other files or your code may not deploy properly
 
 ## Creating the Heroku app
+
+1. Create a list of requirements by going to the terminal and typing `pip3 freeze > requirements.txt`. This popuplates your `requirements.txt` file with the list of required files.<br> 
+Push your changes to GitHub.
+2. Under **Settings > Config Vars** in Heroku, add  a new var  with the key `CREDS` and the value equal to the contents of your `creds.json` file.
+3. Under **Settings > Config Vars** in Heroku, add  a new var  with the key  `PORT` witht the key `PORT` and the value `8000`.
+4. Under **Settings > Buildpacks** in Heroku, add Python to Heroku Buildpacks.
+5. Under **Settings > Buildpacks** in Heroku, add NodeJS to Heroku Buildpacks.
+6. Under **Deploy > Deployment method** in Heroku, select **GitHub** and connect Heroku to your GitHub account.<br>
+Type in your repository name, then click **Search**. When your repository appears, click **Connect** next to it.
+7. Under **Deploy > Manual deploy** in Heroku, select **Deploy branch** to deploy manually.<br>
+Once the process is finished, the following message will appear:<br>
+_Your app was successfully deployed_<br>
+Click **View** under the message, and a new tab will appear with your deployed app.
+8. (optional) Under **Deploy > Automatic deploy** in Heroku, select **Enable Automatic Deploys** if your want your app to be rebuild each time you push to the `main` branch of your GitHub repository.
+
 
 When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
