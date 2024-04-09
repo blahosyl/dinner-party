@@ -29,6 +29,9 @@ print(data)
 # subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
+# the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
+dishes = data[1][:]
+
 # create empty shopping list (will be a list of lists)
 shopping_list = []
 
@@ -39,9 +42,12 @@ shopping_list.append(['butter (g)', 100.0])
 # select a dish – this will be done by user input in the final version
 selected_dish = data[1][4]
 
+# remove the selected dish from the list of available dishes
+dishes.remove(selected_dish)
+
 def get_ingredients(selection):
     """Get list of ingredients for a selected dish, add them to `shopping_list`, return a list of lists"""
-    print(selected_dish)
+    print(selection)
     # get the index of the selected dish
     selection_index = data[1].index(selection)
     # go through each row
@@ -74,6 +80,13 @@ def unify_ingredients():
             shopping_list.remove(x)
             shopping_list.remove(y)
     return shopping_list
+
+for i in range(1, len(dishes)):
+    print(i,dishes[i])
+
+
+for i in range(1, len(data[1])):
+    print(i,data[1][i])
 
 
 print(unify_ingredients())
