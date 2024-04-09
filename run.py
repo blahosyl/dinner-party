@@ -32,6 +32,23 @@ print(data)
 # the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
 dishes = data[1][:]
 
+def print_dishes():
+    """ Print available dishes """
+    for i in range(1, len(dishes)):
+        print(i,dishes[i])
+
+# print the list of dishes in a numbered list
+print_dishes()
+
+# ask user to select a dish number
+dish_number = input('Select a number: ')
+
+# get the dish with the selected number from the `dishes` list
+selected_dish = dishes[int(dish_number)]
+
+# print the selected dish's name
+print(f'You have selected: {selected_dish}')
+
 # create empty shopping list (will be a list of lists)
 shopping_list = []
 
@@ -39,25 +56,22 @@ shopping_list = []
 shopping_list.append(['flour (g)', 60.25])
 shopping_list.append(['butter (g)', 100.0])
 
-# select a dish – this will be done by user input in the final version
-selected_dish = data[1][4]
-
 # remove the selected dish from the list of available dishes
 dishes.remove(selected_dish)
 
 def get_ingredients(selection):
     """Get list of ingredients for a selected dish, add them to `shopping_list`, return a list of lists"""
-    print(selection)
-    # get the index of the selected dish
+    print(f'Ingredients for {selection}')
+    # get the index of the selected dish in the database
     selection_index = data[1].index(selection)
     # go through each row
     for row in data:
         # if the cell in the row under the selected dish has content (ingredient quantity)
         # and it's not one of the first 2 rows
         if row[selection_index] and data.index(row) > 1:
-            # print the ingredient name and amount
+            # print the ingredient name and quantity
             print(row[0]+' '+row[selection_index])
-            # add the list of ingredient + quantity to the list of ingredients (converted to a float)
+            # add the list [ingredient, quantity(converted to a float)] to the shopping list
             shopping_list.append([row[0], float(row[selection_index])])
     return shopping_list
 
@@ -79,15 +93,11 @@ def unify_ingredients():
             # remove the two original items from `shopping_list`
             shopping_list.remove(x)
             shopping_list.remove(y)
+    print('Shopping list updated')
     return shopping_list
 
-for i in range(1, len(dishes)):
-    print(i,dishes[i])
-
-
-for i in range(1, len(data[1])):
-    print(i,data[1][i])
-
-
 print(unify_ingredients())
+
+print_dishes()
+
 
