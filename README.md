@@ -41,3 +41,4 @@ Connect your GitHub repository and deploy as normal.
 
 - [Copy list so it can be changed without affecting the original list](https://stackoverflow.com/a/25004389)
 - [Remove item from list](https://www.w3schools.com/python/python_lists_remove.asp)
+- [Docstring conventions](https://peps.python.org/pep-0257/)
