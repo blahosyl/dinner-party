@@ -77,7 +77,7 @@ def select_dish():
     while True:
         try:
             # ask user to select a dish number
-            dish_number = int(input("Select the number of the dish you'd like to add: "))
+            dish_number = int(input("Type in the number of the dish you'd like to add: "))
             break
         except ValueError:
             # while the input is not one of the allowed options
@@ -141,7 +141,7 @@ def ask_more():
     else:
         # stop the loop
         planning = False
-        print("You have selected all the dishes Here is your shopping list:")
+        print("You have selected all the dishes. Here is your shopping list:")
         print_shopping_list()
         print("Have fun!")
 
