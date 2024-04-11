@@ -105,17 +105,19 @@ def unify_ingredients():
 unify_ingredients()
 
 
-# ask user if they want to add a dish to the shopping list
-add_dish = input('Would you like to add another dish?(Y/N) ')
-
+# ask user if they want to add a dish to the shopping list, make input uppercase
+add_dish = input('Would you like to add another dish?(Y/N) ').upper()
 # validating the input
+# while the input is not one of the allowed options
 while not add_dish == "Y" and not add_dish == "N":
-    add_dish = input("I did not understand. Please type Y or N ")
-    # make input uppercase
-    add_dish = add_dish.upper()
+    # ask for input again, make input uppercase
+    add_dish = input("I did not understand. Please type Y or N ").upper()
 if add_dish == 'Y':
     print_list(dishes)
+    # create new variable called `planning`, and the whole loop should be running while it's True
 elif add_dish == 'N':
+    # set `planning` to False
     print_list(shopping_list)
+
 
 
