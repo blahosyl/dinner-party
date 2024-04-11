@@ -81,7 +81,7 @@ def get_ingredients(selection):
             shopping_list.append([row[0], float(row[selection_index])])
     return shopping_list
 
-def unify_ingredients():
+def add_ingredients():
     """Check `shopping_list` for pairs of items (lists) where the ingredient is the same.
     Add quantities of the ingredient together.
     Return modified `shopping_list`."""
@@ -102,7 +102,7 @@ def unify_ingredients():
     print('Shopping list updated')
     return shopping_list
 
-unify_ingredients()
+add_ingredients()
 
 
 # ask user if they want to add a dish to the shopping list, make input uppercase
