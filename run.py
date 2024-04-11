@@ -102,7 +102,20 @@ def unify_ingredients():
     print('Shopping list updated')
     return shopping_list
 
-print(unify_ingredients())
+unify_ingredients()
 
-print_dishes()
+
+# ask user if they want to add a dish to the shopping list
+add_dish = input('Would you like to add another dish?(Y/N) ')
+
+# validating the input
+while not add_dish == "Y" and not add_dish == "N":
+    add_dish = input("I did not understand. Please type Y or N ")
+    # make input uppercase
+    add_dish = add_dish.upper()
+if add_dish == 'Y':
+    print_dishes()
+elif add_dish == 'N':
+    print(shopping_list)
+
 
