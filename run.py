@@ -58,15 +58,20 @@ shopping_list = []
 dishes = data[1][:]
 
 
-def print_list(list):
+def print_dishes():
     """ Print available dishes """
-    for i in range(1, len(list)):
-        print(i,list[i])
+    for i in range(1, len(dishes)):
+        print(i, dishes[i])
+
+def print_shopping_list():
+    """ Print shopping list """
+    for i in range(0, len(shopping_list)):
+        print(shopping_list[i][0], shopping_list[i][1])
 
 
 def select_dish():
     # print the list of dishes in a numbered list
-    print_list(dishes)
+    print_dishes()
 
     # validating the input
     while True:
@@ -131,13 +136,13 @@ def ask_more():
         elif add_dish == 'N':
             planning = False
             print("Got it! Here is your shopping list:")
-            print_list(shopping_list)
+            print_shopping_list()
             print("Have fun!")
     else:
         # stop the loop
         planning = False
         print("You have selected all the dishes Here is your shopping list:")
-        print_list(shopping_list)
+        print_shopping_list()
         print("Have fun!")
 
 
