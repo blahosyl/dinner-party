@@ -1,6 +1,8 @@
 # import entire library
 import itertools
 
+# Based on the Love Sandwiches project
+# import entire library
 import gspread
 # import 1 class from a library
 from google.oauth2.service_account import Credentials
@@ -21,6 +23,8 @@ recipes = SHEET.worksheet('main')
 
 # get a whole worksheet as a list of lists
 data = recipes.get_all_values()
+# end of code based on the Love Sandwiches project
+# TESTING: print for testing/development purposes
 print(data)
 
 # row 0 is the type of dish: starter, main, dessert or drink
@@ -30,8 +34,6 @@ print(data)
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
 # ask user if they want to plan a dinner party TODO
-
-# TODO ask user if they wanna start planning
 
 planning = True
 
@@ -94,21 +96,22 @@ def get_ingredients(selection):
             shopping_list.append([row[0], float(row[selection_index])])
     return shopping_list
 
+
 def ask_more():
     """Ask the user if they want to add more ingredients"""
     # ask user if they want to add a dish to the shopping list, make input uppercase
-    add_dish = input('Would you like to add another dish?(Y/N) ').upper()
+    add_dish = input('Would you like to add another dish? (Y/N): ').upper()
     # validating the input
     # while the input is not one of the allowed options
     while not add_dish == "Y" and not add_dish == "N":
         # ask for input again, make input uppercase
         add_dish = input("I did not understand. Please type Y or N ").upper()
     if add_dish == 'Y':
-        print("Cool, here is the list of dishes again")
+        print("Cool, here is the list of dishes again:")
     elif add_dish == 'N':
         global planning
         planning = False
-        print("Got it! Here is your shopping list")
+        print("Got it! Here is your shopping list:")
         print_list(shopping_list)
         print("Have fun!")
 
@@ -119,11 +122,11 @@ def add_ingredients():
     Return modified `shopping_list`."""
     # this needs to be run every time items are added to `shopping_list`
     shopping_list = get_ingredients(select_dish())
-    #get all pairs of items within `shopping_list`
-    for x,y in itertools.combinations(shopping_list, 2):
+    # get all pairs of items within `shopping_list`
+    for x, y in itertools.combinations(shopping_list, 2):
         # if the ingredient name and unit (first item of both lists) is the same
         if x[0] == y[0]:
-            # print for testing/development
+            # TESTING: print for testing/development
             print(x, y)
             # add a new item (list) with this ingredient name and unit as its first item,
             # and the sum of the two quantities as the second item
