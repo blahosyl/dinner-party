@@ -31,13 +31,12 @@ print(data)
 
 # ask user if they want to plan a dinner party TODO
 
+# TODO ask user if they wanna start planning
+
+planning = True
+
 # create empty shopping list (will be a list of lists)
 shopping_list = []
-
-# mock add ingredients to test for duplicates TODO REMOVE LATER
-shopping_list.append(['flour (g)', 60.25])
-shopping_list.append(['butter (g)', 100.0])
-
 
 # the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
 dishes = data[1][:]
@@ -95,6 +94,24 @@ def get_ingredients(selection):
             shopping_list.append([row[0], float(row[selection_index])])
     return shopping_list
 
+def ask_more():
+    """Ask the user if they want to add more ingredients"""
+    # ask user if they want to add a dish to the shopping list, make input uppercase
+    add_dish = input('Would you like to add another dish?(Y/N) ').upper()
+    # validating the input
+    # while the input is not one of the allowed options
+    while not add_dish == "Y" and not add_dish == "N":
+        # ask for input again, make input uppercase
+        add_dish = input("I did not understand. Please type Y or N ").upper()
+    if add_dish == 'Y':
+        print("Cool, here is the list of dishes again")
+    elif add_dish == 'N':
+        global planning
+        planning = False
+        print("Got it! Here is your shopping list")
+        print_list(shopping_list)
+        print("Have fun!")
+
 
 def add_ingredients():
     """Check `shopping_list` for pairs of items (lists) where the ingredient is the same.
@@ -115,25 +132,14 @@ def add_ingredients():
             shopping_list.remove(x)
             shopping_list.remove(y)
     print('Shopping list updated')
+    ask_more()
     return shopping_list
 
 
-add_ingredients()
+while planning:
+    add_ingredients()
 
 
-# ask user if they want to add a dish to the shopping list, make input uppercase
-add_dish = input('Would you like to add another dish?(Y/N) ').upper()
-# validating the input
-# while the input is not one of the allowed options
-while not add_dish == "Y" and not add_dish == "N":
-    # ask for input again, make input uppercase
-    add_dish = input("I did not understand. Please type Y or N ").upper()
-if add_dish == 'Y':
-    print_list(dishes)
-    # create new variable called `planning`, and the whole loop should be running while it's True
-elif add_dish == 'N':
-    # set `planning` to False
-    print_list(shopping_list)
 
 
 
