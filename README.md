@@ -28,6 +28,13 @@ Click **View** under the message, and a new tab will appear with your deployed a
 
 ## Credits
 
+The following resources were used to learn/double check general, atomic functionalities/syntax:
+
 - [Copy list so it can be changed without affecting the original list](https://stackoverflow.com/a/25004389)
 - [Remove item from list](https://www.w3schools.com/python/python_lists_remove.asp)
+- [Docstring conventions](https://peps.python.org/pep-0257/)
+- [Get combinations of items from a list](https://stackoverflow.com/a/16603347)
+- [`itertools` package documentation](https://docs.python.org/3/library/itertools.html#itertools.combinations)
+- [Add list items](https://www.w3schools.com/python/python_lists_add.asp)
+- [Remove specified item from a list](https://www.w3schools.com/python/python_lists_remove.asp)
 - [Docstring conventions](https://peps.python.org/pep-0257/)
