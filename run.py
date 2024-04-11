@@ -50,7 +50,6 @@ elif start == 'N':
     print("Maybe some other time then. Bye for now!")
 
 
-
 # create empty shopping list (will be a list of lists)
 shopping_list = []
 
@@ -62,6 +61,7 @@ def print_dishes():
     """ Print available dishes """
     for i in range(1, len(dishes)):
         print(i, dishes[i])
+
 
 def print_shopping_list():
     """ Print shopping list """
@@ -146,7 +146,6 @@ def ask_more():
         print("Have fun!")
 
 
-
 def add_ingredients():
     """Check `shopping_list` for pairs of items (lists) where the ingredient is the same.
     Add quantities of the ingredient together.
@@ -172,8 +171,3 @@ def add_ingredients():
 
 while planning:
     add_ingredients()
-
-
-
-
-
