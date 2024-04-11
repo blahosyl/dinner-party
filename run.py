@@ -42,14 +42,14 @@ shopping_list.append(['butter (g)', 100.0])
 # the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
 dishes = data[1][:]
 
-def print_dishes():
+def print_list(list):
     """ Print available dishes """
-    for i in range(1, len(dishes)):
-        print(i,dishes[i])
+    for i in range(1, len(list)):
+        print(i,list[i])
 
 def select_dish():
     # print the list of dishes in a numbered list
-    print_dishes()
+    print_list(dishes)
 
     # ask user to select a dish number
     dish_number = input("Select the number of the dish you'd like to add: ")
@@ -114,8 +114,8 @@ while not add_dish == "Y" and not add_dish == "N":
     # make input uppercase
     add_dish = add_dish.upper()
 if add_dish == 'Y':
-    print_dishes()
+    print_list(dishes)
 elif add_dish == 'N':
-    print(shopping_list)
+    print_list(shopping_list)
 
 
