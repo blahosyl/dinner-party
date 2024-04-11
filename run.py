@@ -35,7 +35,21 @@ print(data)
 
 # ask user if they want to plan a dinner party TODO
 
-planning = True
+# ask user if they want to start planning, make input uppercase
+start = input('Would you like to plan a dinner party? (Y/N): ').upper()
+# validating the input
+# while the input is not one of the allowed options
+while not start == "Y" and not start == "N":
+    # ask for input again, make input uppercase
+    start = input("I did not understand. Please type Y or N ").upper()
+if start == 'Y':
+    planning = True
+    print("Let's get planning! Here is the list of dishes you can choose from.")
+elif start == 'N':
+    planning = False
+    print("Maybe some other time then. Bye for now!")
+
+
 
 # create empty shopping list (will be a list of lists)
 shopping_list = []
