@@ -13,6 +13,10 @@
 
 ![Program flowchart](readme-pics/dinner-party-flow.jpg)
 
+## Database
+
+[Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
+
 ## Deployment to Heroku
 
 1. Create a list of requirements by going to the terminal and typing `pip3 freeze > requirements.txt`. This popuplates your `requirements.txt` file with the list of required files.<br> 
@@ -34,6 +38,7 @@ Click **View** under the message, and a new tab will appear with your deployed a
 
 The following resources were used to learn/double check general, atomic functionalities/syntax:
 
+- [`gspread` user guide](https://docs.gspread.org/en/v6.0.0/user-guide.html)
 - [Copy list so it can be changed without affecting the original list](https://stackoverflow.com/a/25004389)
 - [Remove item from list](https://www.w3schools.com/python/python_lists_remove.asp)
 - [Docstring conventions](https://peps.python.org/pep-0257/)
@@ -42,3 +47,4 @@ The following resources were used to learn/double check general, atomic function
 - [Add list items](https://www.w3schools.com/python/python_lists_add.asp)
 - [Remove specified item from a list](https://www.w3schools.com/python/python_lists_remove.asp)
 - [Docstring conventions](https://peps.python.org/pep-0257/)
+- [Check if a string is empty](https://stackoverflow.com/a/9573259)
