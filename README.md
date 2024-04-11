@@ -9,7 +9,11 @@
 - Your dependencies must be placed in the `requirements.txt` file
 - Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+## Flow
+
+![Program flowchart](readme-pics/dinner-party-flow.jpg)
+
+## Deployment to Heroku
 
 1. Create a list of requirements by going to the terminal and typing `pip3 freeze > requirements.txt`. This popuplates your `requirements.txt` file with the list of required files.<br> 
 Push your changes to GitHub.
