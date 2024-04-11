@@ -42,17 +42,30 @@ shopping_list.append(['butter (g)', 100.0])
 # the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
 dishes = data[1][:]
 
+
 def print_list(list):
     """ Print available dishes """
     for i in range(1, len(list)):
         print(i,list[i])
 
+
 def select_dish():
     # print the list of dishes in a numbered list
     print_list(dishes)
 
-    # ask user to select a dish number
-    dish_number = input("Select the number of the dish you'd like to add: ")
+    # validating the input
+    while True:
+        try:
+            # ask user to select a dish number
+            dish_number = int(input("Select the number of the dish you'd like to add: "))
+            break
+        except ValueError:
+            # while the input is not one of the allowed options
+            # ask for input again
+            print(f"That is not a number. Please type a number between 1 and {len(dishes)-1}.")
+
+    while dish_number < 1 or dish_number > len(dishes) - 1:
+        dish_number = int(input(f"Number out of range. Please type a number between 1 and {len(dishes) - 1}: "))
 
     # get the dish with the selected number from the `dishes` list
     selected_dish = dishes[int(dish_number)]
@@ -64,6 +77,7 @@ def select_dish():
     dishes.remove(selected_dish)
 
     return selected_dish
+
 
 def get_ingredients(selection):
     """Get list of ingredients for a selected dish, add them to `shopping_list`, return a list of lists"""
@@ -80,6 +94,7 @@ def get_ingredients(selection):
             # add the list [ingredient, quantity(converted to a float)] to the shopping list
             shopping_list.append([row[0], float(row[selection_index])])
     return shopping_list
+
 
 def add_ingredients():
     """Check `shopping_list` for pairs of items (lists) where the ingredient is the same.
@@ -101,6 +116,7 @@ def add_ingredients():
             shopping_list.remove(y)
     print('Shopping list updated')
     return shopping_list
+
 
 add_ingredients()
 

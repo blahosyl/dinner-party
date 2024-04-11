@@ -48,3 +48,7 @@ The following resources were used to learn/double check general, atomic function
 - [Remove specified item from a list](https://www.w3schools.com/python/python_lists_remove.asp)
 - [Docstring conventions](https://peps.python.org/pep-0257/)
 - [Check if a string is empty](https://stackoverflow.com/a/9573259)
+- [Convert `input` to `int` with `Try/Except`](https://www.tutorialsteacher.com/articles/convert-input-to-number-in-python)
+- [`try`/`except`](https://www.w3schools.com/python/python_try_except.asp)
+- [Errors and exceptions](https://docs.python.org/3/tutorial/errors.html)
+- [Input validation: integer in range (did not work)](https://stackoverflow.com/questions/11594605/python-excepting-input-only-if-in-range)
