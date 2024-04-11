@@ -29,6 +29,16 @@ print(data)
 # subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
+# ask user if they want to plan a dinner party TODO
+
+# create empty shopping list (will be a list of lists)
+shopping_list = []
+
+# mock add ingredients to test for duplicates TODO REMOVE LATER
+shopping_list.append(['flour (g)', 60.25])
+shopping_list.append(['butter (g)', 100.0])
+
+
 # the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
 dishes = data[1][:]
 
@@ -37,27 +47,23 @@ def print_dishes():
     for i in range(1, len(dishes)):
         print(i,dishes[i])
 
-# print the list of dishes in a numbered list
-print_dishes()
+def select_dish():
+    # print the list of dishes in a numbered list
+    print_dishes()
 
-# ask user to select a dish number
-dish_number = input('Select a number: ')
+    # ask user to select a dish number
+    dish_number = input("Select the number of the dish you'd like to add: ")
 
-# get the dish with the selected number from the `dishes` list
-selected_dish = dishes[int(dish_number)]
+    # get the dish with the selected number from the `dishes` list
+    selected_dish = dishes[int(dish_number)]
 
-# print the selected dish's name
-print(f'You have selected: {selected_dish}')
+    # print the selected dish's name
+    print(f'You have selected: {selected_dish}')
 
-# create empty shopping list (will be a list of lists)
-shopping_list = []
+    # remove the selected dish from the list of available dishes
+    dishes.remove(selected_dish)
 
-# to test for duplicates
-shopping_list.append(['flour (g)', 60.25])
-shopping_list.append(['butter (g)', 100.0])
-
-# remove the selected dish from the list of available dishes
-dishes.remove(selected_dish)
+    return selected_dish
 
 def get_ingredients(selection):
     """Get list of ingredients for a selected dish, add them to `shopping_list`, return a list of lists"""
@@ -80,7 +86,7 @@ def unify_ingredients():
     Add quantities of the ingredient together.
     Return modified `shopping_list`."""
     # this needs to be run every time items are added to `shopping_list`
-    shopping_list = get_ingredients(selected_dish)
+    shopping_list = get_ingredients(select_dish())
     #get all pairs of items within `shopping_list`
     for x,y in itertools.combinations(shopping_list, 2):
         # if the ingredient name and unit (first item of both lists) is the same
@@ -99,5 +105,4 @@ def unify_ingredients():
 print(unify_ingredients())
 
 print_dishes()
-
 
