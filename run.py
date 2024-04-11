@@ -112,22 +112,34 @@ def get_ingredients(selection):
 
 
 def ask_more():
-    """Ask the user if they want to add more ingredients"""
-    # ask user if they want to add a dish to the shopping list, make input uppercase
-    add_dish = input('Would you like to add another dish? (Y/N): ').upper()
-    # validating the input
-    # while the input is not one of the allowed options
-    while not add_dish == "Y" and not add_dish == "N":
-        # ask for input again, make input uppercase
-        add_dish = input("I did not understand. Please type Y or N ").upper()
-    if add_dish == 'Y':
-        print("Cool, here is the list of dishes again:")
-    elif add_dish == 'N':
-        global planning
+    """Ask the user if they want to add more dishes if there are dishes left on the list"""
+    # get global variables
+    global dishes
+    global planning
+    # check if there are dishes left (note: dishes[0] = '', so this should not be counted)
+    if len(dishes) > 1:
+        # ask user if they want to add a dish to the shopping list, make input uppercase
+        add_dish = input('Would you like to add another dish? (Y/N): ').upper()
+        # validating the input
+        # while the input is not one of the allowed options
+        while not add_dish == "Y" and not add_dish == "N":
+            # ask for input again, make input uppercase
+            add_dish = input("I did not understand. Please type Y or N ").upper()
+        if add_dish == 'Y':
+            # planning remains True, keeps the loop running
+            print("Cool, here is the list of dishes again:")
+        elif add_dish == 'N':
+            planning = False
+            print("Got it! Here is your shopping list:")
+            print_list(shopping_list)
+            print("Have fun!")
+    else:
+        # stop the loop
         planning = False
-        print("Got it! Here is your shopping list:")
+        print("You have selected all the dishes Here is your shopping list:")
         print_list(shopping_list)
         print("Have fun!")
+
 
 
 def add_ingredients():
