@@ -66,7 +66,13 @@ def print_dishes():
 def print_shopping_list():
     """ Print shopping list """
     for i in range(0, len(shopping_list)):
-        print(shopping_list[i][0], shopping_list[i][1])
+        # print(shopping_list[i][0], shopping_list[i][1])
+        print_string = shopping_list[i][0]
+        opening = print_string.index('(')
+        print_string = print_string[:opening-1] + ': ' + str(shopping_list[i][1]) + print_string[opening-1:]
+        print_string = print_string.replace('(', '')
+        print_string = print_string.replace(')', '')
+        print(print_string)
 
 
 def select_dish():

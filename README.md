@@ -52,3 +52,5 @@ The following resources were used to learn/double check general, atomic function
 - [`try`/`except`](https://www.w3schools.com/python/python_try_except.asp)
 - [Errors and exceptions](https://docs.python.org/3/tutorial/errors.html)
 - [Input validation: integer in range (did not work)](https://stackoverflow.com/questions/11594605/python-excepting-input-only-if-in-range)
+- [insert a substring before/after a certain characted in a string](https://stackoverflow.com/a/30232424/24248624)
+- [delete a character from a string](https://builtin.com/software-engineering-perspectives/python-remove-character-from-string)
