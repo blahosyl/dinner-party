@@ -13,6 +13,25 @@
 
 ![Program flowchart](readme-pics/dinner-party-flow.jpg)
 
+### CRUD functionalities
+
+Create
+
+- list of dishes
+- shopping list
+
+Read
+- list of dishes
+- shopping list
+- ingredients of a dish
+
+Update
+- list of dishes
+- shopping list
+
+Delete
+- items from the shopping list
+
 ## Database
 
 [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
