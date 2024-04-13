@@ -174,10 +174,15 @@ def ask_more():
             add_dish = input("I did not understand. Please type Y or N ").upper()
         if add_dish == 'Y':
             # planning remains True, keeps the loop running
-            print("\n Cool, here is the list of dishes again:")
+            clear()
+            # print an empty line to visually separate the list
+            print('\n')
+            print("Cool, here is the list of dishes again:")
         elif add_dish == 'N':
             planning = False
-            print("\n Got it! Here is your shopping list:")
+            # print an empty line to visually separate the list
+            print('\n')
+            print("Got it! Here is your shopping list:")
             print_shopping_list()
             print("Have fun!")
     else:
