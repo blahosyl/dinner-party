@@ -84,14 +84,13 @@ def select_dish():
         try:
             # ask user to select a dish number
             dish_number = int(input("Type in the number of the dish you'd like to add: "))
+            while dish_number < 1 or dish_number > len(dishes) - 1:
+                dish_number = int(input(f"Number out of range. Please type a number between 1 and {len(dishes) - 1}: "))
             break
         except ValueError:
             # while the input is not one of the allowed options
             # ask for input again
-            print(f"That is not a number. Please type a number between 1 and {len(dishes)-1}.")
-
-    while dish_number < 1 or dish_number > len(dishes) - 1:
-        dish_number = int(input(f"Number out of range. Please type a number between 1 and {len(dishes) - 1}: "))
+            print(f"That is not a valid number. Please type a whole number between 1 and {len(dishes)-1}.")
 
     # get the dish with the selected number from the `dishes` list
     selected_dish = dishes[int(dish_number)]
