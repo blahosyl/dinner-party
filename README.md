@@ -32,6 +32,7 @@ Update
 Delete
 - items from the shopping list
 
+
 ## Database
 
 [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
@@ -52,6 +53,15 @@ _Your app was successfully deployed_<br>
 Click **View** under the message, and a new tab will appear with your deployed app.
 8. (optional) Under **Deploy > Automatic deploy** in Heroku, select **Enable Automatic Deploys** if your want your app to be rebuild each time you push to the `main` branch of your GitHub repository.
 
+## Technologies used
+
+### Languages
+
+Python
+
+#### External libraries
+
+Which libraries are used and what their purpose is, why they are needed
 
 ## Testing
 
