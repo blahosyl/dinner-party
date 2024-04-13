@@ -83,13 +83,19 @@ dishes = data[1][:]
 
 
 def print_dishes():
+    # print an empty line to visually separate the list
+    print('\n')
     """ Print available dishes """
     for i in range(1, len(dishes)):
         print(i, dishes[i])
+    # print an empty line to visually separate the list
+    print('\n')
 
 
 def print_shopping_list():
     """ Print shopping list """
+    # print an empty line to visually separate the list
+    print('\n')
     for i in range(0, len(shopping_list)):
         # print(shopping_list[i][0], shopping_list[i][1])
         print_string = shopping_list[i][0]
@@ -98,6 +104,8 @@ def print_shopping_list():
         print_string = print_string.replace('(', '')
         print_string = print_string.replace(')', '')
         print(print_string)
+    # print an empty line to visually separate the list
+    print('\n')
 
 
 def select_dish():
@@ -131,6 +139,8 @@ def select_dish():
 
 def get_ingredients(selection):
     """Get list of ingredients for a selected dish, add them to `shopping_list`, return a list of lists"""
+    # print an empty line to visually separate the block
+    print('\n')
     print(f'Ingredients for {selection}')
     # get the index of the selected dish in the database
     selection_index = data[1].index(selection)
@@ -143,6 +153,8 @@ def get_ingredients(selection):
             print(row[0]+' '+row[selection_index])
             # add the list [ingredient, quantity(converted to a float)] to the shopping list
             shopping_list.append([row[0], float(row[selection_index])])
+    # print an empty line to visually separate the block
+    print('\n')
     return shopping_list
 
 
@@ -194,7 +206,7 @@ def add_ingredients():
             # remove the two original items from `shopping_list`
             shopping_list.remove(x)
             shopping_list.remove(y)
-    print('Shopping list updated')
+    print('Shopping list updated\n')
     ask_more()
     return shopping_list
 
