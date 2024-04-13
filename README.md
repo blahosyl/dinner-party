@@ -53,6 +53,38 @@ Click **View** under the message, and a new tab will appear with your deployed a
 8. (optional) Under **Deploy > Automatic deploy** in Heroku, select **Enable Automatic Deploys** if your want your app to be rebuild each time you push to the `main` branch of your GitHub repository.
 
 
+## Testing
+
+### Y/N questions
+
+- `Y` or `N` – correct
+- `y` or `n`
+- empty string
+- space
+- special character
+- other letter character
+- number character
+
+### Integer from a range
+
+- integer from the specified range – correct
+- integer outside the range
+- non-integer number
+- empty string
+- space
+- special character
+- letter character
+
+Combinations:
+
+- integer outside the range THEN non-number character
+- non-number character THEN integer outside the range
+
+### Database data validation (optional)
+
+Check if ingredient cell contains `(`
+
+
 ## Credits
 
 The following resources were used to learn/double check general, atomic functionalities/syntax:
