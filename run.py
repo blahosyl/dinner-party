@@ -1,8 +1,12 @@
-# import entire library
+# get combinations from a list
 import itertools
+
+# for the `clear()` function
+import os
 
 # Based on the Love Sandwiches project
 # import entire library
+
 import gspread
 # import 1 class from a library
 from google.oauth2.service_account import Credentials
@@ -33,6 +37,15 @@ print(data)
 # subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
+# provided by my mentor Rory Patrick Sheridan
+def clear():
+    """
+    Clear function to clean-up the terminal so things don't get messy.
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
+# TODO put this block in a function
 # ask user if they want to start planning, make input uppercase
 start = input('Would you like to plan a dinner party? (Y/N): ').upper()
 # validating the input
@@ -43,7 +56,10 @@ while not start == "Y" and not start == "N":
 if start == 'Y':
     #  start the addition cycle
     planning = True
-    print("Let's get planning! Here is the list of dishes you can choose from.")
+    print("Let's get planning!")
+    clear()
+    print("Here is the list of dishes you can choose from.")
+
 elif start == 'N':
     #  exit the program with a message
     planning = False
