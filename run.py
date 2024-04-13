@@ -129,7 +129,7 @@ def select_dish():
     selected_dish = dishes[int(dish_number)]
 
     # print the selected dish's name
-    print(f'You have selected: {selected_dish}')
+    print(f'\n You have selected: {selected_dish}')
 
     # remove the selected dish from the list of available dishes
     dishes.remove(selected_dish)
@@ -174,10 +174,10 @@ def ask_more():
             add_dish = input("I did not understand. Please type Y or N ").upper()
         if add_dish == 'Y':
             # planning remains True, keeps the loop running
-            print("Cool, here is the list of dishes again:")
+            print("\n Cool, here is the list of dishes again:")
         elif add_dish == 'N':
             planning = False
-            print("Got it! Here is your shopping list:")
+            print("\n Got it! Here is your shopping list:")
             print_shopping_list()
             print("Have fun!")
     else:
