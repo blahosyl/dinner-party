@@ -33,8 +33,6 @@ print(data)
 # subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
-# ask user if they want to plan a dinner party TODO
-
 # ask user if they want to start planning, make input uppercase
 start = input('Would you like to plan a dinner party? (Y/N): ').upper()
 # validating the input
@@ -43,9 +41,11 @@ while not start == "Y" and not start == "N":
     # ask for input again, make input uppercase
     start = input("I did not understand. Please type Y or N ").upper()
 if start == 'Y':
+    #  start the addition cycle
     planning = True
     print("Let's get planning! Here is the list of dishes you can choose from.")
 elif start == 'N':
+    #  exit the program with a message
     planning = False
     print("Maybe some other time then. Bye for now!")
 
