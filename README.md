@@ -124,3 +124,5 @@ The following resources were used to learn/double check general, atomic function
 - [Input validation: integer in range (did not work)](https://stackoverflow.com/questions/11594605/python-excepting-input-only-if-in-range)
 - [insert a substring before/after a certain characted in a string](https://stackoverflow.com/a/30232424/24248624)
 - [delete a character from a string](https://builtin.com/software-engineering-perspectives/python-remove-character-from-string)
+- [fix `TERM environment variable not set` error](https://stackoverflow.com/a/65161315/24248624)
+- [clear the terminal](https://www.geeksforgeeks.org/clear-screen-python/)

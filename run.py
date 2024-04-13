@@ -2,7 +2,10 @@
 import itertools
 
 # for the `clear()` function
-import os
+from os import system, name
+
+# import sleep to show output for some time period
+from time import sleep
 
 # Based on the Love Sandwiches project
 # import entire library
@@ -29,7 +32,7 @@ recipes = SHEET.worksheet('main')
 data = recipes.get_all_values()
 # end of code based on the Love Sandwiches project
 # TESTING: print for testing/development purposes
-print(data)
+# print(data)
 
 # row 0 is the type of dish: starter, main, dessert or drink
 # row 1 of `data` is the list of dishes
@@ -37,12 +40,13 @@ print(data)
 # subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
-# provided by my mentor Rory Patrick Sheridan
+# provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
 def clear():
     """
-    Clear function to clean-up the terminal so things don't get messy.
+    Clear the terminal
     """
-    os.system("cls" if os.name == "nt" else "clear")
+    # use `cls` for windows, `clear` for other OSes (name: `postfix`)
+    system("cls" if name == "nt" else "clear")
 
 
 # TODO put this block in a function
@@ -54,11 +58,16 @@ while not start == "Y" and not start == "N":
     # ask for input again, make input uppercase
     start = input("I did not understand. Please type Y or N ").upper()
 if start == 'Y':
-    #  start the addition cycle
-    planning = True
     print("Let's get planning!")
+    # sleep for 1.5 seconds after printing output
+    sleep(1.5)
+    # clear the console
     clear()
     print("Here is the list of dishes you can choose from.")
+    # sleep for 2 seconds after printing output
+    sleep(2)
+    #  start the addition cycle
+    planning = True
 
 elif start == 'N':
     #  exit the program with a message
