@@ -95,6 +95,9 @@ Combinations:
 	- display shopping list
 	- end adding loop
 	- display goodbye message
+- if the user selects all dishes: 
+	- print shopping list 
+	- end program
 
 #### Database data validation (optional)
 
