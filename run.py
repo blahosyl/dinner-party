@@ -101,7 +101,7 @@ def welcome():
         # reset terminal color
         print(Style.RESET_ALL)
     if start == 'Y':
-        print(Back.GREEN + "Let's get planning!")
+        print(Back.GREEN + "Let's get planning! 🍾")
         # reset terminal color
         print(Style.RESET_ALL)
         # sleep for 1.5 seconds after printing output
