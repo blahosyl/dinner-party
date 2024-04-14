@@ -86,15 +86,6 @@ shopping_list = []
 dishes_row = data[1][:]
 dishes = planner.DishList(dishes_row)
 
-def print_dishes():
-    # print an empty line to visually separate the list
-    print('\n')
-    """ Print available dishes """
-    for i in range(1, len(dishes)):
-        print(i, dishes[i])
-    # print an empty line to visually separate the list
-    print('\n')
-
 
 def print_shopping_list():
     """ Print shopping list """
@@ -110,36 +101,7 @@ def print_shopping_list():
         print(print_string)
     # print an empty line to visually separate the list
     print('\n')
-
-
-def select_dish():
-    # print the list of dishes in a numbered list
-    print_dishes()
-
-    # validating the input
-    while True:
-        try:
-            # ask user to select a dish number
-            dish_number = int(input("Type in the number of the dish you'd like to add: "))
-            while dish_number < 1 or dish_number > len(dishes) - 1:
-                dish_number = int(input(f"Number out of range. Please type a number between 1 and {len(dishes) - 1}: "))
-            break
-        except ValueError:
-            # while the input is not one of the allowed options
-            # ask for input again
-            print(f"That is not a valid number. Please type a whole number between 1 and {len(dishes)-1}.")
-
-    # get the dish with the selected number from the `dishes` list
-    selected_dish = dishes[int(dish_number)]
-
-    # print the selected dish's name
-    print(f'\n You have selected: {selected_dish}')
-
-    # remove the selected dish from the list of available dishes
-    dishes.remove(selected_dish)
-
-    return selected_dish
-
+    
 
 def get_ingredients(selection):
     """Get list of ingredients for a selected dish, add them to `shopping_list`, return a list of lists"""
