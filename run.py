@@ -41,6 +41,15 @@ data = recipes.get_all_values()
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
 
+# the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
+dishes_row = data[1][:]
+# create a list object with `dishes_row` as the input
+dishes = planner.DishList(dishes_row)
+
+# create empty shopping list object (will be a list of lists eventually)
+shopping_list = planner.ShoppingList([])
+
+
 # provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
 def clear():
     """
@@ -74,14 +83,6 @@ elif start == 'N':
     #  exit the program with a message
     planning = False
     print("Maybe some other time then. Bye for now!")
-
-
-# the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
-dishes_row = data[1][:]
-dishes = planner.DishList(dishes_row)
-
-# create empty shopping list (will be a list of lists)
-shopping_list = planner.ShoppingList([])
 
 
 def ask_more():
