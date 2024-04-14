@@ -7,6 +7,9 @@ from os import system, name
 # import sleep to show output for some time period
 from time import sleep
 
+# import custom class
+import planner
+
 # Based on the Love Sandwiches project
 # import entire library
 
@@ -39,27 +42,6 @@ data = recipes.get_all_values()
 # item 0 of each row is the ingredient
 # subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
-
-class DishList:
-    """
-    Creates an instance of DishLish
-    """
-
-    def __init__(self, course):
-        course = self, course
-
-    def print_enum(self):
-        # print an empty line to visually separate the list
-        print('\n')
-        """ Print available dishes """
-        for i in range(1, len(self)):
-            print(i, self[i])
-        # print an empty line to visually separate the list
-        print('\n')
-
-
-
-
 
 
 # provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
@@ -101,8 +83,8 @@ elif start == 'N':
 shopping_list = []
 
 # the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
-dishes = data[1][:]
-
+dishes_row = data[1][:]
+dishes = planner.DishList(dishes_row)
 
 def print_dishes():
     # print an empty line to visually separate the list
@@ -186,7 +168,7 @@ def ask_more():
     global dishes
     global planning
     # check if there are dishes left (note: dishes[0] = '', so this should not be counted)
-    if len(dishes) > 1:
+    if len(dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list, make input uppercase
         add_dish = input('Would you like to add another dish? (Y/N): ').upper()
         # validating the input
@@ -220,7 +202,7 @@ def add_ingredients():
     Add quantities of the ingredient together.
     Return modified `shopping_list`."""
     # this needs to be run every time items are added to `shopping_list`
-    shopping_list = get_ingredients(select_dish())
+    shopping_list = get_ingredients(dishes.select_dish())
     # get all pairs of items within `shopping_list`
     for x, y in itertools.combinations(shopping_list, 2):
         # if the ingredient name and unit (first item of both lists) is the same

@@ -43,11 +43,3 @@ class DishList:
         self.dish_data.remove(selected_dish)
 
         return selected_dish
-
-
-dishes = DishList(["biscuits", "tea", "dip"])
-
-dishes.select_dish()
-
-# check if the selected dish has been removed from the list
-dishes.print_enum()
