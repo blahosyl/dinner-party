@@ -41,10 +41,11 @@ _data = recipes.get_all_values()
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
 # global variables
+# the row containing the names of dishes
 # the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
-_dishes_row = _data[1][:]
+DISHES_ROW = _data[1][:]
 # create a list object with `dishes_row` as the input
-_dishes = planner.DishList(_dishes_row)
+_dishes = planner.DishList(DISHES_ROW)
 
 # create empty shopping list object (will be a list of lists eventually)
 _shopping_list = planner.ShoppingList([])
