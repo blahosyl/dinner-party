@@ -110,6 +110,8 @@ class ShoppingList:
 
     def print_formatted(self, ingredient_list):
         """ Print ingredient list in a user-friendly string format"""
+        # print an empty line to visually separate the block
+        print('\n')
         # for every item in the list
         for i in range(0, len(ingredient_list)):
             # set `print_string` as the first item of the list
@@ -172,8 +174,6 @@ class ShoppingList:
         # add each ingredient from the selected dish to the shopping list
         for ingredient in dish_ingredients:
             self.list_data.append(ingredient)
-        # print an empty line to visually separate the block
-        print('\n')
         return self.list_data
 
     def add_ingredients(self, selection, recipe_data):
