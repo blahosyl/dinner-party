@@ -4,12 +4,12 @@ from os import system, name
 # import sleep to show output for some time period
 from time import sleep
 
-# import custom class
+# import this module for classes custom written for this project
 import planner
 
 # Based on the Love Sandwiches project
-# import entire library
 
+# import entire library
 import gspread
 # import 1 class from a library
 from google.oauth2.service_account import Credentials

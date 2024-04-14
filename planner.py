@@ -1,3 +1,5 @@
+# This module provides objects and methods for planning dinner parties
+
 # get combinations from a list
 import itertools
 
