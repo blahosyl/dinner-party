@@ -56,6 +56,7 @@ class ShoppingList:
     """
         Creates an instance of ShoppingList
         """
+
     def __init__(self, list_data):
         self.list_data = list_data
 
@@ -63,11 +64,19 @@ class ShoppingList:
         """ Print ingredient list in a user-friendly string format"""
         # print an empty line to visually separate the list
         print('\n')
+        # for every item in the list
         for i in range(0, len(ingredient_list)):
-            # print(shopping_list[i][0], shopping_list[i][1])
+            # set `print_string` as the first item of the list
             print_string = ingredient_list[i][0]
+            # find the index of the opening bracket in the string
             opening = print_string.index('(')
-            print_string = print_string[:opening-1] + ': ' + str(ingredient_list[i][1]) + print_string[opening-1:]
+            # 1 left of the opening bracket, add the following:
+            # a colon
+            # the quantity (second item of the list)
+            print_string = print_string[:opening - 1] \
+                           + ': ' \
+                           + str(ingredient_list[i][1]) \
+                           + print_string[opening - 1:]
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
             print(print_string)
