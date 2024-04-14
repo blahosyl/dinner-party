@@ -40,6 +40,28 @@ data = recipes.get_all_values()
 # subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
+class DishList:
+    """
+    Creates an instance of DishLish
+    """
+
+    def __init__(self, course):
+        course = self, course
+
+    def print_enum(self):
+        # print an empty line to visually separate the list
+        print('\n')
+        """ Print available dishes """
+        for i in range(1, len(self)):
+            print(i, self[i])
+        # print an empty line to visually separate the list
+        print('\n')
+
+
+
+
+
+
 # provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
 def clear():
     """
