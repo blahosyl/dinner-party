@@ -138,3 +138,5 @@ The following resources were used to learn/double check general, atomic function
 - [clear the terminal](https://www.geeksforgeeks.org/clear-screen-python/)
 - [naming conventions](https://peps.python.org/pep-0008/)
 - [naming global vs. local variables](https://stackoverflow.com/questions/69193413/why-does-the-python-style-guide-suggest-the-same-style-for-both-global-and-local)
+- [conventions for putting modules into separate files](https://stackoverflow.com/questions/2864366/are-classes-in-python-in-different-files)
+- [classes of the same module can be grouped in the same file](https://softwareengineering.stackexchange.com/a/306492)
