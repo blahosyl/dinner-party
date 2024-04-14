@@ -154,3 +154,5 @@ The following resources were used to learn/double check general, atomic function
 - [naming global vs. local variables](https://stackoverflow.com/questions/69193413/why-does-the-python-style-guide-suggest-the-same-style-for-both-global-and-local)
 - [conventions for putting modules into separate files](https://stackoverflow.com/questions/2864366/are-classes-in-python-in-different-files)
 - [classes of the same module can be grouped in the same file](https://softwareengineering.stackexchange.com/a/306492)
+- [print floats in general notation - only print decimal point and decimal place digits if they are "not empty"](https://stackoverflow.com/a/2440708/24248624)
+- [string operations](https://docs.python.org/3/library/string.html#format-specification-mini-language)

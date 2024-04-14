@@ -75,7 +75,7 @@ class ShoppingList:
             # the quantity (second item of the list)
             print_string = print_string[:opening - 1] \
                            + ': ' \
-                           + str(ingredient_list[i][1]) \
+                           + f"{ingredient_list[i][1]:g}" \
                            + print_string[opening - 1:]
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
