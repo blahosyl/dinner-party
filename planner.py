@@ -1,3 +1,6 @@
+# get combinations from a list
+import itertools
+
 class DishList:
     """
     Creates an instance of DishList
@@ -89,15 +92,41 @@ class ShoppingList:
         print('\n')
         return self.list_data
 
+    def add_ingredients(self, selection, data):
+        """Check shopping list for pairs of items (lists) where the ingredient is the same.
+        Add quantities of the ingredient together.
+        Return modified shopping list."""
+        # this needs to be run every time items are added to the shopping list
+        self.list_data = self.get_ingredients(selection, data)
+        # get all pairs of items within the shopping list item
+        for x, y in itertools.combinations(self.list_data, 2):
+            # if the ingredient name and unit (first item of both lists) is the same
+            if x[0] == y[0]:
+                # TESTING: print for testing/development
+                print(x, y)
+                # add a new item (list) with this ingredient name and unit as its first item,
+                # and the sum of the two quantities as the second item
+                self.list_data.append([x[0], x[1] + y[1]])
+                # remove the two original items from shopping list
+                self.list_data.remove(x)
+                self.list_data.remove(y)
+        print('Shopping list updated\n')
+        # ask_more()
+        return self.list_data
+
 
 #   def add_ingredients()
 
-
-shopping_list = ShoppingList([])
+# add an ingredient to the shopping list to test `add_ingredients()
+shopping_list = ShoppingList([['baking soda (g)', 2.5]])
 
 data = [['', 'starter', 'starter', 'starter', 'starter', 'starter', 'main', 'main', 'main', 'dessert', 'dessert', 'dessert', 'drink', 'drink', 'drink'], ['', 'céklás tormás', 'Tahini lemon dip', 'Tapenade green', 'Parmezános keksz', 'majonézes karalábé', 'risotto', 'frittata', 'pumpkin quiche', 'red velvet cake', 'lemon bar', 'Vegan Lemon Cake', 'Daiquiry mix', 'bloody mary', 'Pitcher Margarita'], ['risotto rice (g)', '', '', '', '', '', '500', '', '', '', '', '', '', '', ''], ['baking soda (g)', '', '', '', '', '', '', '', '', '2.5', '', '', '', '', ''], ['beetroot, raw (g)', '400', '', '', '', '', '', '', '', '240', '', '', '', '', ''], ['lemon (pc)', '', '1', '', '', '', '', '', '', '1', '2', '1', '', '', '2'], ['Cointreau (ml)', '', '', '', '', '', '', '', '', '', '', '', '', '', '250'], ['creme fraiche (ml)', '200', '', '', '', '', '', '', '', '450', '', '450', '', '', ''], ['white wine (ml)', '', '', '', '', '', '250', '', '', '', '', '', '', '', ''], ['garlic clove (pc)', '', '', '', '', '', '3', '', '', '', '', '', '', '', ''], ['tofu, smoked (g)', '', '', '', '', '', '', '200', '', '', '', '', '', '', ''], ['onion (pc)', '', '', '', '', '', '1', '', '', '', '', '', '', '', ''], ['cocoa powder (g)', '', '', '', '', '', '', '', '', '45', '', '', '', '', ''], ['capers (Tbsp)', '', '', '1', '', '1', '', '', '', '', '', '', '', '', ''], ['kohlrabi (pc)', '', '', '', '', '1', '', '', '', '', '', '', '', '', ''], ['blue cheese (g)', '', '', '', '', '', '', '', '100', '', '', '', '', '20', ''], ['lime (pc)', '', '', '', '', '', '', '', '', '', '', '', '7', '', '4'], ['flour (g)', '', '', '', '200', '', '', '', '', '240', '300', '240', '', '', ''], ['mayonnaise (ml)', '', '', '', '', '180', '', '', '', '', '', '', '', '', ''], ['maple syrup (ml)', '', '30', '', '', '', '', '', '', '', '', '15', '', '', ''], ['mini mozarella (g)', '', '', '', '', '', '', '', '', '', '', '', '', '125', ''], ['gherkins (ml)', '', '', '', '', '', '', '', '', '', '', '', '', '100', ''], ['milk (ml)', '', '', '', '', '', '', '', '300', '', '', '150', '', '', ''], ['olive oil (ml)', '', '', '', '', '', '', '', '', '', '', '130', '', '', ''], ['tomato juice (ml)', '', '', '', '', '', '', '', '', '', '', '', '', '1000', ''], ['parmiggiano (g)', '', '', '', '200', '', '100', '', '', '', '', '', '', '', ''], ['sugar (g)', '', '', '', '', '', '', '', '', '375', '400', '', '', '', ''], ['carrots (pc)', '', '', '', '', '', '1', '', '', '', '', '', '', '', ''], ['rum (ml)', '', '', '', '', '', '', '', '', '', '', '', '300', '', ''], ['simple syrup (ml)', '', '', '', '', '', '', '', '', '', '', '', '60', '', ''], ['sütőpor (g)', '', '', '', '', '', '', '', '', '6', '5', '', '', '', ''], ['hokkaido squash (pc)', '', '', '', '', '', '', '', '1', '', '', '', '', '', ''], ['tahini (ml)', '', '100', '', '', '', '', '', '', '', '', '', '', '', ''], ['tequila (ml)', '', '', '', '', '', '', '', '', '', '', '', '', '', '375'], ['eggs (db)', '', '', '', '', '', '', '6', '5', '4', '4', '', '', '', ''], ['horseradish, fresh (pc)', '1', '', '', '', '', '', '', '', '', '', '', '', '', ''], ['hazelnuts (g)', '', '', '', '', '', '', '', '150', '', '', '', '', '', ''], ['butter (g)', '', '', '', '150', '', '', '', '150', '172.5', '250', '', '', '', ''], ['vanilla extract (ml)', '', '', '', '', '', '', '', '5', '7.5', '', '', '', '', ''], ['yoghurt (ml)', '', '', '', '', '', '', '', '', '', '', '130', '', '', ''], ['double cream (ml)', '', '', '', '', '', '', '', '300', '', '', '', '', '', ''], ['oat flakes (g)', '', '', '', '', '', '', '', '200', '', '', '', '', '', ''], ['green olives (g)', '', '', '150', '', '', '', '', '', '', '', '', '', '100', ''], ['sage (g)', '', '', '', '', '', '', '', '15', '', '', '', '', '', '']]
 
 
-shopping_list.get_ingredients("red velvet cake", data)
+# shopping_list.get_ingredients("red velvet cake", data)
 
-shopping_list.get_ingredients("risotto", data)
+shopping_list.add_ingredients("red velvet cake", data)
+
+# print(shopping_list.list_data)
+
+shopping_list.print_string()
