@@ -43,3 +43,35 @@ class DishList:
         self.dish_data.remove(selected_dish)
 
         return selected_dish
+
+class ShoppingList:
+    """
+        Creates an instance of ShoppingList
+        """
+    def __init__(self, list_data):
+        self.list_data = list_data
+
+    def print_string(self):
+        """ Print shopping list in a user-friendly string format"""
+        # print an empty line to visually separate the list
+        print('\n')
+        for i in range(0, len(self.list_data)):
+            # print(shopping_list[i][0], shopping_list[i][1])
+            print_string = self.list_data[i][0]
+            opening = print_string.index('(')
+            print_string = print_string[:opening-1] + ': ' + str(self.list_data[i][1]) + print_string[opening-1:]
+            print_string = print_string.replace('(', '')
+            print_string = print_string.replace(')', '')
+            print(print_string)
+        # print an empty line to visually separate the list
+        print('\n')
+
+#
+#   def get_ingredients()
+#
+#   def add_ingredients()
+
+
+shopping_list = ShoppingList([["onion (pc)", 1], ["cocoa powder (g)", 300]])
+
+shopping_list.print_string()
