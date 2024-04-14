@@ -1,6 +1,6 @@
 class DishList:
     """
-    Creates an instance of DishLish
+    Creates an instance of DishList
     """
 
     def __init__(self, dish_data):
