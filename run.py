@@ -12,10 +12,25 @@ from colorama import Fore, Back, Style
 # import this module for classes custom written for this project
 import planner
 
-from ascii_magic import AsciiArt
-
-my_art = AsciiArt.from_image('assets/images/sp-sylvia.jpg')
-my_art.to_terminal()
+print(Fore.CYAN +
+    r"""
+     ____________
+    <____________>
+    |            |
+    |            |
+    |            |
+     \          /
+      \________/
+          ||
+          ||
+          ||
+          ||
+       ___||___
+      /   ||   \
+      \________/
+    """
+)
+print(Style.RESET_ALL)
 
 # Based on the Love Sandwiches project
 
@@ -29,7 +44,7 @@ SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
-    ]
+]
 
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
