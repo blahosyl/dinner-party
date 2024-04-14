@@ -17,10 +17,12 @@
 
 Create
 
+- dataset from Google Sheets
 - list of dishes
 - shopping list
 
 Read
+- dataset from Google Sheets
 - list of dishes
 - shopping list
 - ingredients of a dish
@@ -74,7 +76,7 @@ Which libraries are used and what their purpose is, why they are needed
 - all class names are in `CamelCase`.
 - all constant names are in `ALL_CAPS`.
 - all variable names are in `snake_case`.
-- following my mentor's suggestion, I changed the names of global variables (that are not constants) so that they always start with an underscore: `_global_variable`
+- following my mentor's suggestion, I changed the names of global variables (that are not constants) so that they always start with an underscore: `_global_variable`.
 
 
 ### User input
