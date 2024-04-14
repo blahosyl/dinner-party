@@ -109,8 +109,6 @@ def welcome():
         # clear the console
         clear()
         print("Here is the list of dishes you can choose from.")
-        # sleep for 2 seconds after printing output
-        sleep(2)
         #  start the addition cycle
         _planning = True
 

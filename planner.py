@@ -7,6 +7,18 @@ import itertools
 # package suggested by my mentor
 from colorama import Fore, Back, Style
 
+# for the `clear()` function
+from os import system, name
+
+
+# provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
+def clear():
+    """
+    Clear the terminal
+    """
+    # use `cls` for windows, `clear` for other OSes (name: `postfix`)
+    system("cls" if name == "nt" else "clear")
+
 
 class DishList:
     """
@@ -47,6 +59,7 @@ class DishList:
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
 
+        clear()
         print(Fore.CYAN +
               r"""
              ____________
@@ -68,7 +81,8 @@ class DishList:
         print(Style.RESET_ALL)
         # print the selected dish's name
         print(f'You have selected: {selected_dish}')
-
+        # print an empty line to visually separate the list
+        print('\n')
 
         # remove the selected dish from the list of available dishes
         self.dish_data.remove(selected_dish)
@@ -96,8 +110,6 @@ class ShoppingList:
 
     def print_formatted(self, ingredient_list):
         """ Print ingredient list in a user-friendly string format"""
-        # print an empty line to visually separate the list
-        print('\n')
         # for every item in the list
         for i in range(0, len(ingredient_list)):
             # set `print_string` as the first item of the list
@@ -136,16 +148,13 @@ class ShoppingList:
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
             print(print_string)
-        # print an empty line to visually separate the list
-        print('\n')
+
 
     def get_ingredients(self, selection, recipe_data):
         """Get list of ingredients for a selected dish, print them out,
         add them to the shopping list, return a list of lists
         """
 
-        # print an empty line to visually separate the block
-        print('\n')
         print(f'Ingredients for {selection}')
         # get the index of the selected dish in the database
         selection_index = recipe_data[1].index(selection)
