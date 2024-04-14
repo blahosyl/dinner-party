@@ -29,7 +29,7 @@ SHEET = GSPREAD_CLIENT.open('ingredients')
 recipes = SHEET.worksheet('main')
 
 # get a whole worksheet as a list of lists
-data = recipes.get_all_values()
+_data = recipes.get_all_values()
 # end of code based on the Love Sandwiches project
 # TESTING: print for testing/development purposes
 # print(data)
@@ -40,17 +40,17 @@ data = recipes.get_all_values()
 # subsequent items of each row are the quantity of ingredients needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
-
+# global variables
 # the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
-dishes_row = data[1][:]
+_dishes_row = _data[1][:]
 # create a list object with `dishes_row` as the input
-dishes = planner.DishList(dishes_row)
+_dishes = planner.DishList(_dishes_row)
 
 # create empty shopping list object (will be a list of lists eventually)
-shopping_list = planner.ShoppingList([])
+_shopping_list = planner.ShoppingList([])
 
 # sets whether the planning cycle runs or not
-planning = False
+_planning = False
 
 
 # provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
@@ -64,7 +64,7 @@ def clear():
 
 def welcome():
     # get global variable
-    global planning
+    global _planning
     # ask user if they want to start planning, make input uppercase
     start = input('Would you like to plan a dinner party? (Y/N): ').upper()
     # validating the input
@@ -82,21 +82,21 @@ def welcome():
         # sleep for 2 seconds after printing output
         sleep(2)
         #  start the addition cycle
-        planning = True
+        _planning = True
 
     elif start == 'N':
         #  exit the program with a message
-        planning = False
+        _planning = False
         print("Maybe some other time then. Bye for now!")
 
 
 def ask_more():
     """Ask the user if they want to add more dishes if there are dishes left on the list"""
     # get global variables
-    global dishes
-    global planning
+    global _dishes
+    global _planning
     # check if there are dishes left (note: dishes[0] = '', so this should not be counted)
-    if len(dishes.dish_data) > 1:
+    if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list, make input uppercase
         add_dish = input('Would you like to add another dish? (Y/N): ').upper()
         # validating the input
@@ -111,22 +111,22 @@ def ask_more():
             print('\n')
             print("Cool, here is the list of dishes again:")
         elif add_dish == 'N':
-            planning = False
+            _planning = False
             # print an empty line to visually separate the list
             print('\n')
             print("Got it! Here is your shopping list:")
-            shopping_list.print_string()
+            _shopping_list.print_string()
             print("Have fun!")
     else:
         # stop the loop
-        planning = False
+        _planning = False
         print("You have selected all the dishes. Here is your shopping list:")
-        shopping_list.print_string()
+        _shopping_list.print_string()
         print("Have fun!")
 
 
 welcome()
 
-while planning:
-    shopping_list.add_ingredients(dishes.select_dish(), data)
+while _planning:
+    _shopping_list.add_ingredients(_dishes.select_dish(), _data)
     ask_more()
