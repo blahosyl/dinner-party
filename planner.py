@@ -1,6 +1,7 @@
 # get combinations from a list
 import itertools
 
+
 class DishList:
     """
     Creates an instance of DishList
@@ -34,7 +35,8 @@ class DishList:
             except ValueError:
                 # while the input is not one of the allowed options
                 # ask for input again
-                print(f"That is not a valid number. Please type a whole number between 1 and {len(self.dish_data) - 1}.")
+                print(f"That is not a valid number. "
+                      f"Please type a whole number between 1 and {len(self.dish_data) - 1}.")
 
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
@@ -46,6 +48,7 @@ class DishList:
         self.dish_data.remove(selected_dish)
 
         return selected_dish
+
 
 class ShoppingList:
     """
@@ -69,7 +72,7 @@ class ShoppingList:
         # print an empty line to visually separate the list
         print('\n')
 
-    def get_ingredients(self, selection, data):
+    def get_ingredients(self, selection, recipe_data):
         """Get list of ingredients for a selected dish, print them out,
         add them to the shopping list, return a list of lists
         """
@@ -80,10 +83,10 @@ class ShoppingList:
         # get the index of the selected dish in the database
         selection_index = data[1].index(selection)
         # go through each row
-        for row in data:
+        for row in recipe_data:
             # if the cell in the row under the selected dish has content (ingredient quantity)
             # and it's not one of the first 2 rows
-            if row[selection_index] and data.index(row) > 1:
+            if row[selection_index] and recipe_data.index(row) > 1:
                 # print the ingredient name and quantity
                 print(row[0]+' '+row[selection_index])
                 # add the list [ingredient, quantity(converted to a float)] to the shopping list
@@ -92,12 +95,12 @@ class ShoppingList:
         print('\n')
         return self.list_data
 
-    def add_ingredients(self, selection, data):
+    def add_ingredients(self, selection, recipe_data):
         """Check shopping list for pairs of items (lists) where the ingredient is the same.
         Add quantities of the ingredient together.
         Return modified shopping list."""
         # this needs to be run every time items are added to the shopping list
-        self.list_data = self.get_ingredients(selection, data)
+        self.list_data = self.get_ingredients(selection, recipe_data)
         # get all pairs of items within the shopping list item
         for x, y in itertools.combinations(self.list_data, 2):
             # if the ingredient name and unit (first item of both lists) is the same
@@ -114,8 +117,6 @@ class ShoppingList:
         # ask_more()
         return self.list_data
 
-
-#   def add_ingredients()
 
 # add an ingredient to the shopping list to test `add_ingredients()
 shopping_list = ShoppingList([['baking soda (g)', 2.5]])
