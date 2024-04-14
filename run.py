@@ -2,9 +2,11 @@
 from os import system, name
 
 # import sleep to show output for some time period
+# package suggested by my mentor
 from time import sleep
 
 # colored terminal output
+# package suggested by my mentor
 from colorama import Fore, Back, Style
 
 # import this module for classes custom written for this project

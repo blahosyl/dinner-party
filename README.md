@@ -130,6 +130,8 @@ Check if ingredient cell contains `(`
 
 ## Credits
 
+### Study/lookup sources
+
 The following resources were used to learn/double check general, atomic functionalities/syntax:
 
 - [`gspread` user guide](https://docs.gspread.org/en/v6.0.0/user-guide.html)
@@ -161,3 +163,29 @@ The following resources were used to learn/double check general, atomic function
 - [`partition` method example ](https://stackoverflow.com/a/54608451/24248624)
 - [`partition` method on W3Schools](https://www.w3schools.com/python/ref_string_partition.asp)
 - [`colorama` documentation](https://pypi.org/project/colorama/)
+
+### Code
+
+The following sources contributed code or suggestions to specific functions within the project:
+
+- Rory Patrick Sheridan, my mentor, gave suggestions, helped me solve or spotted bugs described in [these Issues](https://github.com/blahosyl/dinner-party/issues?q=is%3Aissue+label%3Amentor) (see the Issue descriptions and comments for details).
+
+
+### Content
+
+All text content was written by me.
+
+### Media
+
+#### Images
+
+### Readme
+
+- [Creating your first README with Kera Cudmore](https://www.youtube.com/watch?v=XbYJ4VlhSnY) by Code Institute
+- [Creating your first README](https://github.com/kera-cudmore/readme-examples) by Kera Cudmore
+- [Bully Book Club](https://github.com/kera-cudmore/Bully-Book-Club) by Kera Cudmore
+- [Bodelschwingher Hof](https://github.com/4n4ru/CI_MS1_BodelschwingherHof/tree/master) by Ana Runje
+- [Travel World](https://github.com/PedroCristo/portfolio_project_1/) by Pedro Cristo
+- [Sourdough Bakes](https://github.com/siobhanlgorman) by Siobhan Gorman
+- [Horizon Photo](https://github.com/Ri-Dearg/horizon-photo/blob/master/README.md#mobile-testing) by Rory Patrick Sheridan
+- [The README of my first Code Institute project](https://github.com/blahosyl/academic-publishing)
