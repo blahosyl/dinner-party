@@ -160,3 +160,4 @@ The following resources were used to learn/double check general, atomic function
 - [regular expression for letters (not used)](https://stackoverflow.com/a/3617808/24248624)
 - [`partition` method example ](https://stackoverflow.com/a/54608451/24248624)
 - [`partition` method on W3Schools](https://www.w3schools.com/python/ref_string_partition.asp)
+- [`colorama` documentation](https://pypi.org/project/colorama/)

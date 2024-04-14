@@ -4,6 +4,9 @@ from os import system, name
 # import sleep to show output for some time period
 from time import sleep
 
+# colored terminal output
+from colorama import Fore, Back, Style
+
 # import this module for classes custom written for this project
 import planner
 
@@ -72,9 +75,13 @@ def welcome():
     # while the input is not one of the allowed options
     while not start == "Y" and not start == "N":
         # ask for input again, make input uppercase
-        start = input("I did not understand. Please type Y or N ").upper()
+        start = input(Fore.RED + "I did not understand. Please type Y or N ").upper()
+        # reset terminal color
+        print(Style.RESET_ALL)
     if start == 'Y':
-        print("Let's get planning!")
+        print(Back.GREEN + "Let's get planning!")
+        # reset terminal color
+        print(Style.RESET_ALL)
         # sleep for 1.5 seconds after printing output
         sleep(1.5)
         # clear the console
@@ -104,7 +111,9 @@ def ask_more():
         # while the input is not one of the allowed options
         while not add_dish == "Y" and not add_dish == "N":
             # ask for input again, make input uppercase
-            add_dish = input("I did not understand. Please type Y or N ").upper()
+            add_dish = input(Fore.RED + "I did not understand. Please type Y or N ").upper()
+            # reset terminal color
+            print(Style.RESET_ALL)
         if add_dish == 'Y':
             # planning remains True, keeps the loop running
             clear()
