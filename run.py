@@ -1,6 +1,3 @@
-# get combinations from a list
-import itertools
-
 # for the `clear()` function
 from os import system, name
 
