@@ -156,3 +156,7 @@ The following resources were used to learn/double check general, atomic function
 - [classes of the same module can be grouped in the same file](https://softwareengineering.stackexchange.com/a/306492)
 - [print floats in general notation - only print decimal point and decimal place digits if they are "not empty"](https://stackoverflow.com/a/2440708/24248624)
 - [string operations](https://docs.python.org/3/library/string.html#format-specification-mini-language)
+- [cut off last character of string](https://stackoverflow.com/a/15478161/24248624)
+- [regular expression for letters (not used)](https://stackoverflow.com/a/3617808/24248624)
+- [`partition` method example ](https://stackoverflow.com/a/54608451/24248624)
+- [`partition` method on W3Schools](https://www.w3schools.com/python/ref_string_partition.asp)

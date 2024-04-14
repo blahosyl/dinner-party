@@ -52,6 +52,16 @@ class DishList:
         return selected_dish
 
 
+units = {
+    "g": "grams",
+    "kg": "kilograms",
+    "pc": "pieces",
+    "ml": "milliliters",
+    "l": "liters",
+    "Tbsp": "tablespoons",
+}
+
+
 class ShoppingList:
     """
         Creates an instance of ShoppingList
@@ -70,6 +80,27 @@ class ShoppingList:
             print_string = ingredient_list[i][0]
             # find the index of the opening bracket in the string
             opening = print_string.index('(')
+            # replace measurement unit abbreviation with full name
+            # get the substring between the opening and the closing bracket
+            abbr = print_string[opening:].partition(")")
+            # get the first item (opening bracket plus abbreviation)
+            abbr = abbr[0]
+            # delete the opening bracket from the variable
+            abbr = abbr.replace('(', '')
+            # if the abbreviation is in the `units` dictionary,
+            # replace it with the corresponding unit name
+            if abbr in units:
+                unit_name = units[abbr]
+                # if the quantity is exactly 1
+                if ingredient_list[i][1] == 1:
+                    # make unit_name singular (remove string-final 's')
+                    unit_name = unit_name[:-1]
+            # if it's not in the dictionary, leave it as is
+            else:
+                unit_name = abbr
+            # replace a parenthesis+abbreviation with parenthesis+unit name
+            print_string = print_string.replace('('+abbr, '('+unit_name)
+            # end of code to replace measurement unit abbreviation with full name
             # 1 left of the opening bracket, add the following:
             # a colon
             # the quantity (second item of the list)
@@ -77,6 +108,7 @@ class ShoppingList:
                            + ': ' \
                            + f"{ingredient_list[i][1]:g}" \
                            + print_string[opening - 1:]
+            # delete the opening and closing parenthesis
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
             print(print_string)
