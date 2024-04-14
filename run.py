@@ -12,6 +12,11 @@ from colorama import Fore, Back, Style
 # import this module for classes custom written for this project
 import planner
 
+from ascii_magic import AsciiArt
+
+my_art = AsciiArt.from_image('assets/images/sp-sylvia.jpg')
+my_art.to_terminal()
+
 # Based on the Love Sandwiches project
 
 # import entire library
