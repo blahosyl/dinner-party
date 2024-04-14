@@ -49,6 +49,9 @@ dishes = planner.DishList(dishes_row)
 # create empty shopping list object (will be a list of lists eventually)
 shopping_list = planner.ShoppingList([])
 
+# sets whether the planning cycle runs or not
+planning = False
+
 
 # provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
 def clear():
@@ -59,30 +62,32 @@ def clear():
     system("cls" if name == "nt" else "clear")
 
 
-# TODO put this block in a function
-# ask user if they want to start planning, make input uppercase
-start = input('Would you like to plan a dinner party? (Y/N): ').upper()
-# validating the input
-# while the input is not one of the allowed options
-while not start == "Y" and not start == "N":
-    # ask for input again, make input uppercase
-    start = input("I did not understand. Please type Y or N ").upper()
-if start == 'Y':
-    print("Let's get planning!")
-    # sleep for 1.5 seconds after printing output
-    sleep(1.5)
-    # clear the console
-    clear()
-    print("Here is the list of dishes you can choose from.")
-    # sleep for 2 seconds after printing output
-    sleep(2)
-    #  start the addition cycle
-    planning = True
+def welcome():
+    # get global variable
+    global planning
+    # ask user if they want to start planning, make input uppercase
+    start = input('Would you like to plan a dinner party? (Y/N): ').upper()
+    # validating the input
+    # while the input is not one of the allowed options
+    while not start == "Y" and not start == "N":
+        # ask for input again, make input uppercase
+        start = input("I did not understand. Please type Y or N ").upper()
+    if start == 'Y':
+        print("Let's get planning!")
+        # sleep for 1.5 seconds after printing output
+        sleep(1.5)
+        # clear the console
+        clear()
+        print("Here is the list of dishes you can choose from.")
+        # sleep for 2 seconds after printing output
+        sleep(2)
+        #  start the addition cycle
+        planning = True
 
-elif start == 'N':
-    #  exit the program with a message
-    planning = False
-    print("Maybe some other time then. Bye for now!")
+    elif start == 'N':
+        #  exit the program with a message
+        planning = False
+        print("Maybe some other time then. Bye for now!")
 
 
 def ask_more():
@@ -119,6 +124,8 @@ def ask_more():
         shopping_list.print_string()
         print("Have fun!")
 
+
+welcome()
 
 while planning:
     shopping_list.add_ingredients(dishes.select_dish(), data)
