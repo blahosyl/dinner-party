@@ -59,7 +59,7 @@ class ShoppingList:
     def __init__(self, list_data):
         self.list_data = list_data
 
-    def print_string(self):
+    def print_formatted(self):
         """ Print shopping list in a user-friendly string format"""
         # print an empty line to visually separate the list
         print('\n')
