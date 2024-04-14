@@ -136,3 +136,5 @@ The following resources were used to learn/double check general, atomic function
 - [delete a character from a string](https://builtin.com/software-engineering-perspectives/python-remove-character-from-string)
 - [fix `TERM environment variable not set` error](https://stackoverflow.com/a/65161315/24248624)
 - [clear the terminal](https://www.geeksforgeeks.org/clear-screen-python/)
+- [naming conventions](https://peps.python.org/pep-0008/)
+- [naming global vs. local variables](https://stackoverflow.com/questions/69193413/why-does-the-python-style-guide-suggest-the-same-style-for-both-global-and-local)
