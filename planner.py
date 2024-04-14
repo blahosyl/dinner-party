@@ -3,6 +3,10 @@
 # get combinations from a list
 import itertools
 
+# colored terminal output
+# package suggested by my mentor
+from colorama import Fore, Back, Style
+
 
 class DishList:
     """
@@ -43,8 +47,28 @@ class DishList:
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
 
+        print(Fore.CYAN +
+              r"""
+             ____________
+            <____________>
+            |            |
+            |            |
+            |            |
+             \          /
+              \________/
+                  ||
+                  ||
+                  ||
+                  ||
+               ___||___
+              /   ||   \
+              \________/
+            """
+              )
+        print(Style.RESET_ALL)
         # print the selected dish's name
-        print(f'\n You have selected: {selected_dish}')
+        print(f'You have selected: {selected_dish}')
+
 
         # remove the selected dish from the list of available dishes
         self.dish_data.remove(selected_dish)

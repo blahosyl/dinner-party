@@ -13,7 +13,7 @@ from colorama import Fore, Back, Style
 import planner
 
 print(Fore.CYAN +
-    r"""
+      r"""
      ____________
     <____________>
     |            |
@@ -29,7 +29,7 @@ print(Fore.CYAN +
       /   ||   \
       \________/
     """
-)
+      )
 print(Style.RESET_ALL)
 
 # Based on the Love Sandwiches project
