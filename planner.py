@@ -59,15 +59,15 @@ class ShoppingList:
     def __init__(self, list_data):
         self.list_data = list_data
 
-    def print_formatted(self):
-        """ Print shopping list in a user-friendly string format"""
+    def print_formatted(self, ingredient_list):
+        """ Print ingredient list in a user-friendly string format"""
         # print an empty line to visually separate the list
         print('\n')
-        for i in range(0, len(self.list_data)):
+        for i in range(0, len(ingredient_list)):
             # print(shopping_list[i][0], shopping_list[i][1])
-            print_string = self.list_data[i][0]
+            print_string = ingredient_list[i][0]
             opening = print_string.index('(')
-            print_string = print_string[:opening-1] + ': ' + str(self.list_data[i][1]) + print_string[opening-1:]
+            print_string = print_string[:opening-1] + ': ' + str(ingredient_list[i][1]) + print_string[opening-1:]
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
             print(print_string)
@@ -84,15 +84,20 @@ class ShoppingList:
         print(f'Ingredients for {selection}')
         # get the index of the selected dish in the database
         selection_index = recipe_data[1].index(selection)
+        # the list of ingredients for the selected dish
+        dish_ingredients = []
         # go through each row
         for row in recipe_data:
             # if the cell in the row under the selected dish has content (ingredient quantity)
             # and it's not one of the first 2 rows
             if row[selection_index] and recipe_data.index(row) > 1:
-                # print the ingredient name and quantity
-                print(row[0]+' '+row[selection_index])
                 # add the list [ingredient, quantity(converted to a float)] to the shopping list
-                self.list_data.append([row[0], float(row[selection_index])])
+                dish_ingredients.append([row[0], float(row[selection_index])])
+        # print the ingredients for the selected dish
+        self.print_formatted(dish_ingredients)
+        # add each ingredient from the selected dish to the shopping list
+        for ingredient in dish_ingredients:
+            self.list_data.append(ingredient)
         # print an empty line to visually separate the block
         print('\n')
         return self.list_data

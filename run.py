@@ -116,13 +116,13 @@ def ask_more():
             # print an empty line to visually separate the list
             print('\n')
             print("Got it! Here is your shopping list:")
-            _shopping_list.print_formatted()
+            _shopping_list.print_formatted(_shopping_list.list_data)
             print("Have fun!")
     else:
         # stop the loop
         _planning = False
         print("You have selected all the dishes. Here is your shopping list:")
-        _shopping_list.print_formatted()
+        _shopping_list.print_formatted(_shopping_list.list_data)
         print("Have fun!")
 
 
