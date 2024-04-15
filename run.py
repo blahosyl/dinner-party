@@ -168,5 +168,5 @@ def ask_more():
 welcome()
 
 while _planning:
-    _shopping_list.add_ingredients(_dishes.select_dish(), _data)
+    _shopping_list.unify_ingredients(_dishes.select_dish(), _data)
     ask_more()

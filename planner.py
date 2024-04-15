@@ -160,7 +160,7 @@ class ShoppingList:
             self.list_data.append(ingredient)
         return self.list_data
 
-    def add_ingredients(self, selection, recipe_data):
+    def unify_ingredients(self, selection, recipe_data):
         """Check shopping list for pairs of items (lists) where the ingredient is the same.
         Add quantities of the ingredient together.
         Return modified shopping list."""
