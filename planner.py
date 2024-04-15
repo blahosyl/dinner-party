@@ -171,7 +171,8 @@ class ShoppingList:
             # if the ingredient name and unit (first item of both lists) is the same
             if x[0] == y[0]:
                 # TESTING: print for testing/development
-                print(x, y)
+                # print pairs of items where the ingredient is the same
+                # print(x, y)
                 # add a new item (list) with this ingredient name and unit as its first item,
                 # and the sum of the two quantities as the second item
                 self.list_data.append([x[0], x[1] + y[1]])
