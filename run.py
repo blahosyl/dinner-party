@@ -112,7 +112,7 @@ def welcome():
         _planning = False
         # clear the terminal
         clear()
-        print("\nMaybe some other time then.\n")
+        print("\nMaybe some other time, then.\n")
         print(Fore.MAGENTA +
               pyfiglet.figlet_format("Bye for now!", font="doom")
               + Fore.RESET)
