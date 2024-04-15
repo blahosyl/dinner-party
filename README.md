@@ -80,6 +80,11 @@ Python
 
 Which libraries are used and what their purpose is, why they are needed
 
+
+### Tools used
+
+- [Convert images to `webp` format](https://cloudconvert.com/jpeg-to-webp)
+
 ## Testing
 
 ### User story testing
