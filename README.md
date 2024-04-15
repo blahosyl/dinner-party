@@ -57,13 +57,14 @@ The heading text color is white, so that it provides sufficient contrast with th
 
 ### Button design
 
-I changed the background color of the **Run Program** button to the dark green of the thyme in the background picture ((with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
-This color contrast with the white text was also checked for accessibility/legibility (see [Color contrasts](#color-contrasts) for more details).
+I changed the background color of the **Run Program** button to the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
 This color was chosen to harmonize with the image but still stand out from the rest of the elements on the page.
 
-For this purpose, I also decreased the border radius of the button, creating a transition between the rounded header and logo and the angular terminal window.
+The color contrast with the white text was checked for accessibility/legibility (see [Color contrasts](#color-contrasts) for more details).
 
-I have also made the button and the text on it larger and increased the font weight.
+
+I have also made the button and the text on it larger and increased the font weight. 
+To balance out these changes, I also increased the button width and its margin.
 
 Finally, I added a hover cursor effect.
 
