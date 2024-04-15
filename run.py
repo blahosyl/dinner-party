@@ -9,27 +9,15 @@ from time import sleep
 # package suggested by my mentor
 from colorama import Fore, Back, Style
 
+# text with ASCII art
+import pyfiglet
+
 # import this module for classes custom written for this project
 import planner
 
 print(Style.BRIGHT)
 print(Fore.MAGENTA +
-      r"""
-     ____________
-    <____________>
-    |            |
-    |            |
-    |            |
-     \          /
-      \________/
-          ||
-          ||
-          ||
-          ||
-       ___||___
-      /   ||   \
-      \________/
-    """
+      pyfiglet.figlet_format("Dinner Party Planner", font = "doom")
       + Fore.RESET)
 
 # Based on the Love Sandwiches project
