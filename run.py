@@ -15,6 +15,8 @@ import pyfiglet
 # import this module for classes custom written for this project
 import planner
 
+# initial screen text
+# name of the app in ASCII art using `pyfiglet`
 print(Style.BRIGHT + Fore.MAGENTA +
       pyfiglet.figlet_format("Dinner Party!", font="doom")
       + Fore.RESET)
@@ -107,7 +109,12 @@ def welcome():
     elif start == 'N':
         #  exit the program with a message
         _planning = False
-        print("Maybe some other time then. Bye for now!")
+        # clear the terminal
+        clear()
+        print("Maybe some other time then.\n")
+        print(Fore.MAGENTA +
+              pyfiglet.figlet_format("Bye for now!", font="doom")
+              + Fore.RESET)
 
 
 def ask_more():
