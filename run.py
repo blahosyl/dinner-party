@@ -15,7 +15,7 @@ import pyfiglet
 # import this module for classes custom written for this project
 import planner
 
-print(Fore.MAGENTA +
+print(Style.BRIGHT + Fore.MAGENTA +
       pyfiglet.figlet_format("Dinner Party!", font="doom")
       + Fore.RESET)
 print("\nDo you love hosting dinner parties?"
@@ -84,18 +84,17 @@ def welcome():
     # get global variable
     global _planning
     # ask user if they want to start planning, make input uppercase
-    start = input(Style.BRIGHT + Back.MAGENTA
+    start = input(Back.MAGENTA
                   + 'Would you like to plan a dinner party? (Y/N):'
-                  + Style.RESET_ALL
+                  + Back.RESET
                   + " ").upper()
     # validating the input
     # while the input is not one of the allowed options
     while not start == "Y" and not start == "N":
         # ask for input again, make input uppercase
-        start = input(Style.BRIGHT + Back.RED
+        start = input(Back.RED
                       + "I did not understand. Please type Y or N:"
-                      + Style.RESET_ALL
-                      + " ").upper()
+                      + Back.RESET + " ").upper()
     if start == 'Y':
         print("\nLet's get planning! 🍾\n")
         # sleep for 1.5 seconds after printing output
