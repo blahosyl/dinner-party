@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,19 +23,61 @@
         body {
             /* Custom styling for the Dinner Party Planner project */
             font-family: Verdana;
-          /* Custom styling for the Dinner Party Planner project
-          Based on American Pizza Order System by Iasmina Pal
-          https://github.com/useriasminna/american_pizza_order_system/ */
+        }
+
+        /* Custom styling for the Dinner Party Planner project
+        Based on American Pizza Order System by Iasmina Pal
+        https://github.com/useriasminna/american_pizza_order_system/ */
+
+
+        #main-container {
            display: flex;
            flex-direction: column;
            align-items: center;
-           justify-content: center;
+           justify-content: flex-start;
            height: 100vh;
            /* this does not work on Heroku with a relative file path in the directory */
            background-image: url("https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/sweet-potatoes.webp");
            background-size: cover;
            background-position: center;
        }
+
+       #main-container h1 {
+         color: white;
+         /* same color as the onions in the background image */
+         background-color: #7a2f40;
+         padding: 12px;
+         border-radius: 10px;
+         border: 2px solid white;
+         box-shadow: 5px 5px 2px white;
+         font-size: xx-large;
+       }
+
+       #logo{
+         margin-top: 5vh;
+         display: flex;
+         align-items: center;
+       }
+
+       #logo img{
+         border-radius: 10px;
+         border: 2px solid #7a2f40;
+         margin-left: 20px;
+         margin-right: 20px;
+         box-shadow: 5px 5px 2px #7a2f40
+        }
+
+        #author {
+          color: #7a2f40;
+          background-color: white;
+          padding: 4px;
+          border-radius: 4px;
+          margin-top: 20px;
+        }
+
+        #author a {
+          color: #7a2f40;
+        }
 
         /**
         * Default styles for xterm.js
@@ -182,15 +225,14 @@
         https://github.com/useriasminna/american_pizza_order_system/ */
         button {
             width: 200px;
-            height: 60px;
-            background-color: #7a2f40;;
+            height: 40px;
+            background-color: #5A5A26;
             color: white;
             text-transform: uppercase;
-            font-size: large;
             font-weight: bold;
-            margin: 20px;
+            margin: 10px;
+            border-radius: 4px;
             border: 2px solid white;
-            border-radius: 8px;
         }
 
         button:hover {
@@ -199,6 +241,22 @@
     </style>
 </head>
 
-@{body}
+<!-- Custom display for the Dinner Party Planner project
+Based on American Pizza Order System by Iasmina Pal
+https://github.com/useriasminna/american_pizza_order_system/ -->
+
+<body>
+    <main id="main-container">
+        <div id="logo">
+          <img src="https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/wine-glasses.webp" alt="Two purple wine glasses clinking" height="60">
+          <h1>Dinner Party Planner</h1>
+          <img src="https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/wine-glasses.webp" alt="Two purple wine glasses clinking" height="60">
+        </div>
+        @{body}
+        <div id="author">
+          Content and design by <a href="https://github.com/blahosyl/dinner-party" target="_blank" rel="noopener" aria-label="GitHub repository of this application (opens in a new tab)">Sylvia Blaho</a>
+        </div>
+    </main>
+</body>
 
 </html>
