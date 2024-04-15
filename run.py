@@ -15,9 +15,8 @@ import pyfiglet
 # import this module for classes custom written for this project
 import planner
 
-print(Style.BRIGHT)
-print(Fore.MAGENTA +
-      pyfiglet.figlet_format("Dinner Party Planner", font = "doom")
+print(Style.BRIGHT + Fore.MAGENTA +
+      pyfiglet.figlet_format("Dinner Party!", font="doom")
       + Fore.RESET)
 
 # Based on the Love Sandwiches project
@@ -80,12 +79,12 @@ def welcome():
     # get global variable
     global _planning
     # ask user if they want to start planning, make input uppercase
-    start = input(Back.MAGENTA + 'Would you like to plan a dinner party? (Y/N):' + Back.RESET + " ").upper()
+    start = input(Style.BRIGHT + Back.MAGENTA + 'Would you like to plan a dinner party? (Y/N):' + Back.RESET + " ").upper()
     # validating the input
     # while the input is not one of the allowed options
     while not start == "Y" and not start == "N":
         # ask for input again, make input uppercase
-        start = input(Back.RED + "I did not understand. Please type Y or N:" + Back.RESET + " ").upper()
+        start = input(Style.BRIGHT + Back.RED + "I did not understand. Please type Y or N:" + Back.RESET + " ").upper()
     if start == 'Y':
         print("\nLet's get planning! 🍾\n")
         # sleep for 1.5 seconds after printing output
@@ -115,7 +114,7 @@ def ask_more():
         # while the input is not one of the allowed options
         while not add_dish == "Y" and not add_dish == "N":
             # ask for input again, make input uppercase
-            add_dish = input(Fore.RED + "I did not understand. Please type Y or N:" + Fore.RESET + " ").upper()
+            add_dish = input(Back.RED + "I did not understand. Please type Y or N:" + Fore.RESET + " ").upper()
         if add_dish == 'Y':
             # planning remains True, keeps the loop running
             clear()
@@ -125,7 +124,7 @@ def ask_more():
         elif add_dish == 'N':
             _planning = False
             # print an empty line to visually separate the list
-            print('\n')
+            clear()
             print("Got it! That's all for now, then.\n")
             print(Fore.CYAN + "Here is your shopping list:" + Fore.RESET)
             _shopping_list.print_formatted(_shopping_list.list_data)

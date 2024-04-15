@@ -49,15 +49,15 @@ class DishList:
                                         + Back.RESET + " "))
                 while dish_number < 1 or dish_number > len(self.dish_data) - 1:
                     dish_number = int(
-                        input(Fore.RED + f"Number out of range. "
+                        input(Style.BRIGHT + Back.RED + f"Number out of range. "
                                          f"Please type a number between 1 and {len(self.dish_data) - 1}:"
-                              + Fore.RESET + " "))
+                              + Back.RESET + " "))
                 break
             except ValueError:
                 # while the input is not one of the allowed options
                 # ask for input again
-                print(Fore.RED + f"That is not a valid number. "
-                      f"Please type a whole number between 1 and {len(self.dish_data) - 1}." + Fore.RESET)
+                print(Back.RED + f"That is not a valid number. "
+                      f"Please type a whole number between 1 and {len(self.dish_data) - 1}." + Back.RESET)
 
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
@@ -153,7 +153,6 @@ class ShoppingList:
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
             print(Fore.CYAN + print_string + Fore.RESET)
-
 
     def get_ingredients(self, selection, recipe_data):
         """Get list of ingredients for a selected dish, print them out,
