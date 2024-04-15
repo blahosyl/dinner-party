@@ -49,12 +49,6 @@ Nevertheless, I chose to lightly alter the provided HTML/CSS code to make the de
 
 I chose a [background image](assets/images/sweet-potatoes.webp) of a colorful dish of sweet potatoes, purple onions and thyme being prepared, to illustrate the joy and labor that goes into throwing a dinner party.
 
-### Header
-
-I added the name of the app as an `h1` element before the Run button in the template. For its background, I used the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
-
-The heading text color is white, so that it provides sufficient contrast with the background (see [Color contrasts](#color-contrasts) for more details).
-
 ### Button design
 
 I changed the background color of the **Run Program** button to the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
@@ -85,20 +79,68 @@ I added some SEO meta tags to the HTML file, so that the site can be found more 
 I followed the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
 Iasmina Pal](https://github.com/useriasminna) in implementing the changes above.
 
-Extending their work, I have also changed the elements described below.
+### Rerolled design elements
 
-### Logo
+I made some additional changes based on the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) that I have decided to reroll: although the modified `layout.html` file passed validation, the deployed page did not. 
+
+<details>
+<summary>Click to see the details of the rerolll</summary>
+
+In addition to come styling in the `head` element, the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/)
+added the following code to `@body` in `layout.html`:
+
+```
+<body>
+    <main id="main-container">
+        <h1>AMERICAN PIZZA ORDER SYSTEM</h1>
+        @{body}
+    </main>
+</body>
+```
+
+I had adopted this this code, and also added a [logo to the header](#logo) and [my name and a link to the GitHub repository](#author-information-and-github-link).
+
+#### Header
+
+I added the name of the app as an `h1` element before the Run button in the template. For its background, I used the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
+
+The heading text color is white, so that it provides sufficient contrast with the background (see [Color contrasts](#color-contrasts) for more details).
+
+#### Logo
 
 I put the [image](assets/images/wine-glasses.webp) used for the favicon as a logo on each side of the header. Its design mirrors that of the box containing the header (box, border radius and shadow), but the colors are inverted.
+
+### Author information and GitHub link
+
+I added my name and the link to the application's repository under the terminal window, using the colors already defined above.
+
+
+![The rerolled site design](readme-pics/rerolled-design.png)
+
+Validating the resulting `html` file in itself passed without errors.
+
+![layout.html passes validation](readme-pics/html-validation-file.png)
+
+However, running HTML validation for [the deployed site](https://dinner-party-planner-ee795b43bd35.herokuapp.com/), produced an error of there being multiple `<body>` tags.
+I have deduced that the reason for this is that the Code Institute template adds a `<body>` tag as well, resulting in a duplicate.
+
+![The deployed site did not pass HTML validation](readme-pics/html-validation-error-start.png)
+
+![The code of the deployed site that did not pass HTML validation](readme-pics/html-validation-error-code.png)
+
+
+Accordingly, I have rerolled the changes to `layout.html` that involved adding `html` elements, and kept the styling  to modifications in the `head`.
+After this, both the modified `layout.html` file and the [the deployed site](https://dinner-party-planner-ee795b43bd35.herokuapp.com/) passed the W3C validator.
+
+![The deployed site passes HTML validation](readme-pics/html-validation-deployed.png)
+
+
+</details>
 
 ### Font
 
 I changed the font used from Arial to Verdana. This font [is considered the most legible](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).) of the popular web-safe fonts, especially for small screen sizes.
  
-### Author information and GitHub link
-
-I added my name and the link to the application's repository under the terminal window, using the colors already defined above.
-
 
 ## Accessibility
 
