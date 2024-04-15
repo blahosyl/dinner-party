@@ -94,6 +94,10 @@ I put the [image](assets/images/wine-glasses.webp) used for the favicon as a log
 
 I changed the font used from Arial to Verdana. This font [is considered the most legible](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).) of the popular web-safe fonts, especially for small screen sizes.
  
+### Author information and GitHub link
+
+I added my name and the link to the application's repository under the terminal window, using the colors already defined above.
+
 
 ## Accessibility
 
@@ -117,7 +121,11 @@ The paired colors have the following contrasts:
 |onion-purple 	|white 	|9.09:1 	| ✅ |
 |thyme-green	 	|white 	|7.17:1 	| ✅ |
 
+### Links
 
+The only link (to the GitHub repository) opens in a new window and has an aria-label.
+
+It is visually distinguished from the rest of the text by being underlined.
 
 ## Deployment
 
