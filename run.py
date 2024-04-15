@@ -154,7 +154,12 @@ def ask_more():
     else:
         # stop the loop
         _planning = False
-        print("You have selected all the dishes. Here is your shopping list:")
+        clear()
+        print("\nYou have selected all the dishes.")
+        print("\nHere comes your shopping list:")
+        # sleep for 1.5 seconds after printing output
+        sleep(1.5)
+        clear()
         _shopping_list.print_formatted(_shopping_list.list_data)
         print(goodbye_message)
         print(START_INSTRUCTION)
