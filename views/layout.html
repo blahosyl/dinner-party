@@ -38,7 +38,7 @@
            /* this does not work on Heroku with a relative file path in the directory */
            background-image: url("https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/sweet-potatoes.webp");
            background-size: cover;
-           background-position: : center;
+           background-position: center;
        }
 
        #main-container h1 {
@@ -52,13 +52,13 @@
          font-size: xx-large;
        }
 
-       logo{
+       #logo{
          margin-top: 5vh;
          display: flex;
          align-items: center;
        }
 
-       logo img{
+       #logo img{
          border-radius: 10px;
          border: 2px solid #7a2f40;
          margin-left: 20px;
@@ -246,11 +246,11 @@ https://github.com/useriasminna/american_pizza_order_system/ -->
 
 <body>
     <main id="main-container">
-        <logo>
-          <img src="https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/wine-glasses.webp" alt="Two purple wine glasses clinking" height="60rem">
+        <div id="logo">
+          <img src="https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/wine-glasses.webp" alt="Two purple wine glasses clinking" height="60">
           <h1>Dinner Party Planner</h1>
-          <img src="https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/wine-glasses.webp" alt="Two purple wine glasses clinking" height="60rem">
-        </logo>
+          <img src="https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/wine-glasses.webp" alt="Two purple wine glasses clinking" height="60">
+        </div>
         @{body}
         <div id="author">
           Content and design by <a href="https://github.com/blahosyl/dinner-party" target="_blank" rel="noopener" aria-label="GitHub repository of this application (opens in a new tab)">Sylvia Blaho</a>
