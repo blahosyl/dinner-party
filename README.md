@@ -55,6 +55,8 @@ I also horizontally centered all elements on the page and added some top margin 
 
 I also added a favicon showing a vector drawing of two wine glasses clinking, to symbolize the social nature of dinner parties. The color of  the graphic is a darker shade of the purple color chosen for the heading box.
 
+Additionally, I added some SEO meta tags to the HTML file.
+
 I followed the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
 Iasmina Pal](https://github.com/useriasminna) in implementing these changes.
 
