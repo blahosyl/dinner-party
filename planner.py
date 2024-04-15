@@ -45,16 +45,19 @@ class DishList:
         while True:
             try:
                 # ask user to select a dish number
-                dish_number = int(input("Type in the number of the dish you'd like to add: "))
+                dish_number = int(input(Back.MAGENTA + "Type in the number of the dish you'd like to add:"
+                                        + Back.RESET + " "))
                 while dish_number < 1 or dish_number > len(self.dish_data) - 1:
                     dish_number = int(
-                        input(f"Number out of range. Please type a number between 1 and {len(self.dish_data) - 1}: "))
+                        input(Fore.RED + f"Number out of range. "
+                                         f"Please type a number between 1 and {len(self.dish_data) - 1}:"
+                              + Fore.RESET + " "))
                 break
             except ValueError:
                 # while the input is not one of the allowed options
                 # ask for input again
-                print(f"That is not a valid number. "
-                      f"Please type a whole number between 1 and {len(self.dish_data) - 1}.")
+                print(Fore.RED + f"That is not a valid number. "
+                      f"Please type a whole number between 1 and {len(self.dish_data) - 1}." + Fore.RESET)
 
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
@@ -78,7 +81,7 @@ class DishList:
               \________/
             """
               )
-        print(Style.RESET_ALL)
+        print(Fore.RESET)
         # print the selected dish's name
         print(f'You have selected: {selected_dish}')
         # print an empty line to visually separate the list
@@ -149,7 +152,7 @@ class ShoppingList:
             # delete the opening and closing parenthesis
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
-            print(print_string)
+            print(Fore.CYAN + print_string + Fore.RESET)
 
 
     def get_ingredients(self, selection, recipe_data):
@@ -157,7 +160,7 @@ class ShoppingList:
         add them to the shopping list, return a list of lists
         """
 
-        print(f'Ingredients for {selection}')
+        print(Fore.CYAN + f'Ingredients for {selection}' + Fore.RESET)
         # get the index of the selected dish in the database
         selection_index = recipe_data[1].index(selection)
         # the list of ingredients for the selected dish
@@ -194,6 +197,6 @@ class ShoppingList:
                 # remove the two original items from shopping list
                 self.list_data.remove(x)
                 self.list_data.remove(y)
-        print('Shopping list updated\n')
+        print('\nShopping list updated\n')
         # ask_more()
         return self.list_data

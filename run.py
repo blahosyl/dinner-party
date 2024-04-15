@@ -12,7 +12,8 @@ from colorama import Fore, Back, Style
 # import this module for classes custom written for this project
 import planner
 
-print(Fore.CYAN +
+print(Style.BRIGHT)
+print(Fore.MAGENTA +
       r"""
      ____________
     <____________>
@@ -29,8 +30,7 @@ print(Fore.CYAN +
       /   ||   \
       \________/
     """
-      )
-print(Style.RESET_ALL)
+      + Fore.RESET)
 
 # Based on the Love Sandwiches project
 
@@ -92,23 +92,19 @@ def welcome():
     # get global variable
     global _planning
     # ask user if they want to start planning, make input uppercase
-    start = input('Would you like to plan a dinner party? (Y/N): ').upper()
+    start = input(Back.MAGENTA + 'Would you like to plan a dinner party? (Y/N):' + Back.RESET + " ").upper()
     # validating the input
     # while the input is not one of the allowed options
     while not start == "Y" and not start == "N":
         # ask for input again, make input uppercase
-        start = input(Fore.RED + "I did not understand. Please type Y or N ").upper()
-        # reset terminal color
-        print(Style.RESET_ALL)
+        start = input(Back.RED + "I did not understand. Please type Y or N:" + Back.RESET + " ").upper()
     if start == 'Y':
-        print(Back.GREEN + "Let's get planning! 🍾")
-        # reset terminal color
-        print(Style.RESET_ALL)
+        print("\nLet's get planning! 🍾\n")
         # sleep for 1.5 seconds after printing output
         sleep(1.5)
         # clear the console
         clear()
-        print("Here is the list of dishes you can choose from.")
+        print("\nHere is the list of dishes you can choose from.")
         #  start the addition cycle
         _planning = True
 
@@ -126,14 +122,12 @@ def ask_more():
     # check if there are dishes left (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list, make input uppercase
-        add_dish = input('Would you like to add another dish? (Y/N): ').upper()
+        add_dish = input(Back.MAGENTA + 'Would you like to add another dish? (Y/N):' + Back.RESET + " ").upper()
         # validating the input
         # while the input is not one of the allowed options
         while not add_dish == "Y" and not add_dish == "N":
             # ask for input again, make input uppercase
-            add_dish = input(Fore.RED + "I did not understand. Please type Y or N ").upper()
-            # reset terminal color
-            print(Style.RESET_ALL)
+            add_dish = input(Fore.RED + "I did not understand. Please type Y or N:" + Fore.RESET + " ").upper()
         if add_dish == 'Y':
             # planning remains True, keeps the loop running
             clear()
@@ -144,9 +138,10 @@ def ask_more():
             _planning = False
             # print an empty line to visually separate the list
             print('\n')
-            print("Got it! Here is your shopping list:")
+            print("Got it! That's all for now, then.\n")
+            print(Fore.CYAN + "Here is your shopping list:" + Fore.RESET)
             _shopping_list.print_formatted(_shopping_list.list_data)
-            print("Have fun!")
+            print("\n" + Fore.MAGENTA + "Have fun!" + Fore.RESET)
     else:
         # stop the loop
         _planning = False
