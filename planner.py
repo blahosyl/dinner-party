@@ -66,24 +66,6 @@ class DishList:
         clear()
         # print the selected dish's name
         print(f'You have selected: {selected_dish}')
-        print(Fore.CYAN +
-              r"""
-             ____________
-            <____________>
-            |            |
-            |            |
-            |            |
-             \          /
-              \________/
-                  ||
-                  ||
-                  ||
-                  ||
-               ___||___
-              /   ||   \
-              \________/
-            """
-              + Fore.RESET)
         # print an empty line to visually separate the list
         print('\n')
 
@@ -196,6 +178,6 @@ class ShoppingList:
                 # remove the two original items from shopping list
                 self.list_data.remove(x)
                 self.list_data.remove(y)
-        print('\nShopping list updated\n')
+        print('\nShopping list updated ✅\n')
         # ask_more()
         return self.list_data
