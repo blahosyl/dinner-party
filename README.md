@@ -43,28 +43,56 @@ Delete
 
 As this project is focused on the terminal functionalities rather than HTML/CSS, designing/altering these was an optional extra.
 
-Nevertheless, I chose to enhance the provided HTML/CSS code to make the deployed page more unique and appealing to users (as a terminal window on a plain white background is alienating to many people.
+Nevertheless, I chose to lightly alter the provided HTML/CSS code to make the deployed page more unique and appealing to users (as a terminal window on a plain white background is alienating to many people).
+
+### Background image
 
 I chose a [background image](assets/images/sweet-potatoes.webp) of a colorful dish of sweet potatoes, purple onions and thyme being prepared, to illustrate the joy and labor that goes into throwing a dinner party.
 
-The dominant light orange of the picture also harmonizes with the dark organe/pumpkin color of the button, which is the signature color of Code Institute.
+### Header
 
 I added the name of the app as an `h1` element before the Run button in the template. For its background, I used the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
 
-The heading tex color is white, so that it provides sufficient contrast with the background (see [Color contrasts](#color-contrasts) for more details).
+The heading text color is white, so that it provides sufficient contrast with the background (see [Color contrasts](#color-contrasts) for more details).
 
-I also horizontally centered all elements on the page and added some top margin for a more pleasing look.
+### Button design
 
-I also added a favicon showing a vector drawing of two wine glasses clinking, to symbolize the social nature of dinner parties. The color of  the graphic is a darker shade of the purple color chosen for the heading box.
+I changed the background color of the **Run Program** button to the dark green of the thyme in the background picture ((with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
+This color contrast with the white text was also checked for accessibility/legibility (see [Color contrasts](#color-contrasts) for more details).
+This color was chosen to harmonize with the image but still stand out from the rest of the elements on the page.
 
-Additionally, I added some SEO meta tags to the HTML file.
+For this purpose, I also decreased the border radius of the button, creating a transition between the rounded header and logo and the angular terminal window.
+
+I have also made the button and the text on it larger and increased the font weight.
+
+Finally, I added a hover cursor effect.
+
+### Alignment of elements
+
+I horizontally centered all elements on the page and added some top margin for a more pleasing look.
+
+### Favicon
+
+I added a favicon showing a vector drawing of two wine glasses clinking, to symbolize the social nature of dinner parties. The color of  the graphic is a darker shade of the purple color chosen for the heading box.
+
+### Meta tags
+
+I added some SEO meta tags to the HTML file, so that the site can be found more easily.
+
+### Design implementation credits
 
 I followed the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
-Iasmina Pal](https://github.com/useriasminna) in implementing these changes.
+Iasmina Pal](https://github.com/useriasminna) in implementing the changes above.
 
-I also put the [image](assets/images/wine-glasses.webp) used for the favicon as a logo on the site. Its design mirrors that of the box containing the header (box, border radius and shadow), but the colors are inverted.
+Extending their work, I have also changed the elements described below.
 
-In addition, I changed the font used from Arial to Verdana. This font [is considered the most legible](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).) of the popular web-safe fonts, especially for small screen sizes.
+### Logo
+
+I put the [image](assets/images/wine-glasses.webp) used for the favicon as a logo on each side of the header. Its design mirrors that of the box containing the header (box, border radius and shadow), but the colors are inverted.
+
+### Font
+
+I changed the font used from Arial to Verdana. This font [is considered the most legible](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).) of the popular web-safe fonts, especially for small screen sizes.
  
 
 ## Accessibility
@@ -73,18 +101,22 @@ In addition, I changed the font used from Arial to Verdana. This font [is consid
 
 The [WebAIM](https://webaim.org/resources/contrastchecker/) was used to ensure that the text and background color of the heading provides sufficient contrast for legibility.
 
-The color variable names used in the project are as follows:
+The colors used in the project are as follows:
 
 |color name 	|HEX code|
 |---			|---	|
 |white			|#FFFFFF| 
 |onion-purple	|#7A2F40| 
+|thyme-green	|#5A5A26| 
+
 
 The paired colors have the following contrasts:
 
 | color 1 |color 2 |contrast | [WCAG AAA](https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/) |
 |---			|---		|:---:		|:---:|
 |onion-purple 	|white 	|9.09:1 	| ✅ |
+|thyme-green	 	|white 	|7.17:1 	| ✅ |
+
 
 
 ## Deployment
