@@ -65,7 +65,7 @@ class DishList:
 
         clear()
         # print the selected dish's name
-        print(f'You have selected: {selected_dish}')
+        print(f'\nYou have selected: {selected_dish}')
         # print an empty line to visually separate the list
         print('\n')
 

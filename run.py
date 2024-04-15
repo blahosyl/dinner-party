@@ -112,7 +112,7 @@ def welcome():
         _planning = False
         # clear the terminal
         clear()
-        print("Maybe some other time then.\n")
+        print("\nMaybe some other time then.\n")
         print(Fore.MAGENTA +
               pyfiglet.figlet_format("Bye for now!", font="doom")
               + Fore.RESET)
@@ -141,9 +141,7 @@ def ask_more():
         if add_dish == 'Y':
             # planning remains True, keeps the loop running
             clear()
-            # print an empty line to visually separate the list
-            print('\n')
-            print("Cool, here is the list of dishes again:")
+            print("\nCool, here is the list of dishes again:")
         elif add_dish == 'N':
             _planning = False
             # print an empty line to visually separate the list
