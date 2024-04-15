@@ -53,10 +53,14 @@ The heading tex color is white, so that it provides sufficient contrast with the
 
 I also horizontally centered all elements on the page and added some top margin for a more pleasing look.
 
+I also added a favicon showing a vector drawing of two wine glasses clinking, to symbolize the social nature of dinner parties. The color of  the graphic is a darker shade of the purple color chosen for the heading box.
+
 I followed the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
 Iasmina Pal](https://github.com/useriasminna) in implementing these changes.
 
 In addition, I changed the font used from Arial to Verdana. This font [is considered the most legible](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).) of the popular web-safe fonts, especially for small screen sizes.
+
+I also put the [image](assets/images/wine-glasses.webp) used for the favicon as a logo on the site. Its design mirrors that of the box containing the header (box, border radius and shadow), but the colors are inverted.
  
 
 ## Accessibility
@@ -249,7 +253,7 @@ All text content was written by me.
 [Background image](assets/images/sweet-potatoes.webp) by me, coverted to `webp` with [CloudConvert]((https://cloudconvert.com/jpeg-to-webp)
 ).
 
-Image for the favicon from [Vecteezy](https://www.vecteezy.com/vector-art/2602820-wine-cups-glasses-toasting-line-style-icon), converted to `png` format with Preview, converted to `ico` format with [Favicon.io](https://favicon.io/).
+[Image](assets/images/wine-glasses.webp) for the favicon and logo from [Vecteezy](https://www.vecteezy.com/vector-art/2602820-wine-cups-glasses-toasting-line-style-icon), converted to `png` format with Preview, converted to `ico` format with [Favicon.io](https://favicon.io/), coverted to `webp` with [CloudConvert](https://cloudconvert.com/jpeg-to-webp).
 
 ### Readme
 

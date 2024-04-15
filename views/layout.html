@@ -41,13 +41,21 @@
          /* same color as the onions in the background image */
          background-color: #7a2f40;
          padding: 12px;
-         border-radius: 5px;
+         border-radius: 10px;
          border: 2px solid white;
          box-shadow: 5px 5px 2px white;
          font-size: xx-large;
+       }
+
+       logo{
          margin-top: 10vh;
        }
 
+       logo img{
+         border-radius: 10px;
+         border: 2px solid #7a2f40;
+         box-shadow: -5px -5px 2px #7a2f40;
+       }
 
         /**
         * Default styles for xterm.js
@@ -209,6 +217,9 @@ https://github.com/useriasminna/american_pizza_order_system/ -->
 
 <body>
     <main id="main-container">
+        <logo>
+          <img src="../assets/images/wine-glasses.webp" alt="Two purple wine glasses clinking" height="80rem">
+        </logo>
         <h1>Dinner Party Planner</h1>
         @{body}
     </main>
