@@ -15,9 +15,14 @@ import pyfiglet
 # import this module for classes custom written for this project
 import planner
 
-print(Style.BRIGHT + Fore.MAGENTA +
+print(Fore.MAGENTA +
       pyfiglet.figlet_format("Dinner Party!", font="doom")
       + Fore.RESET)
+print("\nDo you love hosting dinner parties?"
+      "\nThis app helps you plan them!"
+      "\nJust select the dishes or drinks you want to make for your guests,"
+      "and the app generates a shopping list for you!\n")
+
 
 # Based on the Love Sandwiches project
 
@@ -79,12 +84,18 @@ def welcome():
     # get global variable
     global _planning
     # ask user if they want to start planning, make input uppercase
-    start = input(Style.BRIGHT + Back.MAGENTA + 'Would you like to plan a dinner party? (Y/N):' + Back.RESET + " ").upper()
+    start = input(Style.BRIGHT + Back.MAGENTA
+                  + 'Would you like to plan a dinner party? (Y/N):'
+                  + Style.RESET_ALL
+                  + " ").upper()
     # validating the input
     # while the input is not one of the allowed options
     while not start == "Y" and not start == "N":
         # ask for input again, make input uppercase
-        start = input(Style.BRIGHT + Back.RED + "I did not understand. Please type Y or N:" + Back.RESET + " ").upper()
+        start = input(Style.BRIGHT + Back.RED
+                      + "I did not understand. Please type Y or N:"
+                      + Style.RESET_ALL
+                      + " ").upper()
     if start == 'Y':
         print("\nLet's get planning! 🍾\n")
         # sleep for 1.5 seconds after printing output
@@ -125,7 +136,7 @@ def ask_more():
             _planning = False
             # print an empty line to visually separate the list
             clear()
-            print("Got it! That's all for now, then.\n")
+            print("\nGot it! That's all for now, then.\n")
             print(Fore.CYAN + "Here is your shopping list:" + Fore.RESET)
             _shopping_list.print_formatted(_shopping_list.list_data)
             print("\n" + Fore.MAGENTA + "Have fun!" + Fore.RESET)
