@@ -124,7 +124,9 @@ def ask_more():
         # while the input is not one of the allowed options
         while not add_dish == "Y" and not add_dish == "N":
             # ask for input again, make input uppercase
-            add_dish = input(Back.RED + "I did not understand. Please type Y or N:" + Fore.RESET + " ").upper()
+            add_dish = input(Back.RED
+                             + "I did not understand. Please type Y or N:"
+                             + Back.RESET + " ").upper()
         if add_dish == 'Y':
             # planning remains True, keeps the loop running
             clear()
