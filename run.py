@@ -159,7 +159,6 @@ def ask_more():
         print("\nHere comes your shopping list:")
         # sleep for 1.5 seconds after printing output
         sleep(1.5)
-        clear()
         _shopping_list.print_formatted(_shopping_list.list_data)
         print(goodbye_message)
         print(START_INSTRUCTION)
