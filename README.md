@@ -39,6 +39,46 @@ Delete
 
 [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
 
+## Design
+
+As this project is focused on the terminal functionalities rather than HTML/CSS, designing/altering these was an optional extra.
+
+Nevertheless, I chose to enhance the provided HTML/CSS code to make the deployed page more unique and appealing to users (as a terminal window on a plain white background is alienating to many people.
+
+I chose a [background image](assets/images/sweet-potatoes.webp) of a colorful dish of sweet potatoes, purple onions and thyme being prepared, to illustrate the joy and labor that goes into throwing a dinner party.
+
+I added the name of the app as an `h1` element before the Run button in the template. For its background, I used the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
+
+The heading tex color is white, so that it provides sufficient contrast with the background (see [Color contrasts](#color-contrasts) for more details).
+
+I also horizontally centered all elements on the page and added some top margin for a more pleasing look.
+
+I followed the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
+Iasmina Pal](https://github.com/useriasminna) in implementing these changes.
+
+In addition, I changed the font used from Arial to Verdana. This font [is considered the most legible](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).) of the popular web-safe fonts, especially for small screen sizes.
+ 
+
+## Accessibility
+
+### Color contrasts
+
+The [WebAIM](https://webaim.org/resources/contrastchecker/) was used to ensure that the text and background color of the heading provides sufficient contrast for legibility.
+
+The color variable names used in the project are as follows:
+
+|color name 	|HEX code|
+|---			|---	|
+|white			|#FFFFFF| 
+|onion-purple	|#7A2F40| 
+
+The paired colors have the following contrasts:
+
+| color 1 |color 2 |contrast | [WCAG AAA](https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/) |
+|---			|---		|:---:		|:---:|
+|onion-purple 	|white 	|9.09:1 	| ✅ |
+
+
 ## Deployment
 
 ### Fork the repository
@@ -84,6 +124,7 @@ Which libraries are used and what their purpose is, why they are needed
 ### Tools used
 
 - [Convert images to `webp` format](https://cloudconvert.com/jpeg-to-webp)
+- [Pick colors from an image](https://imagecolorpicker.com/)
 
 ## Testing
 
@@ -185,6 +226,8 @@ The following resources were used to learn/double check general, atomic function
 - [Escape special characters in ACII art](https://code-institute-room.slack.com/archives/C027C3S3TEU/p1636456674153400?thread_ts=1636388878.151000&cid=C027C3S3TEU
 )
 - [String literals with `r`](https://stackoverflow.com/a/4780104/24248624)
+- [Web-safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php)
+- [Verdana properties](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).)	
 
 ### Code
 
@@ -203,7 +246,7 @@ All text content was written by me.
 
 #### Images
 
-[Cover image](assets/images/sweet-potatoes.webp) by me, coverted to `webp` with [CloudConvert]((https://cloudconvert.com/jpeg-to-webp)
+[Background image](assets/images/sweet-potatoes.webp) by me, coverted to `webp` with [CloudConvert]((https://cloudconvert.com/jpeg-to-webp)
 ).
 
 ### Readme
