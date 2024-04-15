@@ -163,6 +163,9 @@ The following resources were used to learn/double check general, atomic function
 - [`partition` method example ](https://stackoverflow.com/a/54608451/24248624)
 - [`partition` method on W3Schools](https://www.w3schools.com/python/ref_string_partition.asp)
 - [`colorama` documentation](https://pypi.org/project/colorama/)
+- [escaping characters in ACII art](https://code-institute-room.slack.com/archives/C027C3S3TEU/p1636456674153400?thread_ts=1636388878.151000&cid=C027C3S3TEU
+)
+- [string literals with `r`](https://stackoverflow.com/a/4780104/24248624)
 
 ### Code
 
