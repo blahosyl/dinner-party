@@ -116,6 +116,7 @@ def ask_more():
     # get global variables
     global _dishes
     global _planning
+    goodbye_message = "\n" + Fore.MAGENTA + "Have fun! 🍸 🍽 🍱 🧁" + Fore.RESET
     # check if there are dishes left (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list, make input uppercase
@@ -140,13 +141,13 @@ def ask_more():
             print("\nGot it! That's all for now, then.\n")
             print(Fore.GREEN + "Here is your shopping list:" + Fore.RESET)
             _shopping_list.print_formatted(_shopping_list.list_data)
+            print(goodbye_message)
     else:
         # stop the loop
         _planning = False
         print("You have selected all the dishes. Here is your shopping list:")
         _shopping_list.print_formatted(_shopping_list.list_data)
-    # goodbye message
-    print("\n" + Fore.MAGENTA + "Have fun! 🍸 🍽 🍱 🧁" + Fore.RESET)
+        print(goodbye_message)
 
 
 welcome()
