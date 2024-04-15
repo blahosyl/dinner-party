@@ -47,6 +47,8 @@ Nevertheless, I chose to enhance the provided HTML/CSS code to make the deployed
 
 I chose a [background image](assets/images/sweet-potatoes.webp) of a colorful dish of sweet potatoes, purple onions and thyme being prepared, to illustrate the joy and labor that goes into throwing a dinner party.
 
+The dominant light orange of the picture also harmonizes with the dark organe/pumpkin color of the button, which is the signature color of Code Institute.
+
 I added the name of the app as an `h1` element before the Run button in the template. For its background, I used the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
 
 The heading tex color is white, so that it provides sufficient contrast with the background (see [Color contrasts](#color-contrasts) for more details).
