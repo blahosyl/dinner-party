@@ -136,7 +136,7 @@ def ask_more():
             # print an empty line to visually separate the list
             clear()
             print("\nGot it! That's all for now, then.\n")
-            print(Fore.CYAN + "Here is your shopping list:" + Fore.RESET)
+            print(Fore.GREEN + "Here is your shopping list:" + Fore.RESET)
             _shopping_list.print_formatted(_shopping_list.list_data)
     else:
         # stop the loop

@@ -152,14 +152,14 @@ class ShoppingList:
             # delete the opening and closing parenthesis
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
-            print(Fore.CYAN + print_string + Fore.RESET)
+            print(Fore.GREEN + print_string + Fore.RESET)
 
     def get_ingredients(self, selection, recipe_data):
         """Get list of ingredients for a selected dish, print them out,
         add them to the shopping list, return a list of lists
         """
 
-        print(Fore.CYAN + f'Ingredients for {selection}' + Fore.RESET)
+        print(Fore.GREEN + f'Ingredients for {selection}' + Fore.RESET)
         # get the index of the selected dish in the database
         selection_index = recipe_data[1].index(selection)
         # the list of ingredients for the selected dish
