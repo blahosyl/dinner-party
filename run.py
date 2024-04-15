@@ -23,7 +23,6 @@ print("\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳"
       "\nJust select the dishes or drinks you want to make for your guests,"
       "\nand the app generates a shopping list for you!\n")
 
-
 # Based on the Love Sandwiches project
 
 # import entire library
@@ -116,7 +115,10 @@ def ask_more():
     # get global variables
     global _dishes
     global _planning
-    goodbye_message = "\n" + Fore.MAGENTA + "Have fun! 🍸 🍽 🍱 🧁" + Fore.RESET
+    # goodbye_message = "\n" + Fore.MAGENTA + "Have fun! 🍸 🍽 🍱 🧁" + Fore.RESET
+    goodbye_message = "\n" + Fore.MAGENTA \
+                      + pyfiglet.figlet_format("Have fun!", font="doom")\
+                      + Fore.RESET
     # check if there are dishes left (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list, make input uppercase
