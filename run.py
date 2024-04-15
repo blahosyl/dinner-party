@@ -18,10 +18,10 @@ import planner
 print(Style.BRIGHT + Fore.MAGENTA +
       pyfiglet.figlet_format("Dinner Party!", font="doom")
       + Fore.RESET)
-print("\nDo you love hosting dinner parties?"
+print("\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳"
       "\nThis app helps you plan them!"
       "\nJust select the dishes or drinks you want to make for your guests,"
-      "and the app generates a shopping list for you!\n")
+      "\nand the app generates a shopping list for you!\n")
 
 
 # Based on the Love Sandwiches project
@@ -138,13 +138,13 @@ def ask_more():
             print("\nGot it! That's all for now, then.\n")
             print(Fore.CYAN + "Here is your shopping list:" + Fore.RESET)
             _shopping_list.print_formatted(_shopping_list.list_data)
-            print("\n" + Fore.MAGENTA + "Have fun!" + Fore.RESET)
     else:
         # stop the loop
         _planning = False
         print("You have selected all the dishes. Here is your shopping list:")
         _shopping_list.print_formatted(_shopping_list.list_data)
-        print("Have fun!")
+    # goodbye message
+    print("\n" + Fore.MAGENTA + "Have fun! 🍸 🍽 🍱 🧁" + Fore.RESET)
 
 
 welcome()

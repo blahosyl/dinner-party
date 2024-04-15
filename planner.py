@@ -64,6 +64,8 @@ class DishList:
         selected_dish = self.dish_data[int(dish_number)]
 
         clear()
+        # print the selected dish's name
+        print(f'You have selected: {selected_dish}')
         print(Fore.CYAN +
               r"""
              ____________
@@ -81,10 +83,7 @@ class DishList:
               /   ||   \
               \________/
             """
-              )
-        print(Fore.RESET)
-        # print the selected dish's name
-        print(f'You have selected: {selected_dish}')
+              + Fore.RESET)
         # print an empty line to visually separate the list
         print('\n')
 
