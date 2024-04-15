@@ -191,6 +191,8 @@ The following resources were used to learn/double check general, atomic function
 The following sources contributed code or suggestions to specific functions within the project:
 
 - Rory Patrick Sheridan, my mentor, gave suggestions, helped me solve or spotted bugs described in [these Issues](https://github.com/blahosyl/dinner-party/issues?q=is%3Aissue+label%3Amentor) (see the Issue descriptions and comments for details).
+- Modifying the Code Institute template to change some HTML/CSS elements was done on the basis of the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
+Iasmina Pal](https://github.com/useriasminna).
 
 
 ### Content
@@ -200,6 +202,9 @@ All text content was written by me.
 ### Media
 
 #### Images
+
+[Cover image](assets/images/sweet-potatoes.webp) by me, coverted to `webp` with [CloudConvert]((https://cloudconvert.com/jpeg-to-webp)
+).
 
 ### Readme
 
