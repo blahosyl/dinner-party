@@ -16,3 +16,4 @@ urllib3==2.2.1
 
 colorama~=0.4.6
 ascii-magic~=2.3.0
+pyfiglet~=1.0.2
