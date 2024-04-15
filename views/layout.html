@@ -25,8 +25,10 @@
            align-items: center;
            justify-content: flex-start;
            height: 100vh;
-           background-image: url("../assets/images/sweet-potatoes.webp");
+           /* this does not work on Heroku with a relative file path in the directory */
+           background-image: url("https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/sweet-potatoes.webp");
            background-size: cover;
+           background-position: : center;
        }
 
        #main-container h1 {
