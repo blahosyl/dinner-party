@@ -52,13 +52,16 @@
 
        logo{
          margin-top: 5vh;
+         display: flex;
+         align-items: center;
        }
 
        logo img{
          border-radius: 10px;
          border: 2px solid #7a2f40;
-         box-shadow: -5px -5px 2px #7a2f40;
-       }
+         box-shadow: 5px 5px 2px #7a2f40;
+         margin-right: 20px;
+        }
 
         /**
         * Default styles for xterm.js
@@ -230,8 +233,8 @@ https://github.com/useriasminna/american_pizza_order_system/ -->
     <main id="main-container">
         <logo>
           <img src="https://raw.githubusercontent.com/blahosyl/dinner-party/main/assets/images/wine-glasses.webp" alt="Two purple wine glasses clinking" height="60rem">
+          <h1>Dinner Party Planner</h1>
         </logo>
-        <h1>Dinner Party Planner</h1>
         @{body}
     </main>
 </body>
