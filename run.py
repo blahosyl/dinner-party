@@ -43,6 +43,7 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('ingredients')
+START_INSTRUCTION ="\nPress RUN PROGRAM to start again"
 
 recipes = SHEET.worksheet('main')
 
@@ -115,6 +116,7 @@ def welcome():
         print(Fore.MAGENTA +
               pyfiglet.figlet_format("Bye for now!", font="doom")
               + Fore.RESET)
+        print(START_INSTRUCTION)
 
 
 def ask_more():
@@ -122,7 +124,6 @@ def ask_more():
     # get global variables
     global _dishes
     global _planning
-    # goodbye_message = "\n" + Fore.MAGENTA + "Have fun! 🍸 🍽 🍱 🧁" + Fore.RESET
     goodbye_message = "\n" + Fore.MAGENTA \
                       + pyfiglet.figlet_format("Have fun!", font="doom")\
                       + Fore.RESET
@@ -151,12 +152,14 @@ def ask_more():
             print(Fore.GREEN + "Here is your shopping list:" + Fore.RESET)
             _shopping_list.print_formatted(_shopping_list.list_data)
             print(goodbye_message)
+            print(START_INSTRUCTION)
     else:
         # stop the loop
         _planning = False
         print("You have selected all the dishes. Here is your shopping list:")
         _shopping_list.print_formatted(_shopping_list.list_data)
         print(goodbye_message)
+        print(START_INSTRUCTION)
 
 
 welcome()
