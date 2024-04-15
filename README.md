@@ -249,6 +249,8 @@ All text content was written by me.
 [Background image](assets/images/sweet-potatoes.webp) by me, coverted to `webp` with [CloudConvert]((https://cloudconvert.com/jpeg-to-webp)
 ).
 
+Image for the favicon from [Vecteezy](https://www.vecteezy.com/vector-art/2602820-wine-cups-glasses-toasting-line-style-icon), converted to `png` format with Preview, converted to `ico` format with [Favicon.io](https://favicon.io/).
+
 ### Readme
 
 - [Creating your first README with Kera Cudmore](https://www.youtube.com/watch?v=XbYJ4VlhSnY) by Code Institute
