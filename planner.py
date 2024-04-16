@@ -10,6 +10,10 @@ from colorama import Fore, Back, Style
 # for the `clear()` function
 from os import system, name
 
+# import sleep to show output for some time period
+# package suggested by my mentor
+from time import sleep
+
 
 # provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
 def clear():
@@ -69,11 +73,12 @@ class DishList:
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
 
-        clear()
         # print the selected dish's name
         print(f'\nYou have selected: {selected_dish}')
-        # print an empty line to visually separate the list
-        print('\n')
+        # sleep for 1.5 seconds after printing output
+        sleep(1.5)
+        # clear the console
+        clear()
 
         # remove the selected dish from the list of available dishes
         self.dish_data.remove(selected_dish)

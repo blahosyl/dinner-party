@@ -117,8 +117,11 @@ def welcome():
         #  exit the program with a message
         _planning = False
         # clear the terminal
-        clear()
         print("\nMaybe some other time, then.\n")
+        # sleep for 1.5 seconds after printing output
+        sleep(1.5)
+        # clear the console
+        clear()
         print(Fore.MAGENTA +
               pyfiglet.figlet_format("Bye for now!", font="doom")
               + Fore.RESET)
@@ -157,21 +160,24 @@ def ask_more():
             print("\nCool, here is the list of dishes again:")
         elif add_dish == 'N':
             _planning = False
-            # print an empty line to visually separate the list
-            clear()
             print("\nGot it! That's all for now, then.\n")
-            print(Fore.GREEN + "Here is your shopping list:" + Fore.RESET)
+            print("\nHere comes your shopping list:")
+            # sleep for 1.5 seconds after printing output
+            sleep(1.5)
+            # clear the screen
+            clear()
             _shopping_list.print_formatted(_shopping_list.list_data)
             print(goodbye_message)
             print(START_INSTRUCTION)
     else:
         # stop the loop
         _planning = False
-        clear()
         print("\nYou have selected all the dishes.")
         print("\nHere comes your shopping list:")
         # sleep for 1.5 seconds after printing output
         sleep(1.5)
+        # clear the screen
+        clear()
         _shopping_list.print_formatted(_shopping_list.list_data)
         print(goodbye_message)
         print(START_INSTRUCTION)
