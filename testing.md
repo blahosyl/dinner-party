@@ -11,6 +11,10 @@ This document describes the testing procedures for the [Dinner Party app](README
 - all variable names are in `snake_case`.
 - following my mentor's suggestion, I changed the names of global variables (that are not constants) so that they always start with an underscore: `_global_variable`.
 
+### PIP8 validation
+
+###HTML/CSS validation
+
 
 ## User input validation
 
@@ -21,7 +25,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 
 `Would you like to plan a dinner party? (Y/N):`
 
-**Single-step test cases**
+#### Single-step test cases
 
 
 |Input						|Expected answer	|Result|
@@ -35,7 +39,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` or `n`			|Maybe some other time, then.| |
 
 
-**Double-step test cases**
+#### Double-step test cases
 
 
 |Shorthand	| Stands for|
@@ -63,7 +67,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 
 `Would you like to add another dish? (Y/N):`
 
-**Single-step test cases**
+#### Single-step test cases
 
 
 |Input						|Expected answer	|Result|
@@ -76,7 +80,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`Y` or `y`			|Cool, here is the list of dishes again:| |
 |`N` or `n`			|Got it! That's all for now, then.| |
 
-**Double-step test cases**
+#### Double-step test cases
 
 
 |Shorthand	| Stands for|
@@ -102,7 +106,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 
 ### Integer from a range
 
-**Single-step test cases**
+#### Single-step test cases
 
 
 `Type in the number of the dish you'd like to add:`
@@ -118,8 +122,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |integer outside the range	|Number out of range. Please type a number between 1 and `<range>`:| |
 |integer from the specified range	|You have selected: `<dish>`| |
 
-**Double-step test cases**
-
+#### Double-step test cases
 
 |Shorthand	| Stands for|
 |---			|---		|
@@ -142,12 +145,6 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`INT`✅ then `INT`❌		|*not possible, program continues after 1st input*| |
 
 
-
-Combinations:
-
-- integer outside the range THEN non-number character
-- non-number character THEN integer outside the range
-
 ## Flow testing
 
 - if the user answers `N` to the 1st question: end with message
@@ -165,6 +162,6 @@ Combinations:
 	- print shopping list 
 	- end program
 
-### Database data validation (optional)
+### Database data validation (to be automated)
 
 Check if ingredient cell contains `(`
