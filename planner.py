@@ -54,14 +54,16 @@ class DishList:
                 while dish_number < 1 or dish_number > len(self.dish_data) - 1:
                     dish_number = int(
                         input(Back.RED + f"Number out of range. "
-                                         f"Please type a number between 1 and {len(self.dish_data) - 1}:"
+                                         f"Please type a number between 1 and "
+                                         f"{len(self.dish_data) - 1}:"
                               + Back.RESET + " "))
                 break
             except ValueError:
                 # while the input is not one of the allowed options
                 # ask for input again
                 print(Back.RED + f"That is not a valid number. "
-                                 f"Please type a whole number between 1 and {len(self.dish_data) - 1}."
+                                 f"Please type a whole number between 1 and "
+                                 f"{len(self.dish_data) - 1}."
                       + Back.RESET)
 
         # get the dish with the selected number from the `dishes` list
@@ -127,14 +129,14 @@ class ShoppingList:
                 unit_name = abbr
             # replace a parenthesis+abbreviation with parenthesis+unit name
             print_string = print_string.replace('(' + abbr, '(' + unit_name)
-            # end of code to replace measurement unit abbreviation with full name
+            # end of code to replace measurement abbreviation with full name
             # 1 left of the opening bracket, add the following:
             # a colon
             # the quantity (second item of the list)
             print_string = print_string[:opening - 1] \
-                           + ': ' \
-                           + f"{ingredient_list[i][1]:g}" \
-                           + print_string[opening - 1:]
+                + ': ' \
+                + f"{ingredient_list[i][1]:g}" \
+                + print_string[opening - 1:]
             # delete the opening and closing parenthesis
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
@@ -152,10 +154,12 @@ class ShoppingList:
         dish_ingredients = []
         # go through each row
         for row in recipe_data:
-            # if the cell in the row under the selected dish has content (ingredient quantity)
+            # if the cell in the row under the selected dish has content
+            # (ingredient quantity)
             # and it's not one of the first 2 rows
             if row[selection_index] and recipe_data.index(row) > 1:
-                # add the list [ingredient, quantity(converted to a float)] to the shopping list
+                # add the list [ingredient, quantity(converted to a float)]
+                # to the shopping list
                 dish_ingredients.append([row[0], float(row[selection_index])])
         # sort list alphabetically
         dish_ingredients.sort()
@@ -169,19 +173,22 @@ class ShoppingList:
         return self.list_data
 
     def unify_ingredients(self, selection, recipe_data):
-        """Check shopping list for pairs of items (lists) where the ingredient is the same.
+        """Check shopping list for pairs of items (lists)
+        where the ingredient is the same.
         Add quantities of the ingredient together.
         Return modified shopping list."""
         # this needs to be run every time items are added to the shopping list
         self.list_data = self.get_ingredients(selection, recipe_data)
         # get all pairs of items within the shopping list item
         for x, y in itertools.combinations(self.list_data, 2):
-            # if the ingredient name and unit (first item of both lists) is the same
+            # if the ingredient name and unit (first item of both lists)
+            # is the same
             if x[0] == y[0]:
                 # TESTING: print for testing/development
                 # print pairs of items where the ingredient is the same
                 # print(x, y)
-                # add a new item (list) with this ingredient name and unit as its first item,
+                # add a new item (list)
+                # with this ingredient name and unit as its first item,
                 # and the sum of the two quantities as the second item
                 self.list_data.append([x[0], x[1] + y[1]])
                 # remove the two original items from shopping list

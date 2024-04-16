@@ -1,3 +1,12 @@
+# Based on the Love Sandwiches project
+
+# import entire library
+import gspread
+# import 1 class from a library
+from google.oauth2.service_account import Credentials
+
+# end of code based on the Love Sandwiches project
+
 # for the `clear()` function
 from os import system, name
 
@@ -26,12 +35,6 @@ print("\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳"
       "\nand the app generates a shopping list for you!\n")
 
 # Based on the Love Sandwiches project
-
-# import entire library
-import gspread
-# import 1 class from a library
-from google.oauth2.service_account import Credentials
-
 # constant specifying what the Robot user has access to
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -43,7 +46,7 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('ingredients')
-START_INSTRUCTION ="\nPress RUN PROGRAM to start again"
+START_INSTRUCTION = "\nPress RUN PROGRAM to start again"
 
 recipes = SHEET.worksheet('main')
 
@@ -56,12 +59,14 @@ _data = recipes.get_all_values()
 # row 0 is the type of dish: starter, main, dessert or drink
 # row 1 of `data` is the list of dishes
 # item 0 of each row is the ingredient
-# subsequent items of each row are the quantity of ingredients needed for the corresponding dish
+# subsequent items of each row are the quantity of ingredients
+# needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
 # global variables
 # the row containing the names of dishes
-# the [:] at the end copies the list, so that `dishes` can be changed without `data[1]` also changing
+# the [:] at the end copies the list, so that `dishes` can be changed
+# without `data[1]` also changing
 DISHES_ROW = _data[1][:]
 # create a list object with `dishes_row` as the input
 _dishes = planner.DishList(DISHES_ROW)
@@ -120,17 +125,24 @@ def welcome():
 
 
 def ask_more():
-    """Ask the user if they want to add more dishes if there are dishes left on the list"""
+    """
+    If there are dishes left on the list,
+    ask the user if they want to add more dishes
+    """
     # get global variables
     global _dishes
     global _planning
     goodbye_message = "\n" + Fore.MAGENTA \
                       + pyfiglet.figlet_format("Have fun!", font="doom")\
                       + Fore.RESET
-    # check if there are dishes left (note: dishes[0] = '', so this should not be counted)
+    # check if there are dishes left
+    # (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
-        # ask user if they want to add a dish to the shopping list, make input uppercase
-        add_dish = input(Back.MAGENTA + 'Would you like to add another dish? (Y/N):' + Back.RESET + " ").upper()
+        # ask user if they want to add a dish to the shopping list,
+        # make input uppercase
+        add_dish = input(Back.MAGENTA
+                         + 'Would you like to add another dish? (Y/N):'
+                         + Back.RESET + " ").upper()
         # validating the input
         # while the input is not one of the allowed options
         while not add_dish == "Y" and not add_dish == "N":
