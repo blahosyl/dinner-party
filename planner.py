@@ -54,25 +54,30 @@ class DishList:
         # validating the input
         while True:
             try:
+                # need to separate `input` and `int` to be able to print
+                # the incorrect user input in the `except` block
+                # Victor Haffreingue and Zerina Johansson helped me solve this
                 # ask user to select a dish number
-                dish_number = int(input(Back.MAGENTA + "Type in the "
-                                        + Fore.GREEN + "number " + Fore.RESET
-                                        + "of the dish you'd like to add:"
-                                        + Back.RESET + " "))
+                dish_number = input(Back.MAGENTA + "Type in the "
+                                    + Fore.GREEN + "number " + Fore.RESET
+                                    + "of the dish you'd like to add:"
+                                    + Back.RESET + " ")
+                # convert user input to integer
                 while dish_number < 1 or dish_number > len(self.dish_data) - 1:
                     dish_number = int(
                         input(Back.RED + f'Number "' + Fore.CYAN + f'{dish_number}'
                               + Fore.RESET + '" out of range 🤔 '
-                                         f"Please type a number between 1 and "
-                                         f"{len(self.dish_data) - 1}:"
+                                             f"Please type a number between 1 and "
+                                             f"{len(self.dish_data) - 1}:"
                               + Back.RESET + " "))
                 break
             except ValueError:
                 # while the input is not one of the allowed options
                 # ask for input again
-                print(Back.RED + f"That is not a valid number 🤔 "
-                                 f"Please type a whole number between 1 and "
-                                 f"{len(self.dish_data) - 1}."
+                print(Back.RED + '"' + Fore.CYAN + f'{dish_number}' + Fore.RESET
+                      + f'" is not a valid number 🤔 '
+                        f'Please type a whole number between 1 and '
+                        f'{len(self.dish_data) - 1}.'
                       + Back.RESET)
 
         # get the dish with the selected number from the `dishes` list
@@ -144,9 +149,9 @@ class ShoppingList:
             # a colon
             # the quantity (second item of the list)
             print_string = print_string[:opening - 1] \
-                + ': ' \
-                + f"{ingredient_list[i][1]:g}" \
-                + print_string[opening - 1:]
+                           + ': ' \
+                           + f"{ingredient_list[i][1]:g}" \
+                           + print_string[opening - 1:]
             # delete the opening and closing parenthesis
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
