@@ -94,15 +94,16 @@ def welcome():
     start = input(Back.MAGENTA
                   + 'Would you like to plan a dinner party? (Y/N):'
                   + Back.RESET
-                  + " ").upper()
+                  + " ")
     # validating the input
     # while the input is not one of the allowed options
-    while not start == "Y" and not start == "N":
+    while start not in {"Y", "N", "y", "n"}:
         # ask for input again, make input uppercase
         start = input(Back.RED
-                      + "I did not understand 🤔 Please type Y or N:"
-                      + Back.RESET + " ").upper()
-    if start == 'Y':
+                      + f'You typed "' + Fore.CYAN + start + Fore.RESET
+                      + f'" – I don\'t understand that 🤔 Please type Y or N:'
+                      + Back.RESET + " ")
+    if start == 'Y' or start == 'y':
         print("\nLet's get planning! 🍾\n")
         # sleep for 1.5 seconds after printing output
         sleep(1.5)
@@ -112,7 +113,7 @@ def welcome():
         #  start the addition cycle
         _planning = True
 
-    elif start == 'N':
+    elif start == 'N' or start == 'n':
         #  exit the program with a message
         _planning = False
         # clear the terminal
