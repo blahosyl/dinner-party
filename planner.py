@@ -29,9 +29,11 @@ class DishList:
         self.dish_data = dish_data
 
     def print_enum(self):
-        # print an empty line to visually separate the list
-        print('\n')
-        """ Print available dishes """
+        """
+        Print available dishes in a numbered list
+        """
+        # sort list alphabetically
+        self.dish_data.sort()
         for i in range(1, len(self.dish_data)):
             print(i, self.dish_data[i])
         # print an empty line to visually separate the list
@@ -153,11 +155,15 @@ class ShoppingList:
             if row[selection_index] and recipe_data.index(row) > 1:
                 # add the list [ingredient, quantity(converted to a float)] to the shopping list
                 dish_ingredients.append([row[0], float(row[selection_index])])
+        # sort list alphabetically
+        dish_ingredients.sort()
         # print the ingredients for the selected dish
         self.print_formatted(dish_ingredients)
         # add each ingredient from the selected dish to the shopping list
         for ingredient in dish_ingredients:
             self.list_data.append(ingredient)
+            # sort list alphabetically
+            self.list_data.sort()
         return self.list_data
 
     def unify_ingredients(self, selection, recipe_data):
