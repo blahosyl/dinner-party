@@ -62,6 +62,7 @@ class DishList:
                                     + Fore.GREEN + "number " + Fore.RESET
                                     + "of the dish you'd like to add:"
                                     + Back.RESET + " ")
+                dish_number = int(dish_number)
                 # convert user input to integer
                 while dish_number < 1 or dish_number > len(self.dish_data) - 1:
                     dish_number = int(

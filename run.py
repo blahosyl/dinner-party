@@ -87,22 +87,56 @@ def clear():
     system("cls" if name == "nt" else "clear")
 
 
-def welcome():
-    # get global variable
-    global _planning
-    # ask user if they want to start planning
-    start = input(Back.MAGENTA
-                  + 'Would you like to plan a dinner party? (Y/N):'
-                  + Back.RESET
-                  + " ")
+def initial_question():
+    """
+    ask user if they want to start planning
+    :return: user_input
+    """
+    user_input = input(Back.MAGENTA
+                       + 'Would you like to plan a dinner party? (Y/N):'
+                       + Back.RESET
+                       + " ")
+    return user_input
+
+
+def more_dishes():
+    """
+    ask user if they want to add another dish
+    :return: user_input
+    """
+    user_input = input(Back.MAGENTA
+                       + 'Would you like to add another dish? (Y/N):'
+                       + Back.RESET + " ")
+    return user_input
+
+
+def y_n_validation(starting_question):
+    """
+    Get and validate user input to Y/N question
+    :return: validated user input
+    """
+    user_input = starting_question
     # validating the input
     # while the input is not one of the allowed options
-    while start not in {"Y", "N", "y", "n"}:
+    while user_input not in {"Y", "N", "y", "n"}:
         # ask for input again
-        start = input(Back.RED
-                      + f'You typed "' + Fore.CYAN + start + Fore.RESET
-                      + f'" – I don\'t understand that 🤔 Please type Y or N:'
-                      + Back.RESET + " ")
+        user_input = input(Back.RED
+                           + f'You typed "' + Fore.CYAN + user_input + Fore.RESET
+                           + f'" – I don\'t understand that 🤔 Please type Y or N:'
+                           + Back.RESET + " ")
+    return user_input
+
+
+def welcome():
+    """
+    Starts planning or ends the program
+    depending on user input
+    """
+    # get global variable
+    global _planning
+    # ask if user wants to start planning
+    start = y_n_validation(initial_question())
+
     if start == 'Y' or start == 'y':
         print("\nLet's get planning! 🍾\n")
         # sleep for 1.5 seconds after printing output
@@ -162,17 +196,7 @@ def ask_more():
     # (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list,
-        add_dish = input(Back.MAGENTA
-                         + 'Would you like to add another dish? (Y/N):'
-                         + Back.RESET + " ")
-        # validating the input
-        # while the input is not one of the allowed options
-        while add_dish not in {"Y", "N", "y", "n"}:
-            # ask for input again
-            add_dish = input(Back.RED
-                             + f'You typed "' + Fore.CYAN + add_dish + Fore.RESET
-                             + f'" – I don\'t understand that 🤔 Please type Y or N:'
-                             + Back.RESET + " ")
+        add_dish = y_n_validation(more_dishes())
         if add_dish == 'Y' or add_dish == 'y':
             # planning remains True, keeps the loop running
             clear()
