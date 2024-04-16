@@ -162,22 +162,22 @@ def ask_more():
     # (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list,
-        # make input uppercase
         add_dish = input(Back.MAGENTA
                          + 'Would you like to add another dish? (Y/N):'
-                         + Back.RESET + " ").upper()
+                         + Back.RESET + " ")
         # validating the input
         # while the input is not one of the allowed options
-        while not add_dish == "Y" and not add_dish == "N":
-            # ask for input again, make input uppercase
+        while add_dish not in {"Y", "N", "y", "n"}:
+            # ask for input again
             add_dish = input(Back.RED
-                             + "I did not understand 🤔 Please type Y or N:"
-                             + Back.RESET + " ").upper()
-        if add_dish == 'Y':
+                      + f'You typed "' + Fore.CYAN + add_dish + Fore.RESET
+                      + f'" – I don\'t understand that 🤔 Please type Y or N:'
+                      + Back.RESET + " ")
+        if add_dish == 'Y' or add_dish == 'y':
             # planning remains True, keeps the loop running
             clear()
             print("\nCool, here is the list of dishes again 🤓")
-        elif add_dish == 'N':
+        elif add_dish == 'N' or add_dish == 'n':
             _planning = False
             print("\nGot it! That's enough cooking for now 🍲\n")
             print_shopping_list_block()
