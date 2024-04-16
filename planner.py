@@ -80,7 +80,7 @@ class DishList:
         # print the selected dish's name
         print(f'\nYou have selected: {selected_dish}')
         # sleep for 1.5 seconds after printing output
-        sleep(1.5)
+        sleep(0.5)
         # clear the console
         clear()
 
