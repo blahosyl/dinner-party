@@ -316,6 +316,7 @@ The following resources were used to learn/double check general, atomic function
 - [sort list of lists](https://stackoverflow.com/a/54116034/24248624)
 - [problems with removing list items in a loop and some solutions (not used)](https://stackoverflow.com/a/6260097/24248624)
 - [fix list comprehension error with indices (not used)](https://codinggear.org/list-indices-must-be-integers-or-slices-not-list/#:~:text=The%20Python%20Typeerror%3A%20list%20indices,index%20instead%20of%20a%20list.)
+- [`isnumeric`: only allow numeric values](https://stackoverflow.com/a/72488576/24248624)
 
 
 ### Code
