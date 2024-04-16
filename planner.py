@@ -57,7 +57,7 @@ class DishList:
                                         + Back.RESET + " "))
                 while dish_number < 1 or dish_number > len(self.dish_data) - 1:
                     dish_number = int(
-                        input(Back.RED + f"Number out of range. "
+                        input(Back.RED + f"Number out of range 🤔 "
                                          f"Please type a number between 1 and "
                                          f"{len(self.dish_data) - 1}:"
                               + Back.RESET + " "))
@@ -65,7 +65,7 @@ class DishList:
             except ValueError:
                 # while the input is not one of the allowed options
                 # ask for input again
-                print(Back.RED + f"That is not a valid number. "
+                print(Back.RED + f"That is not a valid number 🤔 "
                                  f"Please type a whole number between 1 and "
                                  f"{len(self.dish_data) - 1}."
                       + Back.RESET)

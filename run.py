@@ -1,5 +1,4 @@
-# Based on the Love Sandwiches project
-
+# Use of gspread based on the Love Sandwiches project
 # import entire library
 import gspread
 # import 1 class from a library
@@ -101,7 +100,7 @@ def welcome():
     while not start == "Y" and not start == "N":
         # ask for input again, make input uppercase
         start = input(Back.RED
-                      + "I did not understand. Please type Y or N:"
+                      + "I did not understand 🤔 Please type Y or N:"
                       + Back.RESET + " ").upper()
     if start == 'Y':
         print("\nLet's get planning! 🍾\n")
@@ -109,7 +108,7 @@ def welcome():
         sleep(1.5)
         # clear the console
         clear()
-        print("\nHere is the list of dishes you can choose from.")
+        print("\nHere is the list of dishes you can choose from 🤓")
         #  start the addition cycle
         _planning = True
 
@@ -117,7 +116,7 @@ def welcome():
         #  exit the program with a message
         _planning = False
         # clear the terminal
-        print("\nMaybe some other time, then.\n")
+        print("\nMaybe some other time, then 👋\n")
         # sleep for 1.5 seconds after printing output
         sleep(1.5)
         # clear the console
@@ -137,7 +136,7 @@ def print_shopping_list_block():
     goodbye_message = "\n" + Fore.MAGENTA \
                       + pyfiglet.figlet_format("Have fun!", font="doom") \
                       + Fore.RESET
-    print("\nHere comes your shopping list:")
+    print("\nHere comes your shopping list 📋")
     # sleep for 1.5 seconds after printing output
     sleep(1.5)
     # clear the screen
@@ -171,20 +170,21 @@ def ask_more():
         while not add_dish == "Y" and not add_dish == "N":
             # ask for input again, make input uppercase
             add_dish = input(Back.RED
-                             + "I did not understand. Please type Y or N:"
+                             + "I did not understand 🤔 Please type Y or N:"
                              + Back.RESET + " ").upper()
         if add_dish == 'Y':
             # planning remains True, keeps the loop running
             clear()
-            print("\nCool, here is the list of dishes again:")
+            print("\nCool, here is the list of dishes again 🤓")
         elif add_dish == 'N':
             _planning = False
-            print("\nGot it! That's all for now, then.\n")
+            print("\nGot it! That's enough cooking for now 🍲\n")
             print_shopping_list_block()
     else:
         # stop the loop
         _planning = False
         print("\nYou have selected all the dishes.")
+        print("🌯🫔🍛️🍹🥃🍷🍻🌮🥗🧆🍰🍹")
         print_shopping_list_block()
 
 
