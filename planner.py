@@ -38,6 +38,8 @@ class DishList:
         """
         # sort list alphabetically
         self.dish_data.sort()
+        # for each item starting from 1 (not 0), print its index (in green)
+        # and the item
         for i in range(1, len(self.dish_data)):
             print(Fore.GREEN + str(i) + Fore.RESET, self.dish_data[i])
         # print an empty line to visually separate the list
