@@ -314,6 +314,8 @@ The following resources were used to learn/double check general, atomic function
 - [not capitalizin "bloody mary"](https://www.latimes.com/socal/daily-pilot/opinion/story/2020-08-04/a-word-please-lowercase-treatment-in-newswriting-can-humble-important-words#:~:text=But%20since%20the%20drink%20was,drink%20names%20are%20more%20flexible.)
 - [`pyfiglet` usage](https://medium.com/@parcelmaiyo/text-styling-in-python-using-pyfiglet-824c498dfff5)
 - [sort list of lists](https://stackoverflow.com/a/54116034/24248624)
+- [infinity](https://www.geeksforgeeks.org/python-infinity/)
+- [defining functions with optional arguments](https://realpython.com/python-optional-arguments/)
 
 
 ### Code
