@@ -35,7 +35,7 @@ class DishList:
         # sort list alphabetically
         self.dish_data.sort()
         for i in range(1, len(self.dish_data)):
-            print(i, self.dish_data[i])
+            print(Fore.GREEN + str(i) + Fore.RESET, self.dish_data[i])
         # print an empty line to visually separate the list
         print('\n')
 
