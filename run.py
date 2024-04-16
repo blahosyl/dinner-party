@@ -90,7 +90,7 @@ def clear():
 def welcome():
     # get global variable
     global _planning
-    # ask user if they want to start planning, make input uppercase
+    # ask user if they want to start planning
     start = input(Back.MAGENTA
                   + 'Would you like to plan a dinner party? (Y/N):'
                   + Back.RESET
@@ -98,7 +98,7 @@ def welcome():
     # validating the input
     # while the input is not one of the allowed options
     while start not in {"Y", "N", "y", "n"}:
-        # ask for input again, make input uppercase
+        # ask for input again
         start = input(Back.RED
                       + f'You typed "' + Fore.CYAN + start + Fore.RESET
                       + f'" – I don\'t understand that 🤔 Please type Y or N:'
