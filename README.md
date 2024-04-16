@@ -9,11 +9,13 @@
 - Your dependencies must be placed in the `requirements.txt` file
 - Do not edit any of the other files or your code may not deploy properly
 
-## Flow
+## Design
+
+### Flow
 
 ![Program flowchart](readme-pics/dinner-party-flow.jpg)
 
-### CRUD functionalities
+#### CRUD functionalities
 
 Create
 
@@ -35,21 +37,45 @@ Delete
 - items from the shopping list
 
 
-## Database
+### Database
 
 [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
 
-## Design
+### Visual design of the terminal
+
+#### Pause
+
+#### Clear screen
+
+#### ASCII art
+
+#### Color
+
+The main colors chosen (magenta and green) harmonize with the [background image](#background-image) of the site.
+
+In addition, red is used for validation messages.
+
+However, the use of color in this project goes beyond aesthetic purposes: it also serves to aid the user experience, and is deliberately used to distinguish different functional elements from each other:
+
+|style					|function|
+|---					|---|
+|colored backgroud 	|user input needed |
+|red				 	|user entered invalid data|
+|green test			|information that the user needs to proceed|
+|magenta ASCII text	|start and end of progam|
+
+
+### Website design
 
 As this project is focused on the terminal functionalities rather than HTML/CSS, designing/altering these was an optional extra.
 
 Nevertheless, I chose to lightly alter the provided HTML/CSS code to make the deployed page more unique and appealing to users (as a terminal window on a plain white background is alienating to many people).
 
-### Background image
+#### Background image
 
 I chose a [background image](assets/images/sweet-potatoes.webp) of a colorful dish of sweet potatoes, purple onions and thyme being prepared, to illustrate the joy and labor that goes into throwing a dinner party.
 
-### Button design
+#### Button design
 
 I changed the background color of the **Run Program** button to the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
 This color was chosen to harmonize with the image but still stand out from the rest of the elements on the page.
@@ -62,24 +88,24 @@ To balance out these changes, I also increased the button width and its margin.
 
 Finally, I added a hover cursor effect.
 
-### Alignment of elements
+#### Alignment of elements
 
 I horizontally centered all elements on the page and added some top margin for a more pleasing look.
 
-### Favicon
+#### Favicon
 
 I added a favicon showing a vector drawing of two wine glasses clinking, to symbolize the social nature of dinner parties. The color of  the graphic is a darker shade of the purple color chosen for the heading box.
 
-### Meta tags
+#### Meta tags
 
 I added some SEO meta tags to the HTML file, so that the site can be found more easily.
 
-### Design implementation credits
+#### Design implementation credits
 
 I followed the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
 Iasmina Pal](https://github.com/useriasminna) in implementing the changes above.
 
-### Rerolled design elements
+#### Rerolled design elements
 
 I made some additional changes based on the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) that I have decided to reroll: although the modified `layout.html` file passed validation, the deployed page did not. 
 
@@ -106,11 +132,11 @@ I added the name of the app as an `h1` element before the Run button in the temp
 
 The heading text color is white, so that it provides sufficient contrast with the background (see [Color contrasts](#color-contrasts) for more details).
 
-#### Logo
+##### Logo
 
 I put the [image](assets/images/wine-glasses.webp) used for the favicon as a logo on each side of the header. Its design mirrors that of the box containing the header (box, border radius and shadow), but the colors are inverted.
 
-### Author information and GitHub link
+#### Author information and GitHub link
 
 I added my name and the link to the application's repository under the terminal window, using the colors already defined above.
 
@@ -137,10 +163,9 @@ After this, both the modified `layout.html` file and the [the deployed site](htt
 
 </details>
 
-### Font
+#### Font
 
 I changed the font used from Arial to Verdana. This font [is considered the most legible](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).) of the popular web-safe fonts, especially for small screen sizes.
- 
 
 ## Accessibility
 
