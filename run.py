@@ -184,7 +184,7 @@ def ask_more():
         # stop the loop
         _planning = False
         print("\nYou have selected all the dishes.")
-        print("🌯🫔🍛️🍹🥃🍷🍻🌮🥗🧆🍰🍹")
+        print("🌯 🍛️ 🍷 🍻 🌮 🥃 🥗 🧆 🍰 🫔 🍹 ")
         print_shopping_list_block()
 
 
