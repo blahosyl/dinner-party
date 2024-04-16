@@ -28,7 +28,8 @@ import planner
 # name of the app in ASCII art using `pyfiglet`
 print(Style.BRIGHT + Fore.MAGENTA +
       pyfiglet.figlet_format("Dinner Party!", font="doom")
-      + Fore.RESET)
+      )
+print("Designed and coded by Sylvia Blaho (github.com/blahosyl)\n" + Fore.RESET)
 print("\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳"
       "\nThis app helps you plan them!"
       "\nJust select the dishes or drinks you want to make for your guests,"
