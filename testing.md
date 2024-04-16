@@ -12,27 +12,61 @@ This document describes the testing procedures for the [Dinner Party app](README
 - following my mentor's suggestion, I changed the names of global variables (that are not constants) so that they always start with an underscore: `_global_variable`.
 
 
-## User input
+## User input validation
 
 ### Y/N questions
 
-- `Y` or `N` – correct
-- `y` or `n`
-- empty string
-- space
-- special character
-- other letter character
-- number character
+#### Initial question
+
+
+`Would you like to plan a dinner party? (Y/N):`
+
+
+|Input						|Expected answer	|Result|
+|---						|---				|---	|
+|other letter character	|I did not understand. Please type Y or N:| |
+|special character	|I did not understand. Please type Y or N:| |
+|space	|I did not understand. Please type Y or N:| |
+|empty string	|I did not understand. Please type Y or N:| |
+|number character	|I did not understand. Please type Y or N:| |
+|`Y` or `y`			|Here is the list of dishes you can choose from.| |
+|`N` or `n`			|Maybe some other time, then.| |
+
+#### Add more dishes question
+
+
+`Would you like to add another dish? (Y/N):`
+
+
+|Input						|Expected answer	|Result|
+|---						|---				|---	|
+|other letter character	|I did not understand. Please type Y or N:| |
+|special character	|I did not understand. Please type Y or N:| |
+|space	|I did not understand. Please type Y or N:| |
+|empty string	|I did not understand. Please type Y or N:| |
+|number character	|I did not understand. Please type Y or N:| |
+|`Y` or `y`			|Cool, here is the list of dishes again:| |
+|`N` or `n`			|Got it! That's all for now, then.| |
 
 ### Integer from a range
 
-- integer from the specified range – correct
-- integer outside the range
-- non-integer number
-- empty string
-- space
-- special character
-- letter character
+
+`Type in the number of the dish you'd like to add:`
+
+
+|Input						|Expected answer	|Result|
+|---						|---				|---	|
+|letter character	|That is not a valid number. Please type a whole number between 1 and `<range>`.| |
+|special character	|That is not a valid number. Please type a whole number between 1 and `<range>`.| |
+|space	|That is not a valid number. Please type a whole number between 1 and `<range>`.| |
+|empty string	|That is not a valid number. Please type a whole number between 1 and `<range>`.| |
+|non-integer number	|That is not a valid number. Please type a whole number between 1 and `<range>`.| |
+|integer outside the range	|Number out of range. Please type a number between 1 and `<range>`:| |
+|integer from the specified range	|You have selected: `<dish>`| |
+
+
+
+
 
 Combinations:
 
