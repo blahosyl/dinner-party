@@ -47,39 +47,48 @@ class DishList:
         # print an empty line to visually separate the list
         print('\n')
 
-    def select_dish(self):
-        # print the list of dishes in a numbered list
-        self.print_enum()
-
-        # validating the input
+    def validate_range(self, text, lower, upper):
+        """
+        Validate user input: integer in specified range
+        :param text: list, the content of the initial `input`
+        It has to be a list, because using colorama makes it
+        too compliceted to be a string
+        :param lower: int, lower bound of the range (incl.)
+        :param upper: int, upper bound of the range (incl.)
+        :return: validated input: integer in range
+        """
         while True:
             try:
-                # need to separate `input` and `int` to be able to print
-                # the incorrect user input in the `except` block
-                # Victor Haffreingue and Zerina Johansson helped me solve this
-                # ask user to select a dish number
-                dish_number = input(Back.MAGENTA + "Type in the "
-                                    + Fore.GREEN + "number " + Fore.RESET
-                                    + "of the dish you'd like to add:"
-                                    + Back.RESET + " ")
-                # convert user input to integer
-                dish_number = int(dish_number)
-                while dish_number < 1 or dish_number > len(self.dish_data) - 1:
-                    dish_number = int(
-                        input(Back.RED + f'Number "' + Fore.CYAN + f'{dish_number}'
+                user_input = input(text[0])
+                user_input = int(user_input)
+                while user_input < lower or user_input > upper - 1:
+                    user_input = int(
+                        input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
                               + Fore.RESET + '" out of range 🤔 '
-                                             f"Please type a number between 1 and "
-                                             f"{len(self.dish_data) - 1}:"
+                                             f"Please type a number between {lower} and "
+                                             f"{upper - 1}:"
                               + Back.RESET + " "))
                 break
             except ValueError:
                 # while the input is not one of the allowed options
                 # ask for input again
-                print(Back.RED + '"' + Fore.CYAN + f'{dish_number}' + Fore.RESET
+                print(Back.RED + '"' + Fore.CYAN + f'{user_input}' + Fore.RESET
                       + f'" is not a valid number 🤔 '
-                        f'Please type a whole number between 1 and '
-                        f'{len(self.dish_data) - 1}.'
+                        f'Please type a whole number between {lower} and '
+                        f'{upper - 1}.'
                       + Back.RESET)
+        return user_input
+
+    def select_dish(self):
+        # print the list of dishes in a numbered list
+        self.print_enum()
+
+        # validating the input
+        text = [Back.MAGENTA + "Type in the "
+                                   + Fore.GREEN + "number " + Fore.RESET
+                                   + f"of the dish you'd like to add:"
+                                   + Back.RESET + " "]
+        dish_number = self.validate_range(text, 1, len(self.dish_data) - 1)
 
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
