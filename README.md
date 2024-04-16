@@ -314,6 +314,8 @@ The following resources were used to learn/double check general, atomic function
 - [not capitalizin "bloody mary"](https://www.latimes.com/socal/daily-pilot/opinion/story/2020-08-04/a-word-please-lowercase-treatment-in-newswriting-can-humble-important-words#:~:text=But%20since%20the%20drink%20was,drink%20names%20are%20more%20flexible.)
 - [`pyfiglet` usage](https://medium.com/@parcelmaiyo/text-styling-in-python-using-pyfiglet-824c498dfff5)
 - [sort list of lists](https://stackoverflow.com/a/54116034/24248624)
+- [problems with removing list items in a loop and some solutions (not used)](https://stackoverflow.com/a/6260097/24248624)
+- [fix list comprehension error with indices (not used)](https://codinggear.org/list-indices-must-be-integers-or-slices-not-list/#:~:text=The%20Python%20Typeerror%3A%20list%20indices,index%20instead%20of%20a%20list.)
 
 
 ### Code
