@@ -99,6 +99,17 @@ def initial_question():
     return user_input
 
 
+def more_dishes():
+    """
+    ask user if they want to add another dish
+    :return: user_input
+    """
+    user_input = input(Back.MAGENTA
+                       + 'Would you like to add another dish? (Y/N):'
+                       + Back.RESET + " ")
+    return user_input
+
+
 def y_n_validation(starting_question):
     """
     Get and validate user input to Y/N question
@@ -185,17 +196,7 @@ def ask_more():
     # (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list,
-        add_dish = input(Back.MAGENTA
-                         + 'Would you like to add another dish? (Y/N):'
-                         + Back.RESET + " ")
-        # validating the input
-        # while the input is not one of the allowed options
-        while add_dish not in {"Y", "N", "y", "n"}:
-            # ask for input again
-            add_dish = input(Back.RED
-                             + f'You typed "' + Fore.CYAN + add_dish + Fore.RESET
-                             + f'" – I don\'t understand that 🤔 Please type Y or N:'
-                             + Back.RESET + " ")
+        add_dish = y_n_validation(more_dishes())
         if add_dish == 'Y' or add_dish == 'y':
             # planning remains True, keeps the loop running
             clear()
