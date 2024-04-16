@@ -47,7 +47,9 @@ class DishList:
         while True:
             try:
                 # ask user to select a dish number
-                dish_number = int(input(Back.MAGENTA + "Type in the number of the dish you'd like to add:"
+                dish_number = int(input(Back.MAGENTA + "Type in the "
+                                        + Fore.GREEN + "number " + Fore.RESET
+                                        + "of the dish you'd like to add:"
                                         + Back.RESET + " "))
                 while dish_number < 1 or dish_number > len(self.dish_data) - 1:
                     dish_number = int(
@@ -59,7 +61,7 @@ class DishList:
                 # while the input is not one of the allowed options
                 # ask for input again
                 print(Back.RED + f"That is not a valid number. "
-                      f"Please type a whole number between 1 and {len(self.dish_data) - 1}."
+                                 f"Please type a whole number between 1 and {len(self.dish_data) - 1}."
                       + Back.RESET)
 
         # get the dish with the selected number from the `dishes` list
@@ -124,7 +126,7 @@ class ShoppingList:
             else:
                 unit_name = abbr
             # replace a parenthesis+abbreviation with parenthesis+unit name
-            print_string = print_string.replace('('+abbr, '('+unit_name)
+            print_string = print_string.replace('(' + abbr, '(' + unit_name)
             # end of code to replace measurement unit abbreviation with full name
             # 1 left of the opening bracket, add the following:
             # a colon
