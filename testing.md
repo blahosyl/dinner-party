@@ -38,6 +38,8 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`Y` or `y`			|Here is the list of dishes you can choose from.|✅|
 |`N` or `n`			|Maybe some other time, then.|✅|
 
+![User input validation for the initial question](testing/validation-initial-yn-single-y.png)
+
 
 #### Double-step test cases
 
@@ -61,6 +63,9 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` then `N`		|*not possible, program continues after 1st input*|✅|
 |`N` then `X`		|*not possible, program continues after 1st input*|✅|
 |`N` then `Y`		|*not possible, program continues after 1st input*|✅|
+
+![User input validation for "Would you like to add another dish?"](testing/validation-initial-yn-single-y.png)
+
 
 #### Add more dishes question
 
@@ -102,6 +107,8 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` then `N`		|*not possible, program continues after 1st input*|✅|
 |`N` then `X`		|*not possible, program continues after 1st input*|✅|
 |`N` then `Y`		|*not possible, program continues after 1st input*|✅|
+
+![User input validation for "Would you like to add another dish?"](testing/validation-another-dish-yn-x-n.png)
 
 
 ### Integer from a range
