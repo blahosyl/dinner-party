@@ -371,6 +371,8 @@ The following resources were used to learn/double check general, atomic function
 - [Verdana properties](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).)
 - [not capitalizing "daiquiri"](https://www.latimes.com/socal/daily-pilot/opinion/tn-hbi-et-1231-casagrande-20151231-story.html)
 - [not capitalizin "bloody mary"](https://www.latimes.com/socal/daily-pilot/opinion/story/2020-08-04/a-word-please-lowercase-treatment-in-newswriting-can-humble-important-words#:~:text=But%20since%20the%20drink%20was,drink%20names%20are%20more%20flexible.)
+- [`pyfiglet` usage](https://medium.com/@parcelmaiyo/text-styling-in-python-using-pyfiglet-824c498dfff5)
+- [sort list of lists](https://stackoverflow.com/a/54116034/24248624)
 
 
 ### Code
@@ -378,8 +380,8 @@ The following resources were used to learn/double check general, atomic function
 The following sources contributed code or suggestions to specific functions within the project:
 
 - Rory Patrick Sheridan, my mentor, gave suggestions, helped me solve or spotted bugs described in [these Issues](https://github.com/blahosyl/dinner-party/issues?q=is%3Aissue+label%3Amentor) (see the Issue descriptions and comments for details).
-- Modifying the Code Institute template to change some HTML/CSS elements was done on the basis of the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
-Iasmina Pal](https://github.com/useriasminna).
+- Modifying the `layout.html` file in the Code Institute template to change some CSS styling was done following but also revising the method used in the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
+Iasmina Pal](https://github.com/useriasminna) (see the section [Rerolled design elements](#rerolled-design-elements) for details).
 
 
 ### Content
