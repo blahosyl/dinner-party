@@ -212,6 +212,13 @@ visual separation into screens
 
 as little typing as possible
 
+list of ingredients is
+
+- transformed into a readable string
+- alphabetized
+- measurements names are shown instead of abbreviations
+- singular/plural handled
+
 
 ## Deployment
 
