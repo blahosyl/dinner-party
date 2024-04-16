@@ -323,6 +323,7 @@ The following sources contributed code or suggestions to specific functions with
 - Rory Patrick Sheridan, my mentor, gave suggestions, helped me solve or spotted bugs described in [these Issues](https://github.com/blahosyl/dinner-party/issues?q=is%3Aissue+label%3Amentor) (see the Issue descriptions and comments for details).
 - Modifying the `layout.html` file in the Code Institute template to change some CSS styling was done following but also revising the method used in the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) by [
 Iasmina Pal](https://github.com/useriasminna) (see the section [Rerolled design elements](#rerolled-design-elements) for details).
+- Victor Haffreingue and [Zerina Johansson](https://code-institute-room.slack.com/archives/C01DVU37QG4/p1713290110344539) for helping me solve the issue of [printing out the user input in a `try/except` loop](https://github.com/blahosyl/dinner-party/commit/bed421e4bbbe1400df09fcfde4d71438d585d7b1).
 
 
 ### Content
