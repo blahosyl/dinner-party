@@ -170,9 +170,9 @@ def ask_more():
         while add_dish not in {"Y", "N", "y", "n"}:
             # ask for input again
             add_dish = input(Back.RED
-                      + f'You typed "' + Fore.CYAN + add_dish + Fore.RESET
-                      + f'" – I don\'t understand that 🤔 Please type Y or N:'
-                      + Back.RESET + " ")
+                             + f'You typed "' + Fore.CYAN + add_dish + Fore.RESET
+                             + f'" – I don\'t understand that 🤔 Please type Y or N:'
+                             + Back.RESET + " ")
         if add_dish == 'Y' or add_dish == 'y':
             # planning remains True, keeps the loop running
             clear()
