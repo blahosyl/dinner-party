@@ -164,4 +164,4 @@ This document describes the testing procedures for the [Dinner Party app](README
 
 ### Database data validation (to be automated)
 
-Check if ingredient cell contains `(`
+Check if each ingredient cell contains `(`
