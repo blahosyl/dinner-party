@@ -61,7 +61,8 @@ class DishList:
                                         + Back.RESET + " "))
                 while dish_number < 1 or dish_number > len(self.dish_data) - 1:
                     dish_number = int(
-                        input(Back.RED + f"Number out of range 🤔 "
+                        input(Back.RED + f'Number "' + Fore.CYAN + f'{dish_number}'
+                              + Fore.RESET + '" out of range 🤔 '
                                          f"Please type a number between 1 and "
                                          f"{len(self.dish_data) - 1}:"
                               + Back.RESET + " "))
