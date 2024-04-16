@@ -9,6 +9,12 @@
 - Your dependencies must be placed in the `requirements.txt` file
 - Do not edit any of the other files or your code may not deploy properly
 
+## User Experience (UX)
+
+### User goals
+
+### Creator goals
+
 ## Design
 
 ### Flow
@@ -194,6 +200,18 @@ The paired colors have the following contrasts:
 The only link (to the GitHub repository) opens in a new window and has an aria-label.
 
 It is visually distinguished from the rest of the text by being underlined.
+
+## Features
+
+
+"start again" message at the end
+
+functional use of colors/ASCII art
+
+visual separation into screens
+
+as little typing as possible
+
 
 ## Deployment
 
