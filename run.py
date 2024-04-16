@@ -128,6 +128,25 @@ def welcome():
         print(START_INSTRUCTION)
 
 
+def print_shopping_list_block():
+    """
+    Prints confirmation of planning ending,
+    the shopping list, the goodbye message
+    and start instruction
+    """
+    goodbye_message = "\n" + Fore.MAGENTA \
+                      + pyfiglet.figlet_format("Have fun!", font="doom") \
+                      + Fore.RESET
+    print("\nHere comes your shopping list:")
+    # sleep for 1.5 seconds after printing output
+    sleep(1.5)
+    # clear the screen
+    clear()
+    _shopping_list.print_formatted(_shopping_list.list_data)
+    print(goodbye_message)
+    print(START_INSTRUCTION)
+
+
 def ask_more():
     """
     If there are dishes left on the list,
@@ -136,9 +155,6 @@ def ask_more():
     # get global variables
     global _dishes
     global _planning
-    goodbye_message = "\n" + Fore.MAGENTA \
-                      + pyfiglet.figlet_format("Have fun!", font="doom")\
-                      + Fore.RESET
     # check if there are dishes left
     # (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
@@ -161,26 +177,12 @@ def ask_more():
         elif add_dish == 'N':
             _planning = False
             print("\nGot it! That's all for now, then.\n")
-            print("\nHere comes your shopping list:")
-            # sleep for 1.5 seconds after printing output
-            sleep(1.5)
-            # clear the screen
-            clear()
-            _shopping_list.print_formatted(_shopping_list.list_data)
-            print(goodbye_message)
-            print(START_INSTRUCTION)
+            print_shopping_list_block()
     else:
         # stop the loop
         _planning = False
         print("\nYou have selected all the dishes.")
-        print("\nHere comes your shopping list:")
-        # sleep for 1.5 seconds after printing output
-        sleep(1.5)
-        # clear the screen
-        clear()
-        _shopping_list.print_formatted(_shopping_list.list_data)
-        print(goodbye_message)
-        print(START_INSTRUCTION)
+        print_shopping_list_block()
 
 
 welcome()
