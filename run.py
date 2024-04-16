@@ -142,7 +142,10 @@ def print_shopping_list_block():
     sleep(1.5)
     # clear the screen
     clear()
+    print(Fore.GREEN + "\nSHOPPING LIST" + Fore.RESET)
     _shopping_list.print_formatted(_shopping_list.list_data)
+    # sleep for 1.5 seconds after printing output
+    sleep(1.5)
     print(goodbye_message)
     print(START_INSTRUCTION)
 
