@@ -1,10 +1,10 @@
 This document describes the testing procedures for the [Dinner Party app](README.md).
 
-### User story testing
+## User story testing
 
-### Code validation
+## Code validation
 
-#### Naming conventions used
+### Naming conventions used
 
 - all class names are in `CamelCase`.
 - all constant names are in `ALL_CAPS`.
@@ -12,9 +12,9 @@ This document describes the testing procedures for the [Dinner Party app](README
 - following my mentor's suggestion, I changed the names of global variables (that are not constants) so that they always start with an underscore: `_global_variable`.
 
 
-### User input
+## User input
 
-#### Y/N questions
+### Y/N questions
 
 - `Y` or `N` – correct
 - `y` or `n`
@@ -24,7 +24,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 - other letter character
 - number character
 
-#### Integer from a range
+### Integer from a range
 
 - integer from the specified range – correct
 - integer outside the range
@@ -39,7 +39,7 @@ Combinations:
 - integer outside the range THEN non-number character
 - non-number character THEN integer outside the range
 
-### Flow testing
+## Flow testing
 
 - if the user answers `N` to the 1st question: end with message
 - if the user selects a dish:
@@ -56,6 +56,6 @@ Combinations:
 	- print shopping list 
 	- end program
 
-#### Database data validation (optional)
+### Database data validation (optional)
 
 Check if ingredient cell contains `(`
