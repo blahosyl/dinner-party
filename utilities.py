@@ -8,7 +8,7 @@ from os import system, name
 from colorama import Fore, Back
 
 
-def y_n_validation(starting_question):
+def validate_y_n(starting_question):
     """
     Get and validate user input to Y/N question
     :return: validated user input

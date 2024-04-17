@@ -21,7 +21,7 @@ from colorama import Fore, Back, Style
 import pyfiglet
 
 # general-purpose functions
-from utilities import y_n_validation, clear
+from utilities import validate_y_n, clear
 
 # import this module for classes custom written for this project
 import planner
@@ -114,7 +114,7 @@ def welcome():
     # get global variable
     global _planning
     # ask if user wants to start planning
-    start = y_n_validation(initial_question())
+    start = validate_y_n(initial_question())
 
     if start == 'Y' or start == 'y':
         print("\nLet's get planning! 🍾\n")
@@ -175,7 +175,7 @@ def ask_more():
     # (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list,
-        add_dish = y_n_validation(more_dishes())
+        add_dish = validate_y_n(more_dishes())
         if add_dish == 'Y' or add_dish == 'y':
             # planning remains True, keeps the loop running
             clear()
