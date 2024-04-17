@@ -1,3 +1,6 @@
+
+# SELF-WRITTEN MODULES & FUNCTIONS
+
 # import this module for classes custom written for this project
 import planner
 

@@ -1,8 +1,12 @@
 # This module provides objects and methods for planning dinner parties
 
+# STANDARD PACKAGES
+
 # import sleep to show output for some time period
 # package suggested by my mentor
 from time import sleep
+
+# 3RD PARTY LIBRARIES
 
 # get combinations from a list
 import itertools
@@ -11,7 +15,9 @@ import itertools
 # package suggested by my mentor
 from colorama import Fore, Back
 
-# self-written general-purpose functions
+# SELF-WRITTEN MODULES & FUNCTIONS
+
+# general-purpose functions
 from utilities import validate_range, clear
 
 
