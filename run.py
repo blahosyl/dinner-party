@@ -144,7 +144,7 @@ def print_shopping_list_block():
     # clear the screen
     clear()
     print(Fore.GREEN + '\nSHOPPING LIST' + Fore.RESET)
-    _shopping_list.print_formatted(_shopping_list.list_data)
+    planner.print_formatted(_shopping_list.list_data)
     # sleep for 1.5 seconds after printing output
     sleep(1.5)
     print(GOODBYE_MESSAGE)
