@@ -27,7 +27,7 @@ def validate_y_n(starting_question):
     return user_input
 
 
-def validate_number_range(text: list, num_type, lower, upper=float('inf')):
+def validate_range(text: list, num_type, lower, upper=float('inf')):
     """
     Validate user input: number in specified range
     :param text: list, the content of the initial `input`

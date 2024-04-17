@@ -15,7 +15,7 @@ from os import system, name
 from time import sleep
 
 # general-purpose functions
-from utilities import validate_number_range, clear
+from utilities import validate_range, clear
 
 
 # provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
@@ -60,7 +60,7 @@ class DishList:
                 + f"of the dish you'd like to add:"
                 + Back.RESET + " "]
         dish_number = \
-            validate_number_range(text, int, 1, len(self.dish_data) - 1)
+            validate_range(text, int, 1, len(self.dish_data) - 1)
 
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
