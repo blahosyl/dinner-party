@@ -25,28 +25,28 @@ import planner
 # initial screen text
 # name of the app in ASCII art using `pyfiglet`
 print(Style.BRIGHT + Fore.MAGENTA +
-      pyfiglet.figlet_format("Dinner Party!", font="doom")
+      pyfiglet.figlet_format('Dinner Party!', font='doom')
       )
-print("Designed and coded by Sylvia Blaho (github.com/blahosyl)\n"
+print('Designed and coded by Sylvia Blaho (github.com/blahosyl)\n'
       + Fore.RESET)
-print("\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳"
-      "\nThis app helps you plan them!"
-      "\nJust select the dishes or drinks you want to make for your guests,"
-      "\nand the app generates a shopping list for you!\n")
+print('\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳'
+      '\nThis app helps you plan them!'
+      '\nJust select the dishes or drinks you want to make for your guests,'
+      '\nand the app generates a shopping list for you!\n')
 
 # Based on the Love Sandwiches project
 # constant specifying what the Robot user has access to
 SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
+    'https://www.googleapis.com/auth/spreadsheets',
+    'https://www.googleapis.com/auth/drive.file',
+    'https://www.googleapis.com/auth/drive'
 ]
 
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('ingredients')
-START_INSTRUCTION = "\nPress RUN PROGRAM to start again"
+START_INSTRUCTION = '\nPress RUN PROGRAM to start again'
 
 recipes = SHEET.worksheet('main')
 
@@ -86,7 +86,7 @@ def initial_question():
     user_input = input(Back.MAGENTA
                        + 'Would you like to plan a dinner party? (Y/N):'
                        + Back.RESET
-                       + " ")
+                       + ' ')
     return user_input
 
 
@@ -97,7 +97,7 @@ def more_dishes():
     """
     user_input = input(Back.MAGENTA
                        + 'Would you like to add another dish? (Y/N):'
-                       + Back.RESET + " ")
+                       + Back.RESET + ' ')
     return user_input
 
 
@@ -117,7 +117,7 @@ def welcome():
         sleep(1.5)
         # clear the console
         clear()
-        print("\nHere is the list of dishes you can choose from 🤓")
+        print('\nHere is the list of dishes you can choose from 🤓')
         #  start the addition cycle
         _planning = True
 
@@ -125,13 +125,13 @@ def welcome():
         #  exit the program with a message
         _planning = False
         # clear the terminal
-        print("\nMaybe some other time, then 👋\n")
+        print('\nMaybe some other time, then 👋\n')
         # sleep for 1.5 seconds after printing output
         sleep(1.5)
         # clear the console
         clear()
         print(Fore.MAGENTA +
-              pyfiglet.figlet_format("Bye for now!", font="doom")
+              pyfiglet.figlet_format('Bye for now!', font='doom')
               + Fore.RESET)
         print(START_INSTRUCTION)
 
@@ -142,15 +142,15 @@ def print_shopping_list_block():
     the shopping list, the goodbye message
     and start instruction
     """
-    goodbye_message = "\n" + Fore.MAGENTA \
-                      + pyfiglet.figlet_format("Have fun!", font="doom") \
+    goodbye_message = '\n' + Fore.MAGENTA \
+                      + pyfiglet.figlet_format('Have fun!', font='doom') \
                       + Fore.RESET
-    print("\nHere comes your shopping list 📋")
+    print('\nHere comes your shopping list 📋')
     # sleep for 1.5 seconds after printing output
     sleep(1.5)
     # clear the screen
     clear()
-    print(Fore.GREEN + "\nSHOPPING LIST" + Fore.RESET)
+    print(Fore.GREEN + '\nSHOPPING LIST' + Fore.RESET)
     _shopping_list.print_formatted(_shopping_list.list_data)
     # sleep for 1.5 seconds after printing output
     sleep(1.5)
@@ -174,7 +174,7 @@ def ask_more():
         if add_dish == 'Y' or add_dish == 'y':
             # planning remains True, keeps the loop running
             clear()
-            print("\nCool, here is the list of dishes again 🤓")
+            print('\nCool, here is the list of dishes again 🤓')
         elif add_dish == 'N' or add_dish == 'n':
             _planning = False
             print("\nGot it! That's enough cooking for now 🍲\n")
@@ -182,8 +182,8 @@ def ask_more():
     else:
         # stop the loop
         _planning = False
-        print("\nYou have selected all the dishes.")
-        print("🌯 🍛️ 🍷 🍻 🌮 🥃 🥗 🧆 🍰 🫔 🍹 ")
+        print('\nYou have selected all the dishes.')
+        print('🌯 🍛️ 🍷 🍻 🌮 🥃 🥗 🧆 🍰 🫔 🍹 ')
         print_shopping_list_block()
 
 

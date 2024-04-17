@@ -16,14 +16,14 @@ def validate_y_n(starting_question):
     user_input = starting_question
     # validating the input
     # while the input is not one of the allowed options
-    while user_input not in {"Y", "N", "y", "n"}:
+    while user_input not in {'Y', 'N', 'y', 'n'}:
         # ask for input again
         user_input = input(Back.RED
                            + f'You typed "' + Fore.CYAN + user_input
                            + Fore.RESET
                            + f'" – I don\'t understand that 🤔'
                              f' Please type Y or N:'
-                           + Back.RESET + " ")
+                           + Back.RESET + ' ')
     return user_input
 
 
@@ -58,7 +58,7 @@ def validate_range(text: list, num_type, lower, upper=float('inf')):
                 user_input = num_type(
                     input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
                           + Fore.RESET + '" out of range 🤔 '
-                          f"Please type a number {upper_text[0]}:"
+                          f'Please type a number {upper_text[0]}:'
                           + Back.RESET + " "))
             break
         except ValueError:
@@ -77,4 +77,4 @@ def clear():
     Clear the terminal
     """
     # use `cls` for windows, `clear` for other OSes (name: `postfix`)
-    system("cls" if name == "nt" else "clear")
+    system('cls' if name == 'nt' else 'clear')
