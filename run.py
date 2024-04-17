@@ -20,6 +20,9 @@ from colorama import Fore, Back, Style
 # text with ASCII art
 import pyfiglet
 
+# general-purpose functions
+from utilities import y_n_validation, clear
+
 # import this module for classes custom written for this project
 import planner
 
@@ -79,14 +82,6 @@ _shopping_list = planner.ShoppingList([])
 _planning = False
 
 
-# provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
-def clear():
-    """
-    Clear the terminal
-    """
-    # use `cls` for windows, `clear` for other OSes (name: `postfix`)
-    system("cls" if name == "nt" else "clear")
-
 
 def initial_question():
     """
@@ -108,25 +103,6 @@ def more_dishes():
     user_input = input(Back.MAGENTA
                        + 'Would you like to add another dish? (Y/N):'
                        + Back.RESET + " ")
-    return user_input
-
-
-def y_n_validation(starting_question):
-    """
-    Get and validate user input to Y/N question
-    :return: validated user input
-    """
-    user_input = starting_question
-    # validating the input
-    # while the input is not one of the allowed options
-    while user_input not in {"Y", "N", "y", "n"}:
-        # ask for input again
-        user_input = input(Back.RED
-                           + f'You typed "' + Fore.CYAN + user_input
-                           + Fore.RESET
-                           + f'" – I don\'t understand that 🤔'
-                             f' Please type Y or N:'
-                           + Back.RESET + " ")
     return user_input
 
 
