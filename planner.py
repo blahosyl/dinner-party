@@ -37,10 +37,14 @@ def validate_number_range(text: list, num_type, lower, upper=float('inf')):
     """
     while True:
         try:
+            # customised the text of error messages
+            # both for the `while` loop and `except`
+            # only include "whole" in the text if only integers are accepted
             if num_type == int:
                 whole = 'whole '
             else:
                 whole = ''
+            # change text depending on whether there is an `upper` param
             if upper == float('inf'):
                 upper_text = [f'that is {lower} or above']
             else:
@@ -51,13 +55,12 @@ def validate_number_range(text: list, num_type, lower, upper=float('inf')):
                 user_input = num_type(
                     input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
                           + Fore.RESET + '" out of range 🤔 '
-                                         f"Please type a number {upper_text[0]}:"
+                          f"Please type a number {upper_text[0]}:"
                           + Back.RESET + " "))
             break
         except ValueError:
             # while the input is not one of the allowed options
             # ask for input again
-            # only include "whole" in the text if only integers are accepted
             print(Back.RED + '"' + Fore.CYAN + f'{user_input}' + Fore.RESET
                   + f'" is not a valid number 🤔 '
                     f'Please type a {whole}number {upper_text[0]}.'
@@ -97,7 +100,8 @@ class DishList:
                 + Fore.GREEN + "number " + Fore.RESET
                 + f"of the dish you'd like to add:"
                 + Back.RESET + " "]
-        dish_number = validate_number_range(text, int, 1, len(self.dish_data) - 1)
+        dish_number = \
+            validate_number_range(text, int, 1, len(self.dish_data) - 1)
 
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
@@ -168,9 +172,9 @@ class ShoppingList:
             # a colon
             # the quantity (second item of the list)
             print_string = print_string[:opening - 1] \
-                           + ': ' \
-                           + f"{ingredient_list[i][1]:g}" \
-                           + print_string[opening - 1:]
+                + ': ' \
+                + f"{ingredient_list[i][1]:g}" \
+                + print_string[opening - 1:]
             # delete the opening and closing parenthesis
             print_string = print_string.replace('(', '')
             print_string = print_string.replace(')', '')
