@@ -1,30 +1,18 @@
 # This module provides objects and methods for planning dinner parties
 
+# import sleep to show output for some time period
+# package suggested by my mentor
+from time import sleep
+
 # get combinations from a list
 import itertools
 
 # colored terminal output
 # package suggested by my mentor
-from colorama import Fore, Back, Style
+from colorama import Fore, Back
 
-# for the `clear()` function
-from os import system, name
-
-# import sleep to show output for some time period
-# package suggested by my mentor
-from time import sleep
-
-# general-purpose functions
+# self-written general-purpose functions
 from utilities import validate_range, clear
-
-
-# provided by my mentor Rory Patrick Sheridan (modified to fit `from...import`)
-def clear():
-    """
-    Clear the terminal
-    """
-    # use `cls` for windows, `clear` for other OSes (name: `postfix`)
-    system("cls" if name == "nt" else "clear")
 
 
 class DishList:

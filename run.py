@@ -1,17 +1,13 @@
+# import sleep to show output for some time period
+# package suggested by my mentor
+from time import sleep
+
 # Use of gspread based on the Love Sandwiches project
 # import entire library
 import gspread
 # import 1 class from a library
 from google.oauth2.service_account import Credentials
-
 # end of code based on the Love Sandwiches project
-
-# for the `clear()` function
-from os import system, name
-
-# import sleep to show output for some time period
-# package suggested by my mentor
-from time import sleep
 
 # colored terminal output
 # package suggested by my mentor
@@ -20,10 +16,10 @@ from colorama import Fore, Back, Style
 # text with ASCII art
 import pyfiglet
 
-# general-purpose functions
+# self-written general-purpose functions
 from utilities import validate_y_n, clear
 
-# import this module for classes custom written for this project
+# self-written custom classes, methods & library
 import planner
 
 # initial screen text

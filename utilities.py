@@ -1,4 +1,4 @@
-# A collection of general-purpose functions
+# a collection of general-purpose functions
 
 # for the `clear()` function
 from os import system, name
