@@ -269,7 +269,7 @@ Which libraries are used and what their purpose is, why they are needed
 
 ## Testing
 
-See the document [`testing.md`](testing.md) for details.
+See the document [`TESTING.md`](TESTING.md) for details.
 
 ## Credits
 
