@@ -24,13 +24,13 @@ def clear():
     system("cls" if name == "nt" else "clear")
 
 
-def validate_number_range(text: list, type, lower, upper=float('inf')):
+def validate_number_range(text: list, num_type, lower, upper=float('inf')):
     """
     Validate user input: number in specified range
     :param text: list, the content of the initial `input`
     It has to be a list, because using colorama makes it
     too compliceted to be a string
-    :param type: int or float, the type of number input accepted
+    :param num_type: int or float, the type of number input accepted
     :param lower: int, lower bound of the range (incl.)
     :param upper: int, upper bound of the range (incl.)
     :return: validated input: integer in range
@@ -38,9 +38,9 @@ def validate_number_range(text: list, type, lower, upper=float('inf')):
     while True:
         try:
             user_input = input(text[0])
-            user_input = type(user_input)
+            user_input = num_type(user_input)
             while user_input < lower or user_input > upper - 1:
-                user_input = type(
+                user_input = num_type(
                     input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
                           + Fore.RESET + '" out of range 🤔 '
                                          f"Please type a number between {lower} and "
@@ -51,7 +51,7 @@ def validate_number_range(text: list, type, lower, upper=float('inf')):
             # while the input is not one of the allowed options
             # ask for input again
             # only include "whole" in the text if only integers are accepted
-            if type == int:
+            if num_type == int:
                 whole = 'whole '
             else:
                 whole = ''
