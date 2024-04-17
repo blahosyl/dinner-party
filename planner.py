@@ -140,6 +140,7 @@ def print_formatted(ingredient_list):
             # make unit_name singular (remove string-final 's')
             print_string = print_string.replace(unit_name, unit_name[:-1])
         # end of code to replace measurement abbreviation with full name
+
         # 1 left of the opening bracket, add the following:
         # a colon
         # the quantity (second item of the list)
