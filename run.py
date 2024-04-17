@@ -68,6 +68,13 @@ _data = recipes.get_all_values()
 # the [:] at the end copies the list, so that `dishes` can be changed
 # without `data[1]` also changing
 DISHES_ROW = _data[1][:]
+
+# content and styling of goodbye message
+GOODBYE_MESSAGE = '\n' + Fore.MAGENTA \
+                  + pyfiglet.figlet_format('Have fun!', font='doom') \
+                  + Fore.RESET
+
+
 # create a list object with `dishes_row` as the input
 _dishes = planner.DishList(DISHES_ROW)
 
@@ -130,9 +137,7 @@ def welcome():
         sleep(1.5)
         # clear the console
         clear()
-        print(Fore.MAGENTA +
-              pyfiglet.figlet_format('Bye for now!', font='doom')
-              + Fore.RESET)
+        print(GOODBYE_MESSAGE)
         print(START_INSTRUCTION)
 
 
@@ -142,9 +147,6 @@ def print_shopping_list_block():
     the shopping list, the goodbye message
     and start instruction
     """
-    goodbye_message = '\n' + Fore.MAGENTA \
-                      + pyfiglet.figlet_format('Have fun!', font='doom') \
-                      + Fore.RESET
     print('\nHere comes your shopping list 📋')
     # sleep for 1.5 seconds after printing output
     sleep(1.5)
@@ -154,7 +156,7 @@ def print_shopping_list_block():
     _shopping_list.print_formatted(_shopping_list.list_data)
     # sleep for 1.5 seconds after printing output
     sleep(1.5)
-    print(goodbye_message)
+    print(GOODBYE_MESSAGE)
     print(START_INSTRUCTION)
 
 
