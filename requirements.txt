@@ -13,7 +13,5 @@ requests-oauthlib==2.0.0
 rsa==4.9
 StrEnum==0.4.15
 urllib3==2.2.1
-
 colorama~=0.4.6
-ascii-magic~=2.3.0
 pyfiglet~=1.0.2
