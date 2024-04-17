@@ -47,7 +47,7 @@ class DishList:
         # print an empty line to visually separate the list
         print('\n')
 
-    def validate_range(self, text, type, lower, upper):
+    def validate_range(self, text, type, lower, upper=float('inf')):
         """
         Validate user input: number in specified range
         :param text: list, the content of the initial `input`
@@ -78,10 +78,13 @@ class DishList:
                     whole = 'whole '
                 else:
                     whole = ''
+                if upper == float('inf'):
+                    upper_text = [f'that is {lower} or above']
+                else:
+                    upper_text = [f'between {lower} and {upper - 1}']
                 print(Back.RED + '"' + Fore.CYAN + f'{user_input}' + Fore.RESET
                       + f'" is not a valid number 🤔 '
-                        f'Please type a {whole}number between {lower} and '
-                        f'{upper - 1}.'
+                        f'Please type a {whole}number {upper_text[0]}.'
                       + Back.RESET)
         return user_input
 
