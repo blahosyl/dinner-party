@@ -14,7 +14,8 @@ revised_list = []
 # for each item on the shopping list
 for i in range(0, len(shopping_list.list_data)):
     # ask how much the user has
-    have = float(input(f"How much {shopping_list.list_data[i][0]} do you have?"))
+    text = [f'How much {shopping_list.list_data[i][0]} do you have? ']
+    have = planner.validate_number_range(text, float, 0)
     # deduct the quantity in the pantry from the quantity on the shopping list
     shopping_list.list_data[i][1] -= have
     # if the resulting quantity is more than 0
