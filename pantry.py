@@ -30,4 +30,4 @@ for i in range(0, len(shopping_list.list_data)):
 #  set the contents of the shopping list to the intermediate list
 shopping_list.list_data = revised_list
 
-print(shopping_list.list_data)
+shopping_list.print_formatted(shopping_list.list_data)
