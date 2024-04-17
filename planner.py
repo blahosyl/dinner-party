@@ -139,7 +139,7 @@ class ShoppingList:
         add them to the shopping list, return a list of lists
         """
 
-        print(Fore.GREEN + f'Ingredients for {selection}' + Fore.RESET)
+        print(Fore.GREEN + f'\nIngredients for {selection}' + Fore.RESET)
         # get the index of the selected dish in the database
         selection_index = recipe_data[1].index(selection)
         # the list of ingredients for the selected dish
