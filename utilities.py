@@ -1,7 +1,11 @@
 # a collection of general-purpose functions
 
+# STANDARD PACKAGES
+
 # for the `clear()` function
 from os import system, name
+
+# 3RD PARTY LIBRARIES
 
 # colored terminal output
 # package suggested by my mentor
