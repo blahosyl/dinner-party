@@ -28,7 +28,8 @@ import planner
 print(Style.BRIGHT + Fore.MAGENTA +
       pyfiglet.figlet_format("Dinner Party!", font="doom")
       )
-print("Designed and coded by Sylvia Blaho (github.com/blahosyl)\n" + Fore.RESET)
+print("Designed and coded by Sylvia Blaho (github.com/blahosyl)\n"
+      + Fore.RESET)
 print("\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳"
       "\nThis app helps you plan them!"
       "\nJust select the dishes or drinks you want to make for your guests,"
@@ -121,8 +122,10 @@ def y_n_validation(starting_question):
     while user_input not in {"Y", "N", "y", "n"}:
         # ask for input again
         user_input = input(Back.RED
-                           + f'You typed "' + Fore.CYAN + user_input + Fore.RESET
-                           + f'" – I don\'t understand that 🤔 Please type Y or N:'
+                           + f'You typed "' + Fore.CYAN + user_input
+                           + Fore.RESET
+                           + f'" – I don\'t understand that 🤔'
+                             f' Please type Y or N:'
                            + Back.RESET + " ")
     return user_input
 
