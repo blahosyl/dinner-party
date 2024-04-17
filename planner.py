@@ -23,6 +23,47 @@ def clear():
     # use `cls` for windows, `clear` for other OSes (name: `postfix`)
     system("cls" if name == "nt" else "clear")
 
+def validate_number_range(text: list, type, lower, upper=float('inf')):
+    """
+    Validate user input: number in specified range
+    :param text: list, the content of the initial `input`
+    It has to be a list, because using colorama makes it
+    too compliceted to be a string
+    :param type: int or float, the type of number input accepted
+    :param lower: int, lower bound of the range (incl.)
+    :param upper: int, upper bound of the range (incl.)
+    :return: validated input: integer in range
+    """
+    while True:
+        try:
+            user_input = input(text[0])
+            user_input = type(user_input)
+            while user_input < lower or user_input > upper - 1:
+                user_input = type(
+                    input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
+                            + Fore.RESET + '" out of range 🤔 '
+                                            f"Please type a number between {lower} and "
+                                            f"{upper - 1}:"
+                            + Back.RESET + " "))
+            break
+        except ValueError:
+             # while the input is not one of the allowed options
+            # ask for input again
+            # only include "whole" in the text if only integers are accepted
+            if type == int:
+                whole = 'whole '
+            else:
+                whole = ''
+            if upper == float('inf'):
+                upper_text = [f'that is {lower} or above']
+            else:
+                upper_text = [f'between {lower} and {upper - 1}']
+            print(Back.RED + '"' + Fore.CYAN + f'{user_input}' + Fore.RESET
+                    + f'" is not a valid number 🤔 '
+                    f'Please type a {whole}number {upper_text[0]}.'
+                    + Back.RESET)
+    return user_input
+
 
 class DishList:
     """
@@ -47,47 +88,6 @@ class DishList:
         # print an empty line to visually separate the list
         print('\n')
 
-    def validate_range(self, text, type, lower, upper=float('inf')):
-        """
-        Validate user input: number in specified range
-        :param text: list, the content of the initial `input`
-        It has to be a list, because using colorama makes it
-        too compliceted to be a string
-        :param type: int or float, the type of number input accepted
-        :param lower: int, lower bound of the range (incl.)
-        :param upper: int, upper bound of the range (incl.)
-        :return: validated input: integer in range
-        """
-        while True:
-            try:
-                user_input = input(text[0])
-                user_input = type(user_input)
-                while user_input < lower or user_input > upper - 1:
-                    user_input = type(
-                        input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
-                              + Fore.RESET + '" out of range 🤔 '
-                                             f"Please type a number between {lower} and "
-                                             f"{upper - 1}:"
-                              + Back.RESET + " "))
-                break
-            except ValueError:
-                # while the input is not one of the allowed options
-                # ask for input again
-                # only include "whole" in the text if only integers are accepted
-                if type == int:
-                    whole = 'whole '
-                else:
-                    whole = ''
-                if upper == float('inf'):
-                    upper_text = [f'that is {lower} or above']
-                else:
-                    upper_text = [f'between {lower} and {upper - 1}']
-                print(Back.RED + '"' + Fore.CYAN + f'{user_input}' + Fore.RESET
-                      + f'" is not a valid number 🤔 '
-                        f'Please type a {whole}number {upper_text[0]}.'
-                      + Back.RESET)
-        return user_input
-
     def select_dish(self):
         # print the list of dishes in a numbered list
         self.print_enum()
@@ -97,7 +97,7 @@ class DishList:
                                    + Fore.GREEN + "number " + Fore.RESET
                                    + f"of the dish you'd like to add:"
                                    + Back.RESET + " "]
-        dish_number = self.validate_range(text, int, 1, len(self.dish_data) - 1)
+        dish_number = validate_number_range(text, int, 1, len(self.dish_data) - 1)
 
         # get the dish with the selected number from the `dishes` list
         selected_dish = self.dish_data[int(dish_number)]
