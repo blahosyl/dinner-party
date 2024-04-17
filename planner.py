@@ -37,20 +37,6 @@ def validate_number_range(text: list, num_type, lower, upper=float('inf')):
     """
     while True:
         try:
-            user_input = input(text[0])
-            user_input = num_type(user_input)
-            while user_input < lower or user_input > upper - 1:
-                user_input = num_type(
-                    input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
-                          + Fore.RESET + '" out of range 🤔 '
-                                         f"Please type a number between {lower} and "
-                                         f"{upper - 1}:"
-                          + Back.RESET + " "))
-            break
-        except ValueError:
-            # while the input is not one of the allowed options
-            # ask for input again
-            # only include "whole" in the text if only integers are accepted
             if num_type == int:
                 whole = 'whole '
             else:
@@ -59,6 +45,19 @@ def validate_number_range(text: list, num_type, lower, upper=float('inf')):
                 upper_text = [f'that is {lower} or above']
             else:
                 upper_text = [f'between {lower} and {upper - 1}']
+            user_input = input(text[0])
+            user_input = num_type(user_input)
+            while user_input < lower or user_input > upper - 1:
+                user_input = num_type(
+                    input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
+                          + Fore.RESET + '" out of range 🤔 '
+                                         f"Please type a number {upper_text[0]}:"
+                          + Back.RESET + " "))
+            break
+        except ValueError:
+            # while the input is not one of the allowed options
+            # ask for input again
+            # only include "whole" in the text if only integers are accepted
             print(Back.RED + '"' + Fore.CYAN + f'{user_input}' + Fore.RESET
                   + f'" is not a valid number 🤔 '
                     f'Please type a {whole}number {upper_text[0]}.'
