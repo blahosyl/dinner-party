@@ -19,7 +19,9 @@ revised_list = []
 # for each item on the shopping list
 for i in range(0, len(shopping_list.list_data)):
     # ask how much the user has
-    text = [f'How much {shopping_list.list_data[i][0]} do you have? ']
+    ingredient_text = planner.parse_string(shopping_list.list_data[i][0])
+    text = [f'How many {ingredient_text} do you have? ']
+    # get and validate the input (float, >=0, no upper limit)
     have = planner.validate_range(text, float, 0)
     # deduct the quantity in the pantry from the quantity on the shopping list
     shopping_list.list_data[i][1] -= have
@@ -30,4 +32,4 @@ for i in range(0, len(shopping_list.list_data)):
 #  set the contents of the shopping list to the intermediate list
 shopping_list.list_data = revised_list
 
-shopping_list.print_formatted(shopping_list.list_data)
+planner.print_formatted(shopping_list.list_data)

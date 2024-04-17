@@ -72,16 +72,16 @@ class DishList:
         return selected_dish
 
 
-def parse_string(ingredient_string, quantity):
+def parse_string(ingredient_string):
     """
     Find the abbreviation string,
     replace it with the full unit name
     if it is in the dictionary
     The input string must contain ( and )
-    :param quantity: how much of the ingredient is needed
     :param ingredient_string: string
     :return: list[opening parenthesis index,
-                    abbreviation
+                    abbreviation,
+                    Boolean: abbr in dictionary or not,
                     modified intput string]
     """
     # abbreviations and corresponding unit names
@@ -106,18 +106,16 @@ def parse_string(ingredient_string, quantity):
     # replace it with the corresponding unit name
     if abbr in units:
         unit_name = units[abbr]
-        # if the quantity is exactly 1, and it's in the dictionary
-        if quantity == 1:
-            # make unit_name singular (remove string-final 's')
-            unit_name = unit_name[:-1]
+        in_dict = True
     # if it's not in the dictionary, leave it as is
     else:
         unit_name = abbr
+        in_dict = False
     # replace a parenthesis+abbreviation with parenthesis+unit name
     # need to specify parenthesis as well, so that it does not
     # replace things like "g" across the board (unintended)
     ingredient_string = ingredient_string.replace('(' + abbr, '(' + unit_name)
-    return [opening, unit_name, ingredient_string]
+    return [opening, unit_name, in_dict, ingredient_string]
 
 
 def print_formatted(ingredient_list):
@@ -128,22 +126,27 @@ def print_formatted(ingredient_list):
     for i in range(0, len(ingredient_list)):
         # set `print_string` as the first item of the list
         print_string = ingredient_list[i][0]
+        quantity = ingredient_list[i][1]
 
         # replace unit abbreviation with full name
-        parsed_string = parse_string(print_string, ingredient_list[i][1])
+        parsed_string = parse_string(print_string)
         # index of the opening parenthesis
         opening = parsed_string[0]
         unit_name = parsed_string[1]
-        # Boolean: is the abbreviation in the dictionary
-        print_string = parsed_string[2]
-
+        in_dict = parsed_string[2]
+        print_string = parsed_string[3]
+        # if the quantity is exactly 1, and it's in the dictionary
+        if quantity == 1 and in_dict:
+            # make unit_name singular (remove string-final 's')
+            print_string = print_string.replace(unit_name, unit_name[:-1])
         # end of code to replace measurement abbreviation with full name
         # 1 left of the opening bracket, add the following:
         # a colon
         # the quantity (second item of the list)
+        # in general notation
         print_string = print_string[:opening - 1] \
                        + ': ' \
-                       + f'{ingredient_list[i][1]:g}' \
+                       + f'{quantity:g}' \
                        + print_string[opening - 1:]
         # delete the opening and closing parenthesis
         print_string = print_string.replace('(', '')
