@@ -19,7 +19,7 @@
 
 ### Flow
 
-![Program flowchart](readme-pics/dinner-party-flow.jpg)
+![Program flowchart](assets/readme-pics/dinner-party-flow.jpg)
 
 #### CRUD functionalities
 
@@ -147,24 +147,24 @@ I put the [image](assets/images/wine-glasses.webp) used for the favicon as a log
 I added my name and the link to the application's repository under the terminal window, using the colors already defined above.
 
 
-![The rerolled site design](readme-pics/rerolled-design.png)
+![The rerolled site design](assets/readme-pics/rerolled-design.png)
 
 Validating the resulting `html` file in itself passed without errors.
 
-![layout.html passes validation](readme-pics/html-validation-file.png)
+![layout.html passes validation](assets/readme-pics/html-validation-file.png)
 
 However, running HTML validation for [the deployed site](https://dinner-party-planner-ee795b43bd35.herokuapp.com/), produced an error of there being multiple `<body>` tags.
 I have deduced that the reason for this is that the Code Institute template adds a `<body>` tag as well, resulting in a duplicate.
 
-![The deployed site did not pass HTML validation](readme-pics/html-validation-error-start.png)
+![The deployed site did not pass HTML validation](assets/readme-pics/html-validation-error-start.png)
 
-![The code of the deployed site that did not pass HTML validation](readme-pics/html-validation-error-code.png)
+![The code of the deployed site that did not pass HTML validation](assets/readme-pics/html-validation-error-code.png)
 
 
 Accordingly, I have rerolled the changes to `layout.html` that involved adding `html` elements, and kept the styling  to modifications in the `head`.
 After this, both the modified `layout.html` file and the [the deployed site](https://dinner-party-planner-ee795b43bd35.herokuapp.com/) passed the W3C validator.
 
-![The deployed site passes HTML validation](readme-pics/html-validation-deployed.png)
+![The deployed site passes HTML validation](assets/readme-pics/html-validation-deployed.png)
 
 
 </details>
