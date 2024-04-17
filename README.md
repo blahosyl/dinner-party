@@ -83,13 +83,13 @@ I chose a [background image](assets/images/sweet-potatoes.webp) of a colorful di
 
 #### Button design
 
-I changed the background color of the **Run Program** button to the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
+I changed the background color of the **Run Program** button to the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)).
 This color was chosen to harmonize with the image but still stand out from the rest of the elements on the page.
 
 The color contrast with the white text was checked for accessibility/legibility (see [Color contrasts](#color-contrasts) for more details).
 
 
-I have also made the button and the text on it larger and increased the font weight. 
+I have also made the button and the text on it larger and increased the font weight.
 To balance out these changes, I also increased the button width and its margin.
 
 Finally, I added a hover cursor effect.
@@ -113,7 +113,7 @@ Iasmina Pal](https://github.com/useriasminna) in implementing the changes above.
 
 #### Rerolled design elements
 
-I made some additional changes based on the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) that I have decided to reroll: although the modified `layout.html` file passed validation, the deployed page did not. 
+I made some additional changes based on the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) that I have decided to reroll: although the modified `layout.html` file passed validation, the deployed page did not.
 
 <details>
 <summary>Click to see the details of the rerolll</summary>
@@ -134,7 +134,7 @@ I had adopted this this code, and also added a [logo to the header](#logo) and [
 
 #### Header
 
-I added the name of the app as an `h1` element before the Run button in the template. For its background, I used the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)). 
+I added the name of the app as an `h1` element before the Run button in the template. For its background, I used the purple color of the onions from the background image (with the help of [ImageColorPicker](https://imagecolorpicker.com/)).
 
 The heading text color is white, so that it provides sufficient contrast with the background (see [Color contrasts](#color-contrasts) for more details).
 
@@ -183,9 +183,9 @@ The colors used in the project are as follows:
 
 |color name 	|HEX code|
 |---			|---	|
-|white			|#FFFFFF| 
-|onion-purple	|#7A2F40| 
-|thyme-green	|#5A5A26| 
+|white			|#FFFFFF|
+|onion-purple	|#7A2F40|
+|thyme-green	|#5A5A26|
 
 
 The paired colors have the following contrasts:
@@ -233,11 +233,11 @@ You can fork the repository by following these steps:
 5. Click **Fork** in the bottom right part of the screen.
 
 >[!TIP]
->If you do rename the repository, make sure to keep the [GitHub naming conventions](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Naming-Repos.md) in mind. 
+>If you do rename the repository, make sure to keep the [GitHub naming conventions](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Naming-Repos.md) in mind.
 
 ### Deployment to Heroku
 
-1. Create a list of requirements by going to the terminal and typing `pip3 freeze > requirements.txt`. This popuplates your `requirements.txt` file with the list of required files.<br> 
+1. Create a list of requirements by going to the terminal and typing `pip3 freeze > requirements.txt`. This popuplates your `requirements.txt` file with the list of required files.<br>
 Push your changes to GitHub.
 2. Under **Settings > Config Vars** in Heroku, add  a new var  with the key `CREDS` and the value equal to the contents of your `creds.json` file.
 3. Under **Settings > Config Vars** in Heroku, add  a new var  with the key  `PORT` witht the key `PORT` and the value `8000`.
@@ -317,7 +317,8 @@ The following resources were used to learn/double check general, atomic function
 - [problems with removing list items in a loop and some solutions (not used)](https://stackoverflow.com/a/6260097/24248624)
 - [fix list comprehension error with indices (not used)](https://codinggear.org/list-indices-must-be-integers-or-slices-not-list/#:~:text=The%20Python%20Typeerror%3A%20list%20indices,index%20instead%20of%20a%20list.)
 - [`isnumeric`: only allow numeric values](https://stackoverflow.com/a/72488576/24248624)
-
+- [infinity](https://www.geeksforgeeks.org/python-infinity/)
+- [defining functions with optional arguments](https://realpython.com/python-optional-arguments/)
 
 ### Code
 
