@@ -23,6 +23,7 @@ def clear():
     # use `cls` for windows, `clear` for other OSes (name: `postfix`)
     system("cls" if name == "nt" else "clear")
 
+
 def validate_number_range(text: list, type, lower, upper=float('inf')):
     """
     Validate user input: number in specified range
@@ -41,13 +42,13 @@ def validate_number_range(text: list, type, lower, upper=float('inf')):
             while user_input < lower or user_input > upper - 1:
                 user_input = type(
                     input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
-                            + Fore.RESET + '" out of range 🤔 '
-                                            f"Please type a number between {lower} and "
-                                            f"{upper - 1}:"
-                            + Back.RESET + " "))
+                          + Fore.RESET + '" out of range 🤔 '
+                                         f"Please type a number between {lower} and "
+                                         f"{upper - 1}:"
+                          + Back.RESET + " "))
             break
         except ValueError:
-             # while the input is not one of the allowed options
+            # while the input is not one of the allowed options
             # ask for input again
             # only include "whole" in the text if only integers are accepted
             if type == int:
@@ -59,9 +60,9 @@ def validate_number_range(text: list, type, lower, upper=float('inf')):
             else:
                 upper_text = [f'between {lower} and {upper - 1}']
             print(Back.RED + '"' + Fore.CYAN + f'{user_input}' + Fore.RESET
-                    + f'" is not a valid number 🤔 '
+                  + f'" is not a valid number 🤔 '
                     f'Please type a {whole}number {upper_text[0]}.'
-                    + Back.RESET)
+                  + Back.RESET)
     return user_input
 
 
@@ -94,9 +95,9 @@ class DishList:
 
         # validating the input
         text = [Back.MAGENTA + "Type in the "
-                                   + Fore.GREEN + "number " + Fore.RESET
-                                   + f"of the dish you'd like to add:"
-                                   + Back.RESET + " "]
+                + Fore.GREEN + "number " + Fore.RESET
+                + f"of the dish you'd like to add:"
+                + Back.RESET + " "]
         dish_number = validate_number_range(text, int, 1, len(self.dish_data) - 1)
 
         # get the dish with the selected number from the `dishes` list
