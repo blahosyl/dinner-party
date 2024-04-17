@@ -43,10 +43,10 @@ class DishList:
         self.print_enum()
 
         # validating the input
-        text = [Back.MAGENTA + "Type in the "
-                + Fore.GREEN + "number " + Fore.RESET
-                + f"of the dish you'd like to add:"
-                + Back.RESET + " "]
+        text = [Back.MAGENTA + 'Type in the '
+                + Fore.GREEN + 'number ' + Fore.RESET
+                + "of the dish you'd like to add:"
+                + Back.RESET + ' ']
         dish_number = \
             validate_range(text, int, 1, len(self.dish_data) - 1)
 
@@ -67,12 +67,12 @@ class DishList:
 
 
 units = {
-    "g": "grams",
-    "kg": "kilograms",
-    "pc": "pieces",
-    "ml": "milliliters",
-    "l": "liters",
-    "Tbsp": "tablespoons",
+    'g': 'grams',
+    'kg': 'kilograms',
+    'pc': 'pieces',
+    'ml': 'milliliters',
+    'l': 'liters',
+    'Tbsp': 'tablespoons',
 }
 
 
@@ -97,7 +97,7 @@ class ShoppingList:
             opening = print_string.index('(')
             # replace measurement unit abbreviation with full name
             # get the substring between the opening and the closing bracket
-            abbr = print_string[opening:].partition(")")
+            abbr = print_string[opening:].partition(')')
             # get the first item (opening bracket plus abbreviation)
             abbr = abbr[0]
             # delete the opening bracket from the variable
@@ -121,7 +121,7 @@ class ShoppingList:
             # the quantity (second item of the list)
             print_string = print_string[:opening - 1] \
                 + ': ' \
-                + f"{ingredient_list[i][1]:g}" \
+                + f'{ingredient_list[i][1]:g}' \
                 + print_string[opening - 1:]
             # delete the opening and closing parenthesis
             print_string = print_string.replace('(', '')
