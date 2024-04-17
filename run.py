@@ -1,13 +1,10 @@
+# STANDARD PACKAGES
+
 # import sleep to show output for some time period
 # package suggested by my mentor
 from time import sleep
 
-# Use of gspread based on the Love Sandwiches project
-# import entire library
-import gspread
-# import 1 class from a library
-from google.oauth2.service_account import Credentials
-# end of code based on the Love Sandwiches project
+# 3RD PARTY LIBRARIES
 
 # colored terminal output
 # package suggested by my mentor
@@ -16,56 +13,38 @@ from colorama import Fore, Back, Style
 # text with ASCII art
 import pyfiglet
 
-# self-written general-purpose functions
+# SELF-WRITTEN MODULES & FUNCTIONS
+
+# general-purpose functions
 from utilities import validate_y_n, clear
 
-# self-written custom classes, methods & library
+# code for retrieving data from the database in Google Sheets
+import gsheet
+
+# custom classes, methods & library
 import planner
 
-# initial screen text
-# name of the app in ASCII art using `pyfiglet`
-print(Style.BRIGHT + Fore.MAGENTA +
-      pyfiglet.figlet_format('Dinner Party!', font='doom')
-      )
-print('Designed and coded by Sylvia Blaho (github.com/blahosyl)\n'
-      + Fore.RESET)
-print('\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳'
-      '\nThis app helps you plan them!'
-      '\nJust select the dishes or drinks you want to make for your guests,'
-      '\nand the app generates a shopping list for you!\n')
+# GET DATA FROM GOOGLE SHEETS
 
-# Based on the Love Sandwiches project
-# constant specifying what the Robot user has access to
-SCOPE = [
-    'https://www.googleapis.com/auth/spreadsheets',
-    'https://www.googleapis.com/auth/drive.file',
-    'https://www.googleapis.com/auth/drive'
-]
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('ingredients')
-START_INSTRUCTION = '\nPress RUN PROGRAM to start again'
-
-recipes = SHEET.worksheet('main')
-
-# get a whole worksheet as a list of lists
-_data = recipes.get_all_values()
+# get a whole worksheet as a list of lists from Google Sheets
+_data = gsheet.recipes.get_all_values()
 # end of code based on the Love Sandwiches project
 # TESTING: print for testing/development purposes
 # print(data)
 
 # row 0 is the type of dish: starter, main, dessert or drink
-# row 1 of `data` is the list of dishes
+# (row 0 is not used for the MVP, included here for
+# scalability purposes)
+# row 1 of `_data` is the list of dishes
 # item 0 of each row is the ingredient
 # subsequent items of each row are the quantity of ingredients
 # needed for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
-# global variables
-# the row containing the names of dishes
-# the [:] at the end copies the list, so that `dishes` can be changed
+# CONSTANTS
+
+# get the row containing the names of dishes
+# the [:] at the end copies the list, so that `DISHES_ROW` can be changed
 # without `data[1]` also changing
 DISHES_ROW = _data[1][:]
 
@@ -84,14 +63,36 @@ GOODBYE_MESSAGE = '\n' + Fore.MAGENTA \
                   + pyfiglet.figlet_format('Have fun!', font='doom') \
                   + Fore.RESET
 
-# create a list object with `dishes_row` as the input
+# instruction displayed at the end of running
+START_INSTRUCTION = '\nPress RUN PROGRAM to start again'
+
+#  GLOBAL VARIABLES
+
+# create a DishList object with `DISHES_ROW` as the input
 _dishes = planner.DishList(DISHES_ROW)
 
-# create empty shopping list object (will be a list of lists eventually)
+# create empty ShoppingList object (will be a list of lists eventually)
 _shopping_list = planner.ShoppingList([])
 
-# sets whether the planning cycle runs or not
+# set whether the planning cycle runs or not
 _planning = False
+
+
+# FUNCTIONS
+
+
+def welcome_text():
+    """Initial screen text"""
+    # name of the app in ASCII art using `pyfiglet`
+    print(Style.BRIGHT + Fore.MAGENTA +
+          pyfiglet.figlet_format('Dinner Party!', font='doom')
+          )
+    print('Designed and coded by Sylvia Blaho (github.com/blahosyl)\n'
+          + Fore.RESET)
+    print('\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳'
+          '\nThis app helps you plan them!'
+          '\nJust select the dishes or drinks you want to make for your guests,'
+          '\nand the app generates a shopping list for you!\n')
 
 
 def welcome():
@@ -101,6 +102,10 @@ def welcome():
     """
     # get global variable
     global _planning
+
+    # print welcome text
+    welcome_text()
+
     # ask if user wants to start planning
     start = validate_y_n(INITIAL_QUESTION)
 
@@ -174,6 +179,8 @@ def ask_more():
         print('🌯 🍛️ 🍷 🍻 🌮 🥃 🥗 🧆 🍰 🫔 🍹 ')
         print_shopping_list_block()
 
+
+# RUN APP
 
 welcome()
 
