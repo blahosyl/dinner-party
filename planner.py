@@ -29,7 +29,7 @@ def validate_number_range(text: list, num_type, lower, upper=float('inf')):
     Validate user input: number in specified range
     :param text: list, the content of the initial `input`
     It has to be a list, because using colorama makes it
-    too compliceted to be a string
+    too complicated to be a string
     :param num_type: int or float, the type of number input accepted
     :param lower: int, lower bound of the range (incl.)
     :param upper: int, upper bound of the range (incl.)

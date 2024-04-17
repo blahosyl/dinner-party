@@ -7,8 +7,10 @@ shopping_list = planner.ShoppingList([
     ["tahini (Tbsp)", 4],
 ])
 
-# create an intermediate list to store ingredients where quantity is more than 0
-# this is needed because removing items from a list in a loop causes "index out of range" issues
+# create an intermediate list to store ingredients where quantity
+# is more than 0
+# this is needed because removing items from a list in a loop causes
+# "index out of range" issues
 # list comprehension also doesn't work well with list of lists
 revised_list = []
 # for each item on the shopping list
