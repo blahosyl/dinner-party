@@ -69,11 +69,20 @@ _data = recipes.get_all_values()
 # without `data[1]` also changing
 DISHES_ROW = _data[1][:]
 
+# content and styling of initial question to start planning
+INITIAL_QUESTION = [Back.MAGENTA
+                    + 'Would you like to plan a dinner party? (Y/N):'
+                    + Back.RESET
+                    + ' ']
+# content and styling of message asking to add more dishes
+MORE_DISHES = [Back.MAGENTA
+               + 'Would you like to add another dish? (Y/N):'
+               + Back.RESET + ' ']
+
 # content and styling of goodbye message
 GOODBYE_MESSAGE = '\n' + Fore.MAGENTA \
                   + pyfiglet.figlet_format('Have fun!', font='doom') \
                   + Fore.RESET
-
 
 # create a list object with `dishes_row` as the input
 _dishes = planner.DishList(DISHES_ROW)
@@ -85,29 +94,6 @@ _shopping_list = planner.ShoppingList([])
 _planning = False
 
 
-def initial_question():
-    """
-    ask user if they want to start planning
-    :return: user_input
-    """
-    user_input = input(Back.MAGENTA
-                       + 'Would you like to plan a dinner party? (Y/N):'
-                       + Back.RESET
-                       + ' ')
-    return user_input
-
-
-def more_dishes():
-    """
-    ask user if they want to add another dish
-    :return: user_input
-    """
-    user_input = input(Back.MAGENTA
-                       + 'Would you like to add another dish? (Y/N):'
-                       + Back.RESET + ' ')
-    return user_input
-
-
 def welcome():
     """
     Starts planning or ends the program
@@ -116,7 +102,7 @@ def welcome():
     # get global variable
     global _planning
     # ask if user wants to start planning
-    start = validate_y_n(initial_question())
+    start = validate_y_n(INITIAL_QUESTION)
 
     if start == 'Y' or start == 'y':
         print("\nLet's get planning! 🍾\n")
@@ -172,7 +158,7 @@ def ask_more():
     # (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list,
-        add_dish = validate_y_n(more_dishes())
+        add_dish = validate_y_n(MORE_DISHES)
         if add_dish == 'Y' or add_dish == 'y':
             # planning remains True, keeps the loop running
             clear()

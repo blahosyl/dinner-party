@@ -13,7 +13,7 @@ def validate_y_n(starting_question):
     Get and validate user input to Y/N question
     :return: validated user input
     """
-    user_input = starting_question
+    user_input = input(starting_question[0])
     # validating the input
     # while the input is not one of the allowed options
     while user_input not in {'Y', 'N', 'y', 'n'}:
