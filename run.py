@@ -104,7 +104,7 @@ def welcome():
     # ask if user wants to start planning
     start = validate_y_n(INITIAL_QUESTION)
 
-    if start == 'Y' or start == 'y':
+    if start == 'Y':
         print("\nLet's get planning! 🍾\n")
         # sleep for 1.5 seconds after printing output
         sleep(1.5)
@@ -114,7 +114,7 @@ def welcome():
         #  start the addition cycle
         _planning = True
 
-    elif start == 'N' or start == 'n':
+    elif start == 'N':
         #  exit the program with a message
         _planning = False
         # clear the terminal
@@ -159,11 +159,11 @@ def ask_more():
     if len(_dishes.dish_data) > 1:
         # ask user if they want to add a dish to the shopping list,
         add_dish = validate_y_n(MORE_DISHES)
-        if add_dish == 'Y' or add_dish == 'y':
+        if add_dish == 'Y':
             # planning remains True, keeps the loop running
             clear()
             print('\nCool, here is the list of dishes again 🤓')
-        elif add_dish == 'N' or add_dish == 'n':
+        elif add_dish == 'N':
             _planning = False
             print("\nGot it! That's enough cooking for now 🍲\n")
             print_shopping_list_block()

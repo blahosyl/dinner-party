@@ -24,7 +24,10 @@ def validate_y_n(starting_question):
                            + f'" – I don\'t understand that 🤔'
                              f' Please type Y or N:'
                            + Back.RESET + ' ')
-    return user_input
+    # make returned validate input uppercase
+    # this should only happen at this point,
+    # so that the error msg can return the original input
+    return user_input.upper()
 
 
 def validate_range(text: list, num_type, lower, upper=float('inf')):
