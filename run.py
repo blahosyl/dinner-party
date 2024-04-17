@@ -78,7 +78,6 @@ _shopping_list = planner.ShoppingList([])
 _planning = False
 
 
-
 def initial_question():
     """
     ask user if they want to start planning
