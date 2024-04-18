@@ -63,7 +63,7 @@ def validate_range(text: list, num_type, lower, upper=float('inf')):
             user_input = num_type(user_input)
             while user_input < lower or user_input > upper:
                 user_input = num_type(
-                    input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input}'
+                    input(Back.RED + f'Number "' + Fore.CYAN + f'{user_input:g}'
                           + Fore.RESET + '" out of range 🤔 '
                           f'Please type a number {upper_text[0]}:'
                           + Back.RESET + " "))
