@@ -30,18 +30,20 @@ import planner
 # GET DATA FROM GOOGLE SHEETS
 
 # get a whole worksheet as a list of lists from Google Sheets
+# This code is based on the Love Sandwiches project
 _data = gsheet.recipes.get_all_values()
 # end of code based on the Love Sandwiches project
+
 # TESTING: print for testing/development purposes
 # print(data)
 
 # row 0 is the type of dish: starter, main, dessert or drink
-# (row 0 is not used for the MVP, included here for
-# scalability purposes)
+# row 0 is not used for the MVP, included here for
+# scalability purposes
 # row 1 of `_data` is the list of dishes
 # item 0 of each row is the ingredient
-# subsequent items of each row are the quantity of ingredients
-# needed for the corresponding dish
+# subsequent items of each row are the quantity of ingredients needed
+# for the corresponding dish
 # when an ingredient is not needed for a dish, the corresponding cell is empty
 
 # CONSTANTS
@@ -51,17 +53,17 @@ _data = gsheet.recipes.get_all_values()
 # without `data[1]` also changing
 DISHES_ROW = _data[1][:]
 
-# content and styling of initial question to start planning
+# content and styling of initial prompt to start planning
 INITIAL_QUESTION = [f'{Back.MAGENTA}'
                     'Would you like to plan a dinner party? (Y/N):'
                     f'{Back.RESET} ']
 
-# content and styling of message asking to add more dishes
+# content and styling of prompt asking to add more dishes
 MORE_DISHES = [f'{Back.MAGENTA}'
                'Would you like to add another dish? (Y/N):'
                f'{Back.RESET} ']
 
-# content and styling of message to check pantry
+# content and styling of prompt to check pantry
 CHECK_PANTRY = [f'{Back.MAGENTA}'
                 'Would you like to check your pantry for ingredients? (Y/N):'
                 f'{Back.RESET} ']
@@ -115,7 +117,7 @@ def welcome():
     # print welcome text
     welcome_text()
 
-    # ask if user wants to start planning
+    # ask if user wants to start planning, validate input
     start = validate_y_n(INITIAL_QUESTION)
 
     if start == 'Y':
@@ -143,8 +145,9 @@ def welcome():
 
 def print_shopping_list_block():
     """
-    Print confirmation of planning ending,
-    the shopping list, the goodbye message
+    Check if shopping list is empty,
+    print confirmation of planning ending,
+    the shopping list (if not empty), the goodbye message
     and the start instruction
     """
     # if the shopping list is empty (all ingredients in pantry)
@@ -194,7 +197,7 @@ def ask_more():
         # ask user if they want to add a dish to the shopping list,
         add_dish = validate_y_n(MORE_DISHES)
         if add_dish == 'Y':
-            # planning remains True, keeps the loop running
+            # planning remains True, keep the loop running
             clear()
             print('\nCool, here is the list of dishes again 🤓')
         elif add_dish == 'N':
