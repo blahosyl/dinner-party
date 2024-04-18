@@ -48,7 +48,7 @@ Shoudl this be the parent of User input validation and Flow testing?
 |multiple spaces	|I did not understand. Please type Y or N:|✅|
 |empty string	|I did not understand. Please type Y or N:|✅|
 |number character	|I did not understand. Please type Y or N:|✅|
-|multiple characters	|I did not understand. Please type Y or N:|✅|
+|multiple number characters	|I did not understand. Please type Y or N:|✅|
 |`Y` or `y`			|Here is the list of dishes you can choose from.|✅|
 |`N` or `n`			|Maybe some other time, then.|✅|
 
@@ -99,7 +99,7 @@ Shoudl this be the parent of User input validation and Flow testing?
 |multiple spaces	|I did not understand. Please type Y or N:|✅|
 |empty string	|I did not understand. Please type Y or N:|✅|
 |number character	|I did not understand. Please type Y or N:|✅|
-|multiple number character	s|I did not understand. Please type Y or N:|✅|
+|multiple number characters|I did not understand. Please type Y or N:|✅|
 |`Y` or `y`			|Cool, here is the list of dishes again:|✅|
 |`N` or `n`			|Got it! That's all for now, then.|✅|
 
@@ -267,20 +267,67 @@ This input method accepts floats that are positive, including 0.
 
 ## Flow testing
 
+The program flow can be summarised as follows:
+
+- if the user answers `Y` to the initial question: start planning loop
 - if the user answers `N` to the 1st question: end with message
-- if the user selects a dish:
+- when the user selects a dish:
 	- remove it from the list of dishes
 	- display its name and ingredients
 	- add its ingredients to the shopping list
 - if the shopping list already contains an ingredient that is added: combine two items into one, sum the ingredient quantity
-- if the user wants to continue adding an ingredient: rerun adding loop
+- if the user wants to continue adding an ingredient: rerun planning loop
 - if the user does not want to  add more ingredients: 
-	- display shopping list
-	- end adding loop
-	- display goodbye message
+	- end planning loop
+	- ask if they want to check their pantry
 - if the user selects all dishes: 
-	- print shopping list 
-	- end program
+	- end planning loop
+	- ask if they want to check their pantry
+- if the user does not want to check the pantry:
+	- print shopping list, end program
+- if the user wants to check the pantry
+	- ask how much of each shopping list ingredient they have
+	- subtract answer from quantity on shopping list
+		- if resulting quantity is 0 or less, remove item from the list
+- if there are shopping list items left, print shopping list
+- end program with message
+
+All events in the flow work as excpected.
+
+On the flowchart below, I marked the crucial places in the flow that have beed manually tested. The table below  the flowchart summarizes the event and the behaviour that is expected to follow it, along with the test results.
+
+All events in the flow work as excpected.
+
+![Flow testing chart](assets/readme-pics/testing-flow-dinner-party.jpg)
+
+|Nr		|Event|Excpected behaviour	|Result|
+|---:	|---|	---					|---|	
+|1		|Input not valid| Error message, new input|✅|
+|2		|Input valid| Proceed|✅|
+|3		|Input `N`| End program with message|✅|
+|4		|Input `Y`| Display dishes, start planning loop|✅|
+|5		|Input `N`ot valid| Error message, new input|✅|
+|6		|Input valid| Confirm selection|✅|
+|7		|Input valid| Add ingredients to shopping list|✅|
+|8		|Ingredients added to shopping list| Unify quantities in shopping list|✅|
+|9		|No dishes left	|Ask to check pantry|✅|
+|10		|Input `N`ot valid| Error message, new input|✅|
+|11		|Input valid| Proceed|✅|
+|12		|Input `Y`| Display dishes, repeat planning loop|✅|
+|13		|Input `N`| Ask to check pantry |✅|
+|14		|Input `N`ot valid| Error message, new input|✅|
+|15		|Input valid| Proceed|✅|
+|16		|Input `N`| Print shopping list, End program with message|✅|
+|17		|Input `Y`| Start pantry loop, ask quantity of ingredient|✅|
+|18		|Input not valid| Error message, new input|✅|
+|19		|Input valid| Comfirm message, subtract `number` from shopping list|✅|
+|20		|`number < 0`| remove item from shopping list|✅|
+|21		|There are more quantities to check| repeat pantry loop|✅|
+|22		|There are no more quantities to check| proceed|✅|
+|23		|There are items left on shopping list| Print shopping list, End program with message|✅|
+|24		|There are no items left on shopping list| End program with message|✅|
+
+
 
 ## Database data validation (to be automated)
 
@@ -289,3 +336,5 @@ Check if each ingredient cell contains `(`
 ## Devices & browsers
 
 ## Bugs
+
+
