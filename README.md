@@ -173,7 +173,7 @@ I have deduced that the reason for this is that the Code Institute template adds
 
 
 Accordingly, I have rerolled the changes to `layout.html` that involved adding `html` elements, and kept the styling  to modifications in the `head`.
-After this, both the modified `layout.html` file and the [the deployed site](https://dinner-party-planner-ee795b43bd35.herokuapp.com/) passed the W3C validator.
+After this, both the modified `layout.html` file and the [the deployed site](https://dinner-party-planner-ee795b43bd35.herokuapp.com/) [passed the W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdinner-party-planner-ee795b43bd35.herokuapp.com%2F).
 
 ![The deployed site passes HTML validation](assets/readme-pics/html-validation-deployed.png)
 

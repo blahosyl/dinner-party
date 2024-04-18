@@ -11,9 +11,31 @@ This document describes the testing procedures for the [Dinner Party app](README
 - all variable names are in `snake_case`.
 - following my mentor's suggestion, I changed the names of global variables (that are not constants) so that they always start with an underscore: `_global_variable`.
 
-### PIP8 validation
+### PEP8 validation
+
+All 3 Python files written for this project were tested with the build-in PyCharm linter and the [Code Institute PEP8 Linter](https://pep8ci.herokuapp.com/#) thoughout development.
+
+In the current version, no errors were found.
+
+#### `run.py` validation
+
+![`run.py` validated with the CI PEP8 linter](testing/pep8-validation/pep8-run.png)
+
+#### `planning.py` validation
+
+![`planning.py` validated with the CI PEP8 linter](testing/pep8-validation/pep8-planning.png)
+
+#### `utilities.py` validation
+
+![`utilities.py.py` validated with the CI PEP8 linter](testing/pep8-validation/pep8-utilities.png)
+
 
 ### HTML/CSS validation
+
+As I decided to add some CSS styling to the HTML style provided in the project template, I also validated this with the [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdinner-party-planner-ee795b43bd35.herokuapp.com%2F). In the current version, no errors or warnings were found (see [this section of the README](README.md/#rerolled-design-elements) for more details).
+
+![The deployed site passes HTML validation](assets/readme-pics/html-validation-deployed.png)
+
 
 ## Feature testing
 
@@ -77,7 +99,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` then `X`		|*not possible, program continues after 1st input*|✅|
 |`N` then `Y`		|*not possible, program continues after 1st input*|✅|
 
-![User input validation for the initial question](testing/1-would-you-like-to-plan.png)
+![User input validation for the initial question](testing/manual-testing/1-would-you-like-to-plan.png)
 
 
 #### Add more dishes question
@@ -127,7 +149,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` then `X`		|*not possible, program continues after 1st input*|✅|
 |`N` then `Y`		|*not possible, program continues after 1st input*|✅|
 
-![User input validation for the question "Would you like to add another dish?"](testing/2-would-you-like-to-add-another.png)
+![User input validation for the question "Would you like to add another dish?"](testing/manual-testing/2-would-you-like-to-add-another.png)
 
 
 #### Check pantry question
@@ -175,7 +197,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` then `X`		|*not possible, program continues after 1st input*|✅|
 |`N` then `Y`		|*not possible, program continues after 1st input*|✅|
 
-![User input validation for "Would you like to check your pantry for ingredients?"](testing/3-would-you-like-to-check-your-pantry.png)
+![User input validation for "Would you like to check your pantry for ingredients?"](testing/manual-testing/3-would-you-like-to-check-your-pantry.png)
 
 
 ### Number from a range
@@ -224,9 +246,9 @@ This input method accepts integers between 1 and the length of the list of dishe
 |`INT`✅ then `X`		|*not possible, program continues after 1st input*|✅|
 |`INT`✅ then `INT`❌		|*not possible, program continues after 1st input*|✅|
 
-![User input validation for dish selection (integer in range)](testing/4-type-the-number-of-the-dish-1.png)
+![User input validation for dish selection (integer in range)](testing/manual-testing/4-type-the-number-of-the-dish-1.png)
 
-![User input validation for dish selection (integer in range)](testing/4-type-the-number-of-the-dish-2.png)
+![User input validation for dish selection (integer in range)](testing/manual-testing/4-type-the-number-of-the-dish-2.png)
 
 
 
@@ -274,9 +296,9 @@ This input method accepts floats that are positive, including 0.
 |`INT`✅ then `X`		|*not possible, program continues after 1st input*|✅|
 |`INT`✅ then `INT`❌		|*not possible, program continues after 1st input*|✅|
 
-![User input validation for pantry check (float in range)](testing/5-how-many-do-you-have-1.png)
+![User input validation for pantry check (float in range)](testing/manual-testing/5-how-many-do-you-have-1.png)
 
-![User input validation for pantry check (float in range)](testing/5-how-many-do-you-have-3.png)
+![User input validation for pantry check (float in range)](testing/manual-testing/5-how-many-do-you-have-3.png)
 
 
 ## Flow testing
