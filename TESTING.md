@@ -13,12 +13,22 @@ This document describes the testing procedures for the [Dinner Party app](README
 
 ### PIP8 validation
 
-###HTML/CSS validation
+### HTML/CSS validation
+
+## Feature testing
+
+Shoudl this be the parent of User input validation and Flow testing?
 
 
 ## User input validation
 
 ### Y/N questions
+
+3 such questions occur in the program flow:
+
+- [Initial question](#initial-question)
+- [Add more dishes question](#add-more-dishes-question)
+- [Check pantry question](#check-pantr-question)
 
 #### Initial question
 
@@ -31,10 +41,14 @@ This document describes the testing procedures for the [Dinner Party app](README
 |Input						|Expected answer	|Result|
 |---						|---				|:---:	|
 |other letter character	|I did not understand. Please type Y or N:|✅|
+|multiple letter characters|I did not understand. Please type Y or N:|✅|
 |special character	|I did not understand. Please type Y or N:|✅|
+|multiple special characters	|I did not understand. Please type Y or N:|✅|
 |space	|I did not understand. Please type Y or N:|✅|
+|multiple spaces	|I did not understand. Please type Y or N:|✅|
 |empty string	|I did not understand. Please type Y or N:|✅|
 |number character	|I did not understand. Please type Y or N:|✅|
+|multiple characters	|I did not understand. Please type Y or N:|✅|
 |`Y` or `y`			|Here is the list of dishes you can choose from.|✅|
 |`N` or `n`			|Maybe some other time, then.|✅|
 
@@ -48,7 +62,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |---			|---		|
 |`Y`			|	`Y` or `y`	|
 |`N`			|	`N` or `n`	|
-|`X`			| Any other character|
+|`X`			| Any other character(s)|
 
 
 
@@ -78,10 +92,14 @@ This document describes the testing procedures for the [Dinner Party app](README
 |Input						|Expected answer	|Result|
 |---						|---				|:---:	|
 |other letter character	|I did not understand. Please type Y or N:|✅|
+|multiple letter characters	|I did not understand. Please type Y or N:|✅|
 |special character	|I did not understand. Please type Y or N:|✅|
+|multiple special characters|I did not understand. Please type Y or N:|✅|
 |space	|I did not understand. Please type Y or N:|✅|
+|multiple spaces	|I did not understand. Please type Y or N:|✅|
 |empty string	|I did not understand. Please type Y or N:|✅|
 |number character	|I did not understand. Please type Y or N:|✅|
+|multiple number character	s|I did not understand. Please type Y or N:|✅|
 |`Y` or `y`			|Cool, here is the list of dishes again:|✅|
 |`N` or `n`			|Got it! That's all for now, then.|✅|
 
@@ -92,7 +110,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |---			|---		|
 |`Y`			|	`Y` or `y`	|
 |`N`			|	`N` or `n`	|
-|`X`			| Any other character|
+|`X`			| Any other character(s)|
 
 
 
@@ -110,47 +128,142 @@ This document describes the testing procedures for the [Dinner Party app](README
 
 ![User input validation for "Would you like to add another dish?"](testing/validation-another-dish-yn-x-n.png)
 
+#### Add more dishes question
 
-### Integer from a range
+
+`Would you like to check your pantry for ingredients (Y/N):`
 
 #### Single-step test cases
 
 
+|Input						|Expected answer	|Result|
+|---						|---				|:---:	|
+|other letter character	|I did not understand. Please type Y or N:|✅|
+|multiple letter characters	|I did not understand. Please type Y or N:|✅|
+|special character	|I did not understand. Please type Y or N:|✅|
+|multiple special characters|I did not understand. Please type Y or N:|✅|
+|space	|I did not understand. Please type Y or N:|✅|
+|multiple spaces	|I did not understand. Please type Y or N:|✅|
+|empty string	|I did not understand. Please type Y or N:|✅|
+|number character	|I did not understand. Please type Y or N:|✅|
+|multiple number characters|I did not understand. Please type Y or N:|✅|
+|`Y` or `y`			|Let's check your pantry, then!|✅|
+|`N` or `n`			|Got it! That's all for now, then.|✅|
+
+#### Double-step test cases
+
+
+|Shorthand	| Stands for|
+|---			|---		|
+|`Y`			|	`Y` or `y`	|
+|`N`			|	`N` or `n`	|
+|`X`			| Any other character(s)|
+
+
+
+|Input				|Expected answer	|Result|
+|---				|---				|:---:	|
+|`X` then `X`		|I did not understand[...] x2|✅|
+|`X` then `Y`		|I did not understand[...] Let's check your pantry, then!|✅|
+|`X` then `N`		|I did not understand[...] Got it! That's all for now, then.|✅|
+|`Y` then `Y`		|*not possible, program continues after 1st input*|✅|
+|`Y` then `X`		|*not possible, program continues after 1st input*|✅|
+|`Y` then `N`		|*not possible, program continues after 1st input*|✅|
+|`N` then `N`		|*not possible, program continues after 1st input*|✅|
+|`N` then `X`		|*not possible, program continues after 1st input*|✅|
+|`N` then `Y`		|*not possible, program continues after 1st input*|✅|
+
+![User input validation for "Would you like to check your pantry for ingredients?"]()
+
+
+### Number from a range
+
+#### Integer from a range (bounded)
+
 `Type in the number of the dish you'd like to add:`
+
+This input method accepts integers between 1 and the length of the list of dishes (this changes dynamically from 14 to 1). Both the lower and the upper bound is accepted.
+
+##### Single-step test cases
 
 
 |Input						|Expected answer	|Result|
 |---						|---				|:---:	|
-|letter character	|That is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
-|special character	|That is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
-|space	|That is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
-|empty string	|That is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
-|non-integer number	|That is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
-|integer outside the range	|Number out of range. Please type a number between 1 and `<range>`:|✅|
+|letter character	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|multiple letter characters|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|special character	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+| multiple special characters	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|space	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+| multiple spaces	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|empty string	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|non-integer number	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|integer outside the range	|Number`<input>` out of range. Please type a number between 1 and `<range>`:|✅|
 |integer from the specified range	|You have selected: `<dish>`|✅|
 
-#### Double-step test cases
+##### Double-step test cases
 
 |Shorthand	| Stands for|
 |---			|---		|
 |`INT`✅	|integer from the range	|
 |`INT`❌	|integer from outside the range|
-|`X`			| Any other character|
+|`X`			| Any other character(s)|
 
 
 
 |Input						|Expected answer	|Result|
 |---						|---				|:---:
-|`X` then `X`				|That is not a valid number[...] x2|✅|
-|`X` then `INT`❌		|That is not a valid number[...] Number out of range[...]|✅|
-|`X` then `INT`✅		|That is not a valid number[...] You have selected[...]|✅|
-|`INT`❌ then `INT`❌	|Number out of range[...] x2 |✅|
-|`INT`❌ then `X`		|Number out of range[...] That is not a valid number[...] |✅|
-|`INT`❌ then `INT`✅		|Number out of range[...]  You have selected[...]|✅|
+|`X` then `X`				|`<input>` is not a valid number[...] x2|✅|
+|`X` then `INT`❌		|`<input>` is not a valid number[...] Number`<input>` out of range[...]|✅|
+|`X` then `INT`✅		|`<input>` is not a valid number[...] You have selected[...]|✅|
+|`INT`❌ then `INT`❌	|Number`<input>` out of range[...] x2 |✅|
+|`INT`❌ then `X`		|Number`<input>` out of range[...] `<input>` is not a valid number[...] |✅|
+|`INT`❌ then `INT`✅		|Number`<input>` out of range[...]  You have selected[...]|✅|
 |`INT`✅ then `INT`✅		|*not possible, program continues after 1st input*|✅|
 |`INT`✅ then `X`		|*not possible, program continues after 1st input*|✅|
 |`INT`✅ then `INT`❌		|*not possible, program continues after 1st input*|✅|
 
+
+#### Float from a range
+
+`How many <units> of <ingredient> do you have?`
+
+This input method accepts floats that are positive, including 0.
+
+
+##### Single-step test cases
+
+|Input						|Expected answer	|Result|
+|---						|---				|:---:|
+|letter character	|`<input>` is not a valid number. Please type a number that is 0 or above.|✅|
+|multiple letter characters|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|special character	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+| multiple special characters	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|space	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+| multiple spaces	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|empty string	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|non-positive number	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
+|float from the specified range| Got it, you have `<input>` `<units>` of `<ingredient>`||✅|
+
+##### Double-step test cases
+
+|Shorthand	| Stands for|
+|---			|---		|
+|`INT`✅	|integer from the range	|
+|`INT`❌	|integer from outside the range|
+|`X`			| Any other character(s)|
+
+
+|Input						|Expected answer	|Result|
+|---						|---				|:---:
+|`X` then `X`				|`<input>` is not a valid number[...] x2|✅|
+|`X` then `INT`❌		|`<input>` is not a valid number[...] Number`<input>` out of range[...]|✅|
+|`X` then `INT`✅		|`<input>` is not a valid number[...] Got it, you have[...]|✅|
+|`INT`❌ then `INT`❌	|Number`<input>` out of range[...] x2 |✅|
+|`INT`❌ then `X`		|Number`<input>` out of range[...] `<input>` is not a valid number[...] |✅|
+|`INT`❌ then `INT`✅		|Number`<input>` out of range[...]  Got it, you have[...]|✅|
+|`INT`✅ then `INT`✅		|*not possible, program continues after 1st input*|✅|
+|`INT`✅ then `X`		|*not possible, program continues after 1st input*|✅|
+|`INT`✅ then `INT`❌		|*not possible, program continues after 1st input*|✅|
 
 ## Flow testing
 
