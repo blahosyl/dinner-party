@@ -169,6 +169,10 @@ This document describes the testing procedures for the [Dinner Party app](README
 	- print shopping list 
 	- end program
 
-### Database data validation (to be automated)
+## Database data validation (to be automated)
 
 Check if each ingredient cell contains `(`
+
+## Devices & browsers
+
+## Bugs

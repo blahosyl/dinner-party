@@ -1,19 +1,17 @@
 # Dinner Party Planner
 
+
+Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
+
+
 ![Deployed site starting screen](assets/readme-pics/start-screen-full.png)
 
 
 [Go to the deployed app](https://dinner-party-planner-ee795b43bd35.herokuapp.com/)
 
-
 See the development progress and further plans on [GitHub Projects](https://github.com/users/blahosyl/projects/1/views/2).
 
-
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Table of Contents
 
 ## User Experience (UX)
 
@@ -181,28 +179,6 @@ After this, both the modified `layout.html` file and the [the deployed site](htt
 
 I changed the font used from Arial to Verdana. This font [is considered the most legible](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).) of the popular web-safe fonts, especially for small screen sizes.
 
-## Accessibility
-
-### Color contrasts
-
-The [WebAIM](https://webaim.org/resources/contrastchecker/) was used to ensure that the text and background color of the heading provides sufficient contrast for legibility.
-
-The colors used in the project are as follows:
-
-|color name 	|HEX code|Comment|
-|---			|---	|---|
-|white			|#FFFFFF| |
-|onion-purple	|#7A2F40| |
-|thyme-green	|#5A5A26| Not used in the final version, but still visible in the screenshot [here](#logo).|
-
-
-The paired colors have the following contrasts:
-
-| color 1 |color 2 |contrast | [WCAG AAA](https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/) |
-|---			|---		|:---:		|:---:|
-|onion-purple 	|white 	|9.09:1 	| ✅ |
-|thyme-green	 	|white 	|7.17:1 	| ✅ |
-
 ## Features
 
 
@@ -250,8 +226,48 @@ pantry checker features:
 - removes ingredients with quantity less than 0
 - handles singular/plural
 
+### Future features
 
-## Development
+### Accessibility
+
+#### Color contrasts
+
+The [WebAIM](https://webaim.org/resources/contrastchecker/) was used to ensure that the text and background color of the heading provides sufficient contrast for legibility.
+
+The colors used in the project are as follows:
+
+|color name 	|HEX code|Comment|
+|---			|---	|---|
+|white			|#FFFFFF| |
+|onion-purple	|#7A2F40| |
+|thyme-green	|#5A5A26| Not used in the final version, but still visible in the screenshot [here](#logo).|
+
+
+The paired colors have the following contrasts:
+
+| color 1 |color 2 |contrast | [WCAG AAA](https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/) |
+|---			|---		|:---:		|:---:|
+|onion-purple 	|white 	|9.09:1 	| ✅ |
+|thyme-green	 	|white 	|7.17:1 	| ✅ |
+
+## Technologies used
+
+### Languages used
+
+Python
+
+### External libraries used
+
+Which libraries are used and what their purpose is, why they are needed
+
+
+### Tools used
+
+- [Convert images to `webp` format](https://cloudconvert.com/jpeg-to-webp)
+- [Pick colors from an image](https://imagecolorpicker.com/)
+
+
+### Development process
 
 tools used
 GitHub Projects, Issues, branches (deleted when completed)
@@ -287,21 +303,6 @@ _Your app was successfully deployed_<br>
 Click **View** under the message, and a new tab will appear with your deployed app.
 8. (optional) Under **Deploy > Automatic deploy** in Heroku, select **Enable Automatic Deploys** if your want your app to be rebuild each time you push to the `main` branch of your GitHub repository.
 
-## Technologies used
-
-### Languages
-
-Python
-
-#### External libraries
-
-Which libraries are used and what their purpose is, why they are needed
-
-
-### Tools used
-
-- [Convert images to `webp` format](https://cloudconvert.com/jpeg-to-webp)
-- [Pick colors from an image](https://imagecolorpicker.com/)
 
 ## Testing
 
@@ -356,7 +357,7 @@ The following resources were used to learn/double check general, atomic function
 - [infinity](https://www.geeksforgeeks.org/python-infinity/)
 - [defining functions with optional arguments](https://realpython.com/python-optional-arguments/)
 
-### Code
+### Code credits
 
 The following sources contributed code or suggestions to specific functions within the project:
 
@@ -393,3 +394,4 @@ All text content was written by me.
 - [Sourdough Bakes](https://github.com/siobhanlgorman) by Siobhan Gorman
 - [Horizon Photo](https://github.com/Ri-Dearg/horizon-photo/blob/master/README.md#mobile-testing) by Rory Patrick Sheridan
 - [The README of my first Code Institute project](https://github.com/blahosyl/academic-publishing)
+- [The README of my second Code Institute project](https://github.com/blahosyl/operator-game)
