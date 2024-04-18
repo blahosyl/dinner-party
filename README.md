@@ -3,6 +3,9 @@
 [Go to the deployed app](https://dinner-party-planner-ee795b43bd35.herokuapp.com/)
 
 
+See the development progress and further plans on [GitHub Projects](https://github.com/users/blahosyl/projects/1/views/2)
+
+
 ## Reminders
 
 - Your code must be placed in the `run.py` file
