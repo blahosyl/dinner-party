@@ -45,20 +45,20 @@ def validate_range(text: list, num_type, lower, upper=float('inf')):
     :param upper: int, upper bound of the range (incl.)
     :return: validated input: integer in range
     """
+    # customise the text of error messages
+    # both for the `while` loop and `except`
+    # only include "whole" in the text if only integers are accepted
+    if num_type == int:
+        whole = 'whole '
+    else:
+        whole = ''
+    # change text depending on whether there is an `upper` param
+    if upper == float('inf'):
+        upper_text = [f'that is {lower} or above']
+    else:
+        upper_text = [f'between {lower} and {upper}']
     while True:
         try:
-            # customised the text of error messages
-            # both for the `while` loop and `except`
-            # only include "whole" in the text if only integers are accepted
-            if num_type == int:
-                whole = 'whole '
-            else:
-                whole = ''
-            # change text depending on whether there is an `upper` param
-            if upper == float('inf'):
-                upper_text = [f'that is {lower} or above']
-            else:
-                upper_text = [f'between {lower} and {upper}']
             user_input = input(text[0])
             user_input = num_type(user_input)
             while user_input < lower or user_input > upper:
