@@ -49,10 +49,10 @@ class DishList:
         self.print_enum()
 
         # validating the input
-        text = [Back.MAGENTA + 'Type in the '
-                + Fore.GREEN + 'number ' + Fore.RESET
-                + "of the dish you'd like to add:"
-                + Back.RESET + ' ']
+        text = [f'{Back.MAGENTA}Type in the '
+                f'{Fore.GREEN}number{Fore.RESET} ' 
+                "of the dish you'd like to add:"
+                f'{Back.RESET} ']
         dish_number = \
             validate_range(text, int, 1, len(self.dish_data) - 1)
 
