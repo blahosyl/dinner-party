@@ -303,7 +303,7 @@ This input method accepts floats that are positive, including 0.
 
 ## Flow testing
 
-The program flow can be summarised as follows:
+The summarised program flow is repeated here for convenience:
 
 - if the user answers `Y` to the initial question: start planning loop
 - if the user answers `N` to the 1st question: end with message

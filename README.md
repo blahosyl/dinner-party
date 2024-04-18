@@ -6,6 +6,8 @@ It provides a structured flow with step-by-step questions that are straightforwa
 
 The result is more user-friendly and less prone to errors than using Google Sheet's built-in filtering and sorting for the same purpose.
 
+It was developed as the first Python project for my coursework for [Code Institute](https://codeinstitute.net/) (Portfolio Project 3).
+
 Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
 
@@ -18,9 +20,9 @@ See the development progress and further plans on [GitHub Projects](https://gith
 
 <!--Shield.io badges-->
 
-![GitHub last commit](https://img.shields.io/github/last-commit/blahosyl/operator-game?color=red)
-![GitHub contributors](https://img.shields.io/github/contributors/blahosyl/operator-game?color=orange)
-![GitHub language count](https://img.shields.io/github/languages/count/blahosyl/operator-game?color=black)
+![GitHub last commit](https://img.shields.io/github/last-commit/blahosyl/dinner-party?color=red)
+![GitHub contributors](https://img.shields.io/github/contributors/blahosyl/dinner-party?color=orange)
+![GitHub language count](https://img.shields.io/github/languages/count/blahosyl/dinner-party?color=black)
 
 ## Table of Contents
 
@@ -37,17 +39,57 @@ The Dinner Party Planner app aims to solve this problem. It provides a structure
 
 ### User goals
 
+- [UX1] I want to see what recipes are available
+- [UX2] I want to choose one or more recipes to shop for
+- [UX3] I want to see the ingredients for the dish I selected
+- [UX4] I want to get a shopping list of all ingredients correctly added
+
 ### Creator goals
+
+
 
 ## Design
 
 ### Flow
 
+From the outset, I had three main goals in mind: ease of use, proper error handling, and scalability.
+
+The diagram below shows the Minimum Viable Product flow for the app. As discussed with my mentor, this satisfies the criteria of an MVP by being usable as is, and also a suitable project to finish in 2 weeks after just starting to learn Python.
+
 ![Program flowchart: initial plan](assets/readme-pics/initial-flow-dinner-party.jpg)
 
-The current version of the program flow is as follows ([click here to view the full-size version on Mire](https://miro.com/app/board/uXjVKVLz2oI=/?share_link_id=420958715421)):
+
+This includes the following features:
+
+The current version of the program flow is as follows ([click here to view the full-size version on Miro](https://miro.com/app/board/uXjVKVLz2oI=/?share_link_id=420958715421)):
 
 ![Program flowchart: initial plan](assets/readme-pics/current-flow-dinner-party.jpg)
+
+
+The program flow can be summarised as follows:
+
+- if the user answers `Y` to the initial question: start planning loop
+- if the user answers `N` to the 1st question: end with message
+- when the user selects a dish:
+	- remove it from the list of dishes
+	- display its name and ingredients
+	- add its ingredients to the shopping list
+- if the shopping list already contains an ingredient that is added: combine two items into one, sum the ingredient quantity
+- if the user wants to continue adding an ingredient: rerun planning loop
+- if the user does not want to  add more ingredients: 
+	- end planning loop
+	- ask if they want to check their pantry
+- if the user selects all dishes: 
+	- end planning loop
+	- ask if they want to check their pantry
+- if the user does not want to check the pantry:
+	- print shopping list, end program
+- if the user wants to check the pantry
+	- ask how much of each shopping list ingredient they have
+	- subtract answer from quantity on shopping list
+		- if resulting quantity is 0 or less, remove item from the list
+- if there are shopping list items left, print shopping list
+- end program with message
 
 
 #### CRUD functionalities
@@ -81,6 +123,8 @@ A new test account was created for this purpose, for security reasons.
 ### Visual design of the terminal
 
 #### Pause
+
+Rather than 
 
 #### Clear screen
 
