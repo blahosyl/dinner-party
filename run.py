@@ -147,13 +147,18 @@ def print_shopping_list_block():
     the shopping list, the goodbye message
     and the start instruction
     """
-    print('\nHere comes your shopping list 📋')
-    # sleep for 1.5 seconds after printing output
-    sleep(1.5)
-    # clear the screen
-    clear()
-    print(Fore.GREEN + '\nSHOPPING LIST' + Fore.RESET)
-    planner.print_formatted(_shopping_list.list_data)
+    # if the shopping list is empty (all ingredients in pantry)
+    if _shopping_list.list_data == []:
+        print('You have all the ingredients needed, \n'
+              'no need to buy anything 💰')
+    else:
+        print('\nHere comes your shopping list 📋')
+        # sleep for 1.5 seconds after printing output
+        sleep(1.5)
+        # clear the screen
+        clear()
+        print(Fore.GREEN + '\nSHOPPING LIST' + Fore.RESET)
+        planner.print_formatted(_shopping_list.list_data)
     # sleep for 1.5 seconds after printing output
     sleep(1.5)
     print(GOODBYE_MESSAGE)
