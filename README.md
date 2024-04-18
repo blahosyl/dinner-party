@@ -53,6 +53,15 @@ Delete
 
 [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
 
+`# row 0 is the type of dish: starter, main, dessert or drink
+# (row 0 is not used for the MVP, included here for
+# scalability purposes)
+# row 1 of `_data` is the list of dishes
+# item 0 of each row is the ingredient
+# subsequent items of each row are the quantity of ingredients
+# needed for the corresponding dish
+# when an ingredient is not needed for a dish, the corresponding cell is empty`
+
 A new test account was created for this purpose, for security reasons.
 
 ### Visual design of the terminal
@@ -300,7 +309,11 @@ Which libraries are used and what their purpose is, why they are needed
 
 ## Testing
 
-See the document [`TESTING.md`](TESTING.md) for details.
+
+
+`# TESTING: print for testing/development purposes`
+
+See the document [`TESTING.md`](TESTING.md) for details and results.
 
 ## Credits
 
