@@ -1,7 +1,10 @@
 # Dinner Party Planner
 
-This app helps plan dinner parties by managing a recipe database, creating shopping lists, and cshecking off items already in your pantry | CodeInstitute Portfolio Project 3
+This app creates shopping lists for dinner parties from a recipe database. 
 
+It provides a structured flow with step-by-step questions that are straightforward to answer, does all necessary calculations in the background, and produces a tailor-made list depending on the ingredients needed, while also taking existing stock into account.
+
+The result is more user-friendly and less prone to errors than using Google Sheet's built-in filtering and sorting for the same purpose.
 
 Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
@@ -21,7 +24,16 @@ See the development progress and further plans on [GitHub Projects](https://gith
 
 ## Table of Contents
 
+
 ## User Experience (UX)
+
+As an avid cook and dinner party host, I maintain several recipe databases in Google Sheets for different occassions, seasons and dietary preferences. These contain a range of dishes, ingrediets and substitutions.
+
+As it is not uncommon that I host a series of dinner parties within the same week, it is paramount to be able to pool all the ingredients needed for all these parties together, so that they can be purchased in a single grocery run or delivery.
+
+Google Sheets is very well suited for storing data in a structured way, but it is much less capable of producing a shopping list tailored for a specific occassions. While it is technically possible to create such a list using conditionals, filtering and sorting, it is a cumbersome process prone to manual error.
+
+The Dinner Party Planner app aims to solve this problem. It provides a structured flow with step-by-step questions that are straightforward to answer, does all necessary calculations in the background, and produces a tailor-made list depending on the ingredients needed and also taking existing stock into account.
 
 ### User goals
 
