@@ -23,6 +23,7 @@ import gsheet
 
 # custom classes, methods & library
 import planner
+from pantry import check_pantry
 
 # GET DATA FROM GOOGLE SHEETS
 
@@ -56,6 +57,12 @@ INITIAL_QUESTION = [Back.MAGENTA
 # content and styling of message asking to add more dishes
 MORE_DISHES = [Back.MAGENTA
                + 'Would you like to add another dish? (Y/N):'
+               + Back.RESET + ' ']
+
+# content and styling of message to check pantry
+CHECK_PANTRY = [Back.MAGENTA
+               + '\nWould you like to check your pantry '
+                 'for ingredients you already have? (Y/N):'
                + Back.RESET + ' ']
 
 # content and styling of goodbye message
@@ -150,6 +157,17 @@ def print_shopping_list_block():
     print(GOODBYE_MESSAGE)
     print(START_INSTRUCTION)
 
+def end_planning():
+    # stop the planning loop
+    global _planning
+    _planning = False
+    # ask if the user wants to check their pantry
+    pantry = validate_y_n(CHECK_PANTRY)
+    if pantry == 'Y':
+        check_pantry(_shopping_list)
+    # print the shopping list
+    print_shopping_list_block()
+
 
 def ask_more():
     """
@@ -158,7 +176,6 @@ def ask_more():
     """
     # get global variables
     global _dishes
-    global _planning
     # check if there are dishes left
     # (note: dishes[0] = '', so this should not be counted)
     if len(_dishes.dish_data) > 1:
@@ -169,15 +186,12 @@ def ask_more():
             clear()
             print('\nCool, here is the list of dishes again 🤓')
         elif add_dish == 'N':
-            _planning = False
             print("\nGot it! That's enough cooking for now 🍲\n")
-            print_shopping_list_block()
+            end_planning()
     else:
-        # stop the loop
-        _planning = False
         print('\nYou have selected all the dishes.')
         print('🌯 🍛️ 🍷 🍻 🌮 🥃 🥗 🧆 🍰 🫔 🍹 ')
-        print_shopping_list_block()
+        end_planning()
 
 
 # RUN APP
