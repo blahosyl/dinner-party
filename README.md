@@ -1,5 +1,7 @@
 # Dinner Party Planner
 
+This app helps plan dinner parties by managing a recipe database, creating shopping lists, and cshecking off items already in your pantry | CodeInstitute Portfolio Project 3
+
 
 Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
@@ -10,6 +12,12 @@ Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 [Go to the deployed app](https://dinner-party-planner-ee795b43bd35.herokuapp.com/)
 
 See the development progress and further plans on [GitHub Projects](https://github.com/users/blahosyl/projects/1/views/2).
+
+<!--Shield.io badges-->
+
+![GitHub last commit](https://img.shields.io/github/last-commit/blahosyl/operator-game?color=red)
+![GitHub contributors](https://img.shields.io/github/contributors/blahosyl/operator-game?color=orange)
+![GitHub language count](https://img.shields.io/github/languages/count/blahosyl/operator-game?color=black)
 
 ## Table of Contents
 
@@ -374,6 +382,8 @@ Iasmina Pal](https://github.com/useriasminna) (see the section [Rerolled design 
 @nobe4 and [Zerina Johansson](https://code-institute-room.slack.com/archives/C01DVU37QG4/p1713290110344539) helped me solve the issue of [printing out the user input in a `try/except` loop](https://github.com/blahosyl/dinner-party/commit/bed421e4bbbe1400df09fcfde4d71438d585d7b1).
 
 @nobe4 also gave me valuable advice on organizing code, and helped me solve the [bug in displaying the correct user input in a `try/except` block](https://github.com/blahosyl/dinner-party/issues/41).
+
+Finally, I would like to thank an enthusiastic apha tester who wished to remain anonymous.
 
 
 ### Content
