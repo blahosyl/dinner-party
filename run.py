@@ -164,7 +164,7 @@ def end_planning():
     # ask if the user wants to check their pantry
     pantry = validate_y_n(CHECK_PANTRY)
     if pantry == 'Y':
-        check_pantry(_shopping_list)
+        _shopping_list.check_pantry()
     # print the shopping list
     print_shopping_list_block()
 
