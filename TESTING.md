@@ -329,11 +329,25 @@ All events in the flow work as excpected.
 
 
 
-## Database data validation (to be automated)
+### Database data validation
 
 Check if each ingredient cell contains `(`
 
-## Devices & browsers
+#### Devices & browsers
+
+##### Devices
+
+The website was tested on the following devices:
+
+ - Macbook Air M2, Mac OS Sonoma 14.3.1 
+ - Macbook Air M1, Mac OS Sonoma 14.3.1
+
+ ##### Browsers
+
+The site was tested on the following browsers:
+
+- Google Chrome
+- Microsoft Edge 
 
 ## Bugs
 
