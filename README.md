@@ -23,7 +23,12 @@ See the development progress and further plans on [GitHub Projects](https://gith
 
 ### Flow
 
-![Program flowchart](assets/readme-pics/dinner-party-flow.jpg)
+![Program flowchart: initial plan](assets/readme-pics/initial-flow-dinner-party.jpg)
+
+The current version of the program flow is as follows ([click here to view the full-size version on Mire](https://miro.com/app/board/uXjVKVLz2oI=/?share_link_id=420958715421)):
+
+![Program flowchart: initial plan](assets/readme-pics/current-flow-dinner-party.jpg)
+
 
 #### CRUD functionalities
 
