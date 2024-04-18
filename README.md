@@ -1,9 +1,12 @@
+# Dinner Party Planner
+
+![Deployed site starting screen](assets/readme-pics/start-screen-full.png)
 
 
 [Go to the deployed app](https://dinner-party-planner-ee795b43bd35.herokuapp.com/)
 
 
-See the development progress and further plans on [GitHub Projects](https://github.com/users/blahosyl/projects/1/views/2)
+See the development progress and further plans on [GitHub Projects](https://github.com/users/blahosyl/projects/1/views/2).
 
 
 ## Reminders
@@ -49,6 +52,8 @@ Delete
 ### Database
 
 [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
+
+A new test account was created for this purpose, for security reasons.
 
 ### Visual design of the terminal
 
@@ -103,7 +108,7 @@ I horizontally centered all elements on the page and added some top margin for a
 
 #### Favicon
 
-I added a favicon showing a vector drawing of two wine glasses clinking, to symbolize the social nature of dinner parties. The color of  the graphic is a darker shade of the purple color chosen for the heading box.
+I added a favicon showing a vector drawing of two wine glasses clinking, to symbolize the social nature of dinner parties. The color of  the graphic is a darker shade of the purple color chosen for the button.
 
 #### Meta tags
 
@@ -121,7 +126,7 @@ I made some additional changes based on the [American Pizza Order System project
 <details>
 <summary>Click to see the details of the rerolll</summary>
 
-In addition to come styling in the `head` element, the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/)
+In addition to some styling in the `head` element, the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/)
 added the following code to `@body` in `layout.html`:
 
 ```
@@ -133,7 +138,7 @@ added the following code to `@body` in `layout.html`:
 </body>
 ```
 
-I had adopted this this code, and also added a [logo to the header](#logo) and [my name and a link to the GitHub repository](#author-information-and-github-link).
+I had adopted this code, and also added a [logo to the header](#logo) and [my name and a link to the GitHub repository](#author-information-and-github-link).
 
 #### Header
 
