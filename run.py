@@ -1,3 +1,6 @@
+# This app lets users create and check a shopping list for dinner parties,
+# using a database of dishes, ingredients and quantities in Google Sheets
+
 # STANDARD PACKAGES
 
 # import sleep to show output for some time period
@@ -87,7 +90,7 @@ _planning = False
 
 
 def welcome_text():
-    """Initial screen text"""
+    """Print initial screen text"""
     # name of the app in ASCII art using `pyfiglet`
     print(Style.BRIGHT + Fore.MAGENTA +
           pyfiglet.figlet_format('Dinner Party!', font='doom')
@@ -140,9 +143,9 @@ def welcome():
 
 def print_shopping_list_block():
     """
-    Prints confirmation of planning ending,
+    Print confirmation of planning ending,
     the shopping list, the goodbye message
-    and start instruction
+    and the start instruction
     """
     print('\nHere comes your shopping list 📋')
     # sleep for 1.5 seconds after printing output
@@ -158,6 +161,10 @@ def print_shopping_list_block():
 
 
 def end_planning():
+    """
+    Stop the planning loop, ask if check_pantry() should be run,
+    print shopping list
+    """
     # stop the planning loop
     global _planning
     _planning = False
@@ -196,8 +203,11 @@ def ask_more():
 
 # RUN APP
 
+# print initial text and ask if user wants to start the program
 welcome()
 
 while _planning:
+    # add dish to shopping list
     _shopping_list.unify_ingredients(_dishes.select_dish(), _data)
+    # ask if user wants to add more dishes
     ask_more()
