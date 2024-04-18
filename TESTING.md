@@ -17,7 +17,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 
 ## Feature testing
 
-Shoudl this be the parent of User input validation and Flow testing?
+
 
 
 ## User input validation
@@ -301,7 +301,7 @@ All events in the flow work as excpected.
 ![Flow testing chart](assets/readme-pics/testing-flow-dinner-party.jpg)
 
 |Nr		|Event|Excpected behaviour	|Result|
-|---:	|---|	---					|---|	
+|---:	|---|	---					|:---:|	
 |1		|Input not valid| Error message, new input|✅|
 |2		|Input valid| Proceed|✅|
 |3		|Input `N`| End program with message|✅|
@@ -331,7 +331,16 @@ All events in the flow work as excpected.
 
 ### Database data validation
 
-Check if each ingredient cell contains `(`
+The database in Google Sheets was manually checked for the following:
+
+|Check											|Result|
+|---											|:---:|
+| dishes are in the 2nd row|✅|
+| ingredients are in the 1st column|✅|
+| capitalization (none)|✅|
+| spelling|✅|
+| quantity cells only contain floats|✅|
+| each ingredient cell contains `(` and `)`|✅|
 
 #### Devices & browsers
 
@@ -351,4 +360,13 @@ The site was tested on the following browsers:
 
 ## Bugs
 
+All bugs are tracked in [GitHub Issues](https://github.com/blahosyl/dinner-party/issues).
+
+#### Known bugs
+
+There are no known bugs in the project.
+
+#### Solved bugs
+
+Solved bugs are listed in [GitHub Issues](https://github.com/blahosyl/dinner-party/issues?q=is%3Aissue+label%3Abug).
 
