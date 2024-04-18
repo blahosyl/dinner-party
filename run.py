@@ -60,9 +60,9 @@ MORE_DISHES = [Back.MAGENTA
 
 # content and styling of message to check pantry
 CHECK_PANTRY = [Back.MAGENTA
-               + '\nWould you like to check your pantry '
-                 'for ingredients you already have? (Y/N):'
-               + Back.RESET + ' ']
+                + '\nWould you like to check your pantry '
+                  'for ingredients you already have? (Y/N):'
+                + Back.RESET + ' ']
 
 # content and styling of goodbye message
 GOODBYE_MESSAGE = '\n' + Fore.MAGENTA \
@@ -97,7 +97,8 @@ def welcome_text():
           + Fore.RESET)
     print('\nDo you love hosting dinner parties?  🍝 🥂 🎂 🥳'
           '\nThis app helps you plan them!'
-          '\nJust select the dishes or drinks you want to make for your guests,'
+          '\nJust select the dishes or drinks you want to make '
+          'for your guests,'
           '\nand the app generates a shopping list for you!\n')
 
 
@@ -155,6 +156,7 @@ def print_shopping_list_block():
     sleep(1.5)
     print(GOODBYE_MESSAGE)
     print(START_INSTRUCTION)
+
 
 def end_planning():
     # stop the planning loop
