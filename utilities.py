@@ -12,12 +12,12 @@ from os import system, name
 from colorama import Fore, Back
 
 
-def validate_y_n(starting_question):
+def validate_y_n(prompt):
     """
     Get and validate user input to Y/N question
     :return: validated user input
     """
-    user_input = input(starting_question[0])
+    user_input = input(prompt[0])
     # validating the input
     # while the input is not one of the allowed options
     while user_input not in {'Y', 'N', 'y', 'n'}:
@@ -33,10 +33,10 @@ def validate_y_n(starting_question):
     return user_input.upper()
 
 
-def validate_range(text: list, num_type, lower, upper=float('inf')):
+def validate_range(prompt: list, num_type, lower, upper=float('inf')):
     """
     Validate user input: number in specified range
-    :param text: list, the content of the initial `input`
+    :param prompt: list, the content of the initial `input`
     It has to be a list, because using colorama makes it
     too complicated to be a string
     :param num_type: int or float, the type of number input accepted
@@ -69,7 +69,7 @@ def validate_range(text: list, num_type, lower, upper=float('inf')):
         if error:
             print(error)
         try:
-            user_input = input(text[0])
+            user_input = input(prompt[0])
             user_input = num_type(user_input)
 
             # if the number is in range, proceed
