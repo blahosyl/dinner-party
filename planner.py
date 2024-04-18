@@ -221,12 +221,18 @@ class ShoppingList:
         return self.list_data
 
     def check_pantry(self):
+        # confirm starting pantry check
+        print("\nLet's check your pantry, then! 👍\n")
+        # sleep for 0.5 seconds after printing output
+        sleep(0.5)
+
         # create an intermediate list to store ingredients where quantity
         # is more than 0
         # this is needed because removing items from a list in a loop causes
         # "index out of range" issues
         # list comprehension also doesn't work well with list of lists
         revised_list = []
+
         # for each item on the shopping list
         for i in range(0, len(self.list_data)):
 
@@ -265,7 +271,8 @@ class ShoppingList:
             # sleep for 0.5 seconds after printing output
             sleep(0.5)
 
-            # deduct the quantity in the pantry from the quantity on the shopping list
+            # deduct the quantity in the pantry from the quantity
+            # on the shopping list
             self.list_data[i][1] -= have
             # if the resulting quantity is more than 0
             if self.list_data[i][1] > 0:
