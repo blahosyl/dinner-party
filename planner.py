@@ -23,7 +23,7 @@ from utilities import validate_range, clear
 
 class DishList:
     """
-    Creates an instance of DishList
+    Create an instance of DishList: a list of strings
     """
 
     def __init__(self, dish_data):
@@ -45,12 +45,15 @@ class DishList:
         print('\n')
 
     def select_dish(self):
+        """
+        Select a dish based on user input
+        """
         # print the list of dishes in a numbered list
         self.print_enum()
 
         # validating the input
         text = [f'{Back.MAGENTA}Type in the '
-                f'{Fore.GREEN}number{Fore.RESET} ' 
+                f'{Fore.GREEN}number{Fore.RESET} '
                 "of the dish you'd like to add:"
                 f'{Back.RESET} ']
         dish_number = \
@@ -77,9 +80,8 @@ def parse_string(ingredient_string):
     Find the abbreviation string,
     replace it with the full unit name
     if it is in the dictionary
-    The input string must contain ( and )
-    :param ingredient_string: string
-    :return: list[opening parenthesis index,
+    :param string ingredient_string: must contain ( and )
+    :returns list: [opening parenthesis index,
                     abbreviation,
                     Boolean: abbr in dictionary or not,
                     modified intput string]
@@ -120,7 +122,11 @@ def parse_string(ingredient_string):
 
 
 def print_formatted(ingredient_list):
-    """ Print ingredient list in a user-friendly string format"""
+    """ Print ingredient list in a user-friendly string format
+    :ingredient_list: a list where each item is a list containing a string
+    and a number. The string must contain ( and )
+    :type ingredient_list list
+    """
     # print an empty line to visually separate the block
     print('\n')
     # for every item in the list
@@ -158,15 +164,23 @@ def print_formatted(ingredient_list):
 
 class ShoppingList:
     """
-        Creates an instance of ShoppingList
+        Create an instance of ShoppingList
         """
 
     def __init__(self, list_data):
+        """
+        :param list list_data: [ingredient (unit), quantity]
+        """
         self.list_data = list_data
 
     def get_ingredients(self, selection, recipe_data):
         """Get list of ingredients for a selected dish, print them out,
         add them to the shopping list, return a list of lists
+        :param string selection: the name of the selected dish
+        :type recipe_data: list
+        :param recipe_data: the database containing the dishes, ingredients
+         and quantities
+        :returns: list
         """
 
         print(Fore.GREEN + f'\nIngredients for {selection}' + Fore.RESET)
@@ -198,7 +212,14 @@ class ShoppingList:
         """Check shopping list for pairs of items (lists)
         where the ingredient is the same.
         Add quantities of the ingredient together.
-        Return modified shopping list."""
+        Return modified shopping list.
+        :type selection: string
+        :param selection: the name of the selected dish
+        :type recipe_data: list
+        :param recipe_data: the database containing the dishes, ingredients and
+        quantities
+        :returns: list
+        """
         # this needs to be run every time items are added to the shopping list
         self.list_data = self.get_ingredients(selection, recipe_data)
         # get all pairs of items within the shopping list item
@@ -221,6 +242,11 @@ class ShoppingList:
         return self.list_data
 
     def check_pantry(self):
+        """
+        For each item on the shopping list, ask the user how much they have.
+        Subtract answer from quantity. If quantity becomes zero or less,
+        remove item from the list.
+        """
         # confirm starting pantry check
         print("\nLet's check your pantry, then! 👍\n")
         # sleep for 0.5 seconds after printing output
