@@ -153,9 +153,9 @@ def print_formatted(ingredient_list):
         # the quantity (second item of the list)
         # in general notation
         print_string = print_string[:opening - 1] \
-                       + ': ' \
-                       + f'{quantity:g}' \
-                       + print_string[opening - 1:]
+            + ': ' \
+            + f'{quantity:g}' \
+            + print_string[opening - 1:]
         # delete the opening and closing parenthesis
         print_string = print_string.replace('(', '')
         print_string = print_string.replace(')', '')
@@ -213,7 +213,7 @@ class ShoppingList:
         where the ingredient is the same.
         Add quantities of the ingredient together.
         Return modified shopping list.
-        :type selection: string
+        :type selection
         :param selection: the name of the selected dish
         :type recipe_data: list
         :param recipe_data: the database containing the dishes, ingredients and
@@ -293,7 +293,9 @@ class ShoppingList:
                 # make unit_name singular (remove string-final 's')
                 unit_name = unit_name[:-1]
             # print confirmation with user input
-            print(f'Got it, you have {have:g} {unit_name} of {ingredient_text}\n')
+            print(
+                f'Got it, you have {have:g} {unit_name} of {ingredient_text}\n'
+                )
             # sleep for 0.5 seconds after printing output
             sleep(0.5)
 
