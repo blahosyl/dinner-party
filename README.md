@@ -241,6 +241,10 @@ pantry checker features:
 
 ### Future features
 
+There are several extra features and extensions planned for this project that were outside the MVP and were unrealistic to complete in the allotted time of 2 weeks.
+
+They are viewable in [GitHub Issues](https://github.com/blahosyl/dinner-party/issues?q=is%3Aissue++is%3Aopen+label%3Aoptional), including extensive mock code for possible implementation. 
+
 ### Accessibility
 
 #### Color contrasts
