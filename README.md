@@ -76,7 +76,7 @@ However, the use of color in this project goes beyond aesthetic purposes: it als
 
 ### Website design
 
-As this project is focused on the terminal functionalities rather than HTML/CSS, designing/altering these was an optional extra.
+As this project is focused on Python rather than HTML/CSS, designing/altering the site itself was an optional extra.
 
 Nevertheless, I chose to lightly alter the provided HTML/CSS code to make the deployed page more unique and appealing to users (as a terminal window on a plain white background is alienating to many people).
 
@@ -145,7 +145,7 @@ The heading text color is white, so that it provides sufficient contrast with th
 
 I put the [image](assets/images/wine-glasses.webp) used for the favicon as a logo on each side of the header. Its design mirrors that of the box containing the header (box, border radius and shadow), but the colors are inverted.
 
-#### Author information and GitHub link
+##### Author information and GitHub link
 
 I added my name and the link to the application's repository under the terminal window, using the colors already defined above.
 
@@ -184,11 +184,11 @@ The [WebAIM](https://webaim.org/resources/contrastchecker/) was used to ensure t
 
 The colors used in the project are as follows:
 
-|color name 	|HEX code|
-|---			|---	|
-|white			|#FFFFFF|
-|onion-purple	|#7A2F40|
-|thyme-green	|#5A5A26|
+|color name 	|HEX code|Comment|
+|---			|---	|---|
+|white			|#FFFFFF| |
+|onion-purple	|#7A2F40| |
+|thyme-green	|#5A5A26| Not used in the final version, but still visible in the screenshot [here](#logo).|
 
 
 The paired colors have the following contrasts:
@@ -197,12 +197,6 @@ The paired colors have the following contrasts:
 |---			|---		|:---:		|:---:|
 |onion-purple 	|white 	|9.09:1 	| ✅ |
 |thyme-green	 	|white 	|7.17:1 	| ✅ |
-
-### Links
-
-The only link (to the GitHub repository) opens in a new window and has an aria-label.
-
-It is visually distinguished from the rest of the text by being underlined.
 
 ## Features
 
