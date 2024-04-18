@@ -52,7 +52,6 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`Y` or `y`			|Here is the list of dishes you can choose from.|✅|
 |`N` or `n`			|Maybe some other time, then.|✅|
 
-![User input validation for the initial question](testing/validation-initial-yn-single-y.png)
 
 
 #### Double-step test cases
@@ -78,7 +77,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` then `X`		|*not possible, program continues after 1st input*|✅|
 |`N` then `Y`		|*not possible, program continues after 1st input*|✅|
 
-![User input validation for "Would you like to add another dish?"](testing/validation-initial-yn-single-y.png)
+![User input validation for the initial question](testing/1-would-you-like-to-plan.png)
 
 
 #### Add more dishes question
@@ -103,6 +102,8 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`Y` or `y`			|Cool, here is the list of dishes again:|✅|
 |`N` or `n`			|Got it! That's all for now, then.|✅|
 
+
+
 #### Double-step test cases
 
 
@@ -126,9 +127,10 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` then `X`		|*not possible, program continues after 1st input*|✅|
 |`N` then `Y`		|*not possible, program continues after 1st input*|✅|
 
-![User input validation for "Would you like to add another dish?"](testing/validation-another-dish-yn-x-n.png)
+![User input validation for the question "Would you like to add another dish?"](testing/2-would-you-like-to-add-another.png)
 
-#### Add more dishes question
+
+#### Check pantry question
 
 
 `Would you like to check your pantry for ingredients (Y/N):`
@@ -173,7 +175,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 |`N` then `X`		|*not possible, program continues after 1st input*|✅|
 |`N` then `Y`		|*not possible, program continues after 1st input*|✅|
 
-![User input validation for "Would you like to check your pantry for ingredients?"]()
+![User input validation for "Would you like to check your pantry for ingredients?"](testing/3-would-you-like-to-check-your-pantry.png)
 
 
 ### Number from a range
@@ -222,6 +224,11 @@ This input method accepts integers between 1 and the length of the list of dishe
 |`INT`✅ then `X`		|*not possible, program continues after 1st input*|✅|
 |`INT`✅ then `INT`❌		|*not possible, program continues after 1st input*|✅|
 
+![User input validation for dish selection (integer in range)](testing/4-type-the-number-of-the-dish-1.png)
+
+![User input validation for dish selection (integer in range)](testing/4-type-the-number-of-the-dish-2.png)
+
+
 
 #### Float from a range
 
@@ -242,7 +249,9 @@ This input method accepts floats that are positive, including 0.
 | multiple spaces	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
 |empty string	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
 |non-positive number	|`<input>` is not a valid number. Please type a whole number between 1 and `<range>`.|✅|
-|float from the specified range| Got it, you have `<input>` `<units>` of `<ingredient>`||✅|
+|float from the specified range| Got it, you have `<input>` `<units>` of `<ingredient>`|✅|
+|integer from the specified range| Got it, you have `<input>` `<units>` of `<ingredient>`|✅|
+
 
 ##### Double-step test cases
 
@@ -264,6 +273,11 @@ This input method accepts floats that are positive, including 0.
 |`INT`✅ then `INT`✅		|*not possible, program continues after 1st input*|✅|
 |`INT`✅ then `X`		|*not possible, program continues after 1st input*|✅|
 |`INT`✅ then `INT`❌		|*not possible, program continues after 1st input*|✅|
+
+![User input validation for pantry check (float in range)](testing/5-how-many-do-you-have-1.png)
+
+![User input validation for pantry check (float in range)](testing/5-how-many-do-you-have-3.png)
+
 
 ## Flow testing
 
