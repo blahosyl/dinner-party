@@ -84,7 +84,7 @@ def parse_string(ingredient_string):
     :returns list: [opening parenthesis index,
                     abbreviation,
                     Boolean: abbr in dictionary or not,
-                    modified intput string]
+                    string: modified intput string]
     """
     # abbreviations and corresponding unit names
     units = {
@@ -137,21 +137,24 @@ def print_formatted(ingredient_list):
 
         # replace unit abbreviation with full name
         parsed_string = parse_string(print_string)
-        # index of the opening parenthesis
+        # get the index of the opening parenthesis
         opening = parsed_string[0]
+        # get the unit name
         unit_name = parsed_string[1]
+        # get whether the unit name is in the dictionary
         in_dict = parsed_string[2]
+        # get the print string
         print_string = parsed_string[3]
-        # if the quantity is exactly 1, and it's in the dictionary
+        # if the quantity is exactly 1, and unit is in the dictionary
         if quantity == 1 and in_dict:
-            # make unit_name singular (remove string-final 's')
+            # replace unit_name with singular version (remove string-final 's')
             print_string = print_string.replace(unit_name, unit_name[:-1])
         # end of code to replace measurement abbreviation with full name
 
-        # 1 left of the opening bracket, add the following:
+        # 1 place left of the opening parenthesis, add the following:
         # a colon
-        # the quantity (second item of the list)
-        # in general notation
+        # the quantity (second item of the list) in general notation
+        # re-add the rest of the string
         print_string = print_string[:opening - 1] \
             + ': ' \
             + f'{quantity:g}' \
@@ -159,6 +162,7 @@ def print_formatted(ingredient_list):
         # delete the opening and closing parenthesis
         print_string = print_string.replace('(', '')
         print_string = print_string.replace(')', '')
+        # print the string in green
         print(Fore.GREEN + print_string + Fore.RESET)
 
 
@@ -301,8 +305,8 @@ class ShoppingList:
             # sleep for 0.5 seconds after printing output
             sleep(0.5)
 
-            # deduct the quantity in the pantry from the quantity
-            # on the shopping list
+            # deduct the quantity in the pantry
+            # from the quantity on the shopping list
             self.list_data[i][1] -= have
             # if the resulting quantity is more than 0
             if self.list_data[i][1] > 0:
