@@ -22,12 +22,11 @@ def validate_y_n(starting_question):
     # while the input is not one of the allowed options
     while user_input not in {'Y', 'N', 'y', 'n'}:
         # ask for input again
-        user_input = input(Back.RED
-                           + f'You typed "' + Fore.CYAN + user_input
-                           + Fore.RESET
-                           + f'" – I don\'t understand that 🤔'
-                             f' Please type Y or N:'
-                           + Back.RESET + ' ')
+        user_input = input(
+                           f'{Back.RED}You typed "{Fore.CYAN}{user_input}' 
+                           f'{Fore.RESET}" – I don\'t understand that 🤔'
+                           f' Please type Y or N:{Back.RESET } '
+                           )
     # make returned validate input uppercase
     # this should only happen at this point,
     # so that the error msg can return the original input

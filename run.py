@@ -49,20 +49,20 @@ _data = gsheet.recipes.get_all_values()
 DISHES_ROW = _data[1][:]
 
 # content and styling of initial question to start planning
-INITIAL_QUESTION = [Back.MAGENTA
-                    + 'Would you like to plan a dinner party? (Y/N):'
-                    + Back.RESET
-                    + ' ']
+INITIAL_QUESTION = [f'{Back.MAGENTA}'
+                    'Would you like to plan a dinner party? (Y/N):'
+                    f'{Back.RESET} ']
+
 # content and styling of message asking to add more dishes
-MORE_DISHES = [Back.MAGENTA
-               + 'Would you like to add another dish? (Y/N):'
-               + Back.RESET + ' ']
+MORE_DISHES = [f'{Back.MAGENTA}'
+               'Would you like to add another dish? (Y/N):'
+               f'{Back.RESET} ']
 
 # content and styling of message to check pantry
-CHECK_PANTRY = [Back.MAGENTA
-                + '\nWould you like to check your pantry '
-                  'for ingredients you already have? (Y/N):'
-                + Back.RESET + ' ']
+CHECK_PANTRY = [f'{Back.MAGENTA}'
+                '\nWould you like to check your pantry '
+                'for ingredients you already have? (Y/N):'
+                f'{Back.RESET} ']
 
 # content and styling of goodbye message
 GOODBYE_MESSAGE = '\n' + Fore.MAGENTA \
