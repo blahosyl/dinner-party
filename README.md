@@ -216,6 +216,26 @@ list of ingredients is
 - measurements names are shown instead of abbreviations
 - singular/plural handled
 
+flow ends when we run out of ingredients
+
+don't rely on order of ingredients or dishes
+
+written with scalability in mind, already planning for integrating more features (e.g. dish types)
+
+### Not part of the MVP
+
+#### OOP
+
+#### Validator functions made general-purpose
+
+#### Show input in error messages
+
+#### Pantry checker
+
+This inspired a lot of restructuring, refactoring, splitting up functions and rethinking the logic, so it had the added benefit of much cleaner and better code as a result, on top of the actual functionality (which is super relevant to real life)
+
+list of such refactoring
+
 
 ## Deployment
 
