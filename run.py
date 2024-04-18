@@ -60,8 +60,7 @@ MORE_DISHES = [f'{Back.MAGENTA}'
 
 # content and styling of message to check pantry
 CHECK_PANTRY = [f'{Back.MAGENTA}'
-                '\nWould you like to check your pantry '
-                'for ingredients you already have? (Y/N):'
+                'Would you like to check your pantry for ingredients? (Y/N):'
                 f'{Back.RESET} ']
 
 # content and styling of goodbye message
