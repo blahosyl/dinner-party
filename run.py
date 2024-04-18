@@ -23,7 +23,6 @@ import gsheet
 
 # custom classes, methods & library
 import planner
-from pantry import check_pantry
 
 # GET DATA FROM GOOGLE SHEETS
 
