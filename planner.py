@@ -254,11 +254,11 @@ class ShoppingList:
             ingredient_text = ingredient_text[:opening - 1]
 
             # ask how much of the given ingredient the user has
-            text = [f'\nHow many {Fore.MAGENTA}{unit_name}{Fore.RESET} '
+            text = [f'How many {Fore.MAGENTA}{unit_name}{Fore.RESET} '
                     f'of {Fore.GREEN}{ingredient_text}{Fore.RESET} '
                     f'do you have?\n'
                     f'{Back.MAGENTA}Type {Fore.GREEN}0{Fore.RESET} '
-                    f'if you don\'t have any{Back.RESET} ']
+                    f'if you don\'t have any{Back.RESET}: ']
 
             # get and validate the input (float, >=0, no upper limit)
             have = validate_range(text, float, 0)
