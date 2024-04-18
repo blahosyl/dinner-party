@@ -4,7 +4,7 @@ from time import sleep
 
 # 3RD PARTY LIBRARIES
 
-from colorama import Fore, Back, Style
+from colorama import Fore, Back
 
 # SELF-WRITTEN MODULES & FUNCTIONS
 
@@ -40,7 +40,7 @@ def check_pantry(shopping_list):
         ingredient_text = ingredient_text[:opening - 1]
 
         # ask how much of the given ingredient the user has
-        text = [f'\n{Style.BRIGHT}How many {Fore.MAGENTA}{unit_name}{Fore.RESET} '
+        text = [f'\nHow many {Fore.MAGENTA}{unit_name}{Fore.RESET} '
                 f'of {Fore.GREEN}{ingredient_text}{Fore.RESET} '
                 f'do you have?\n'
                 f'{Back.MAGENTA}Type {Fore.GREEN}0{Fore.RESET} '
