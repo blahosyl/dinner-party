@@ -92,6 +92,7 @@ def parse_string(ingredient_string):
         'ml': 'milliliters',
         'l': 'liters',
         'Tbsp': 'tablespoons',
+        'cloves': 'cloves',
     }
     # find the index of the opening bracket in the string
     opening = ingredient_string.index('(')
