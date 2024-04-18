@@ -90,7 +90,7 @@ def validate_range(prompt, num_type, lower,
         except ValueError:
             # while the input is not one of the allowed options
             # ask for input again
-            error = f'\n{Back.RED}{Fore.CYAN}"{user_input}{Fore.RESET}' \
+            error = f'\n{Back.RED}"{Fore.CYAN}{user_input}{Fore.RESET}' \
                     '" is not a valid number 🤔 ' \
                     f'Please type a {whole}number {upper_text[0]}.' \
                     f'{Back.RESET}'
