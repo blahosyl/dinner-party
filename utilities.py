@@ -15,7 +15,9 @@ from colorama import Fore, Back
 def validate_y_n(prompt):
     """
     Get and validate user input to Y/N question
-    :return: validated user input
+    :type prompt: list
+    :param prompt: the content of the initial `input`
+    :return str: validated user input, capitalized ("Y or "N)
     """
     user_input = input(prompt[0])
     # validating the input
@@ -23,26 +25,32 @@ def validate_y_n(prompt):
     while user_input not in {'Y', 'N', 'y', 'n'}:
         # ask for input again
         user_input = input(
-                           f'{Back.RED}You typed "{Fore.CYAN}{user_input}' 
-                           f'{Fore.RESET}" – I don\'t understand that 🤔'
-                           f' Please type Y or N:{Back.RESET } '
-                           )
+            f'{Back.RED}You typed "{Fore.CYAN}{user_input}'
+            f'{Fore.RESET}" – I don\'t understand that 🤔'
+            f' Please type Y or N:{Back.RESET} '
+        )
     # make returned validate input uppercase
     # this should only happen at this point,
     # so that the error msg can return the original input
     return user_input.upper()
 
 
-def validate_range(prompt: list, num_type, lower, upper=float('inf')):
+def validate_range(prompt, num_type, lower,
+                   upper=float('inf')) -> float:
     """
     Validate user input: number in specified range
-    :param prompt: list, the content of the initial `input`
+    :type prompt: list
+    :param prompt: the content of the initial `input`
     It has to be a list, because using colorama makes it
     too complicated to be a string
-    :param num_type: int or float, the type of number input accepted
-    :param lower: int, lower bound of the range (incl.)
-    :param upper: int, upper bound of the range (incl.)
-    :return: validated input: integer in range
+    :type num_type: type
+    :param num_type: the type of number input accepted: `int` or `float`
+    :type lower: float
+    :param lower: the lower bound of the range (incl.)
+    :param upper: the upper bound of the range (incl.)
+    :returns validated input, integer or float in range (depending
+    on the
+    value of `num_type`)
     """
     # customise the text of error messages
     # both for the `while` loop and `except`
@@ -59,7 +67,7 @@ def validate_range(prompt: list, num_type, lower, upper=float('inf')):
 
     # in the following `try/except block`, using the `error` variable and
     # moving the "out of range" error logic after `break` was suggested
-    # by Victor H.
+    # by @nobe4
 
     # the error message to be printed
     error = None
@@ -75,17 +83,17 @@ def validate_range(prompt: list, num_type, lower, upper=float('inf')):
             # if the number is in range, proceed
             if lower <= user_input <= upper:
                 break
-            error = f'\n{Back.RED}Number "{Fore.CYAN}{user_input:g}'\
-                    f'{Fore.RESET}" out of range 🤔 '\
-                    f'Please type a number {upper_text[0]}.'\
+            error = f'\n{Back.RED}Number "{Fore.CYAN}{user_input:g}' \
+                    f'{Fore.RESET}" out of range 🤔 ' \
+                    f'Please type a number {upper_text[0]}.' \
                     f'{Back.RESET} '
         except ValueError:
             # while the input is not one of the allowed options
             # ask for input again
-            error = f'\n{Back.RED}{Fore.CYAN}"{user_input}{Fore.RESET}'\
-                  '" is not a valid number 🤔 '\
-                  f'Please type a {whole}number {upper_text[0]}.'\
-                  f'{Back.RESET}'
+            error = f'\n{Back.RED}{Fore.CYAN}"{user_input}{Fore.RESET}' \
+                    '" is not a valid number 🤔 ' \
+                    f'Please type a {whole}number {upper_text[0]}.' \
+                    f'{Back.RESET}'
     return user_input
 
 
