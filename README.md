@@ -271,17 +271,39 @@ The paired colors have the following contrasts:
 
 ### Languages used
 
-Python
+- Python 
+- Markdown 
+- HTML/CSS
 
 ### External libraries used
+
+
 
 Which libraries are used and what their purpose is, why they are needed
 
 
 ### Tools used
 
-- [Convert images to `webp` format](https://cloudconvert.com/jpeg-to-webp)
-- [Pick colors from an image](https://imagecolorpicker.com/)
+- [Cloudconvert](https://cloudconvert.com/jpeg-to-webp) – Convert images to `webp` format
+- [Favicon.io](https://favicon.io/) – create the favicon
+- [Git](https://git-scm.com/) – version control
+- [GitHub](https://github.com/) – store the source files
+- [GitHub Desktop](https://desktop.github.com/) – GitHub UI
+- [GitHub Issues](https://github.com/features/issues) – feature management, bug tracking
+- [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) – project management
+- [GitHub TOC generator](http://github.com/3kh0/readme-toc/) – automatically generate a Markdown TOC
+- [GitHub web editor](https://github.com/)
+- [GitPod](https://gitpod.io/) – Integrated Development Environment (only used for testing setup/requirements)
+- [Image color picker](https://imagecolorpicker.com/) – color picker from image
+- [MacDown](https://macdown.uranusjr.com/) – Markdown editor
+- [Preview](https://support.apple.com/guide/preview/welcome/mac) – cropping and annotating images
+- [PyCharm](https://www.jetbrains.com/pycharm/) - code editor used for development
+- [PythonTutor](https://pythontutor.com/) – debugging Code
+- [Shields.io](https://shields.io/) – add badges to README
+- [Slack](https://slack.com/) – mentor communication
+- [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
+
+
 
 
 ### Development process
