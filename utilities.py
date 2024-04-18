@@ -56,25 +56,36 @@ def validate_range(text: list, num_type, lower, upper=float('inf')):
         upper_text = [f'that is {lower} or above']
     else:
         upper_text = [f'between {lower} and {upper}']
+
+    # in the following `try/except block`, using the `error` variable and
+    # moving the "out of range" error logic after `break` was suggested
+    # by Victor H.
+
+    # the error message to be printed
+    error = None
+
     while True:
+        # if there is an error, print its value
+        if error:
+            print(error)
         try:
             user_input = input(text[0])
             user_input = num_type(user_input)
-            while user_input < lower or user_input > upper:
-                user_input = num_type(
-                    input(f'{Back.RED}Number "{Fore.CYAN}{user_input:g}'
-                          f'{Fore.RESET}" out of range 🤔 '
-                          f'Please type a number {upper_text[0]}:'
-                          f'{Back.RESET} ')
-                )
-            break
+
+            # if the number is in range, proceed
+            if lower <= user_input <= upper:
+                break
+            error = f'\n{Back.RED}Number "{Fore.CYAN}{user_input:g}'\
+                    f'{Fore.RESET}" out of range 🤔 '\
+                    f'Please type a number {upper_text[0]}.'\
+                    f'{Back.RESET} '
         except ValueError:
             # while the input is not one of the allowed options
             # ask for input again
-            print(f'{Back.RED}{Fore.CYAN}"{user_input}{Fore.RESET}'
-                  '" is not a valid number 🤔 '
-                  f'Please type a {whole}number {upper_text[0]}.'
-                  f'{Back.RESET}')
+            error = f'\n{Back.RED}{Fore.CYAN}"{user_input}{Fore.RESET}'\
+                  '" is not a valid number 🤔 '\
+                  f'Please type a {whole}number {upper_text[0]}.'\
+                  f'{Back.RESET}'
     return user_input
 
 
