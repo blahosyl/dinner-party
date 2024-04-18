@@ -250,7 +250,9 @@ class ShoppingList:
         # confirm starting pantry check
         print("\nLet's check your pantry, then! 👍\n")
         # sleep for 0.5 seconds after printing output
-        sleep(0.5)
+        sleep(1.5)
+
+        clear()
 
         # create an intermediate list to store ingredients where quantity
         # is more than 0
