@@ -337,6 +337,12 @@ I changed the font used from Arial to Verdana. This font [is considered the most
 
 ## Features
 
+### Start screen
+
+The start screen displays the name of the app in a large font styled with ASCII art, followed by the developer name and repository link, the instructions for use, and finally, the initial question asking the user if they want to start planning.
+
+![Start screen](assets/readme-pics/flow-feature-screens/start-screen.png)
+
 
 "start again" message at the end
 
