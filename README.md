@@ -156,6 +156,20 @@ The pantry checker flow only asks inpu for dishes that hau been added to the sho
 
 All lists shown to the user are alphabetized, which aids visual processing.
 
+##### String transformations
+
+The shopping list is presented twice during the flow of the program: at the end of planning, and during the pantry checking process.
+
+Each of these is very different from each other as well as from how the data is stored, tailored too the specific purpose in the flow.
+
+Both are
+
+- transformed into a readable string
+- alphabetized
+- measurement names are shown instead of abbreviations
+- singular/plural is handled based on the quantity
+
+
 ##### Input in error messages 
 
 When a user enters an invalid input, the input is repeated in the error message. This improves user interaction, and also avoids misunderstanding that could result from a [user entering input before the propmt apppears](https://github.com/blahosyl/dinner-party/issues/39).
@@ -355,19 +369,8 @@ The start screen displays the name of the app in a large font styled with ASCII 
 ![Start screen](assets/readme-pics/flow-feature-screens/start-screen.png)
 
 
-"start again" message at the end
 
 
-
-
-list of ingredients is
-
-- transformed into a readable string
-- alphabetized
-- measurements names are shown instead of abbreviations
-- singular/plural handled
-
-flow ends when we run out of ingredients
 
 
 ![Start screen](assets/readme-pics/flow-feature-screens/start-screen.png)
@@ -387,6 +390,10 @@ flow ends when we run out of ingredients
 
 
 ![Start screen](assets/readme-pics/flow-feature-screens/last-dish.png)
+
+flow ends when we run out of ingredients
+
+
 ![Start screen](assets/readme-pics/flow-feature-screens/all-dishes-pantry-validation.png)
 ![Start screen](assets/readme-pics/flow-feature-screens/all-dishes.png)
 
@@ -414,6 +421,9 @@ flow ends when we run out of ingredients
 ![Start screen](assets/readme-pics/flow-feature-screens/shopping-list.png)
 
 ![Start screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
+
+"start again" message at the end
+
 
 ![Start screen](assets/readme-pics/flow-feature-screens/end-screen.png)
 
