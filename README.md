@@ -364,12 +364,11 @@ written with scalability in mind, already planning for integrating more features
 ![Start screen](assets/readme-pics/flow-feature-screens/pantry-start.png)
 
 
-![Start screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
+![Start screen](assets/readme-pics/flow-feature-screens/shopping-list.png)
 
 ![Start screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
 
 ![Start screen](assets/readme-pics/flow-feature-screens/end-screen.png)
-
 
 
 
