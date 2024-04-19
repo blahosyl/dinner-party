@@ -4,7 +4,7 @@ This app **creates shopping lists for dinner parties from a recipe database**.
 
 It provides a **structured flow** with **step-by-step** questions that are straightforward to answer, does all necessary calculations in the background, and produces a **tailor-made list** depending on the ingredients needed, while also **taking existing stock into account**.
 
-The result is **more user-friendly and less prone to errors** than using Google Sheet's built-in filtering and sorting for the same purpose.
+The result is **more user-friendly and less prone to errors** than using Google Sheets' built-in filtering and sorting for the same purpose.
 
 The database contains recipes I routinely use, so this app does not only simulate a real-life process, it actually **is usable in real life**.
 
@@ -37,7 +37,7 @@ As it is not uncommon that I host a series of dinner parties within the same wee
 
 Google Sheets is very well suited for storing data in a structured way, but it is much less capable of producing a shopping list tailored for a specific occasion. While it is technically possible to create such a list using conditionals, filtering and sorting, it is a cumbersome process prone to manual error.
 
-The Dinner Party Planner app aims to solve this problem. It provides a structured flow with step-by-step questions that are straightforward to answer, does all necessary calculations in the background, and produces a tailor-made list depending on the ingredients needed and also taking existing stock into account.
+The Dinner Party Planner app aims to solve this problem. It provides a structured flow with step-by-step questions that are straightforward to answer, does all necessary calculations in the background, and produces a tailor-made list depending on the ingredients needed, while also taking existing stock into account.
 
 ### User goals
 
@@ -68,9 +68,9 @@ The same set of goals was determined for all users of the app regardless of whet
 
 ## Design
 
-### Scope
+### Flow 
 
-### Flow
+####Scope
 
 From the outset, I had three main goals in mind: ease of use, proper error handling, and scalability.
 
@@ -96,7 +96,7 @@ The MVP program flow can be summarized as follows:
 	- print shopping list, end program
 
 
-After the MVP was completed well-ahead of the expected timeline, and there was more time left until the submission deadline than originally anticipated, I decided to add a new feature that was outside the scope of the MVP: the `check_pantry()` function and its accompanying logic. 
+After the MVP was completed well ahead of the expected timeline, and there was more time left until the submission deadline than originally anticipated, I decided to add a new feature that was outside the scope of the MVP: [the `check_pantry()` function](https://github.com/blahosyl/dinner-party/issues/35) and its accompanying logic. 
 
 This loops through each ingredient on the shopping list, asks the user how much of it they already have, and adjusts the quantities accordingly. When the resulting quantity is 0 or less, the item is deleted from the shopping list.
 
