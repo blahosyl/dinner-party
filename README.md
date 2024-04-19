@@ -134,7 +134,17 @@ The current program flow can be summarized as follows:
 
 This flow ensures an intuitive progression through the process, and eliminates the need for complicated navigation.
 
+#### Interaction design
 
+##### Minimal typing
+
+The app is designed to work with as little typing as possible. 
+
+Yes/no questions only require a single character as an answer.
+
+The list of dishes is presented as a numbered list, so that users only need to enter the dish number, rather than type the whole name of the dish.
+
+The pantry checker function only requires the user to enter a number for each ingredient checked.
 #### CRUD functionalities
 
 ##### Create
