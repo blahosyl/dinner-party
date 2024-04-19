@@ -346,15 +346,19 @@ The paired colors have the following contrasts:
 
 ### Languages used
 
-- Python 
-- Markdown 
-- HTML/CSS
+- Python: to create the app
+- Markdown: to create the documentation
+- HTML/CSS: to modify the deployment template supplied by [Code Institute](https://codeinstitute.net)
 
-### External libraries used
+### Python libraries used
 
-
-
-Which libraries are used and what their purpose is, why they are needed
+- `os`: used in the function that clears the terminal
+- `time`: use the `sleep` method to pause the running of the app, so that the user has time to process information
+- `gspread`: get data from Google Sheets
+- `google.oauth2.service_account`: authenticate with Google Sheets
+- `itertools`: get combinations from a list
+- `colorama`: add color to the terminal text, both for design and UX purposes (see[the section Color](#color) for more detail)
+- `pyfiglet`: display text using ASCII art
 
 
 ### Tools used
@@ -377,9 +381,7 @@ Which libraries are used and what their purpose is, why they are needed
 - [Shields.io](https://shields.io/) – add badges to README
 - [Slack](https://slack.com/) – mentor communication
 - [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
-
-
-
+ 
 
 ### Development process
 
