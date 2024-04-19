@@ -205,7 +205,7 @@ def ask_more():
             end_planning()
     else:
         print('\nYou have selected all the dishes.')
-        print('🌯 🍛️ 🍷 🍻 🌮 🥃 🥗 🧆 🍰 🫔 🍹 ')
+        print('🌯 🍛️ 🍷 🍻 🌮 🥃 🥗 🧆 🍰 🫔 🍹 \n')
         end_planning()
 
 
