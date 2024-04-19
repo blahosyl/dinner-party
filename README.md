@@ -77,15 +77,36 @@ The diagram below shows the Minimum Viable Product flow for the app. As discusse
 
 ![Program flowchart: initial plan](assets/readme-pics/initial-flow-dinner-party.jpg)
 
+The MVP program flow can be summarised as follows:
 
-This includes the following features:
+- if the user answers `Y` to the initial question: start planning loop
+- if the user answers `N` to the 1st question: end with message
+- when the user selects a dish:
+	- remove it from the list of dishes
+	- display its name and ingredients
+	- add its ingredients to the shopping list
+- if the shopping list already contains an ingredient that is added: combine two items into one, sum the ingredient quantity
+- if the user wants to continue adding an ingredient: rerun planning loop
+- if the user does not want to  add more ingredients: 
+	- end planning loop
+	- print shopping list, end program
+- if the user selects all dishes: 
+	- end planning loop
+	- print shopping list, end program
+
+
+After the MVP was completed well-ahead of the expected timeline, and there was more time left until the submission deadline than originally anticipated, I decided to add a new feature that was outside the scope of the MVP: the `check_pantry()` function and its accompanying logic. 
+
+This loops through each ingredient on the shopping list, asks the user how much of it they already have, and adjusts the quantities accordingly. When the resulting quantity is 0 or less, the item is deleted from the shopping list.
+
+Even though this feature seemed like an easy add-on, it has nearly doubled the steps in the program flow.
 
 The current version of the program flow is as follows ([click here to view the full-size version on Miro](https://miro.com/app/board/uXjVKVLz2oI=/?share_link_id=420958715421)):
 
 ![Program flowchart: initial plan](assets/readme-pics/current-flow-dinner-party.jpg)
 
 
-The program flow can be summarised as follows:
+The current program flow can be summarised as follows:
 
 - if the user answers `Y` to the initial question: start planning loop
 - if the user answers `N` to the 1st question: end with message
@@ -135,9 +156,11 @@ Delete
 
 ### Database
 
-[Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
+The matrix of dishes, ingredietns and quantities are store in this [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
 
-A new test account was created for this purpose, for security reasons. However, the contents of the database are actually recipes I routinely use, so this app does not only simulate a real-life process, it actually **is** usable in real life.
+A new test Google account was created for this purpose, for security reasons, as I did not consider it good practice to use my real-life credentials for developing my first app of this kind, where the potential for human error is large. 
+
+However, the contents of the database are actually recipes I routinely use, so this app does not only simulate a real-life process, it actually **is** usable in real life.##
 
 ### Visual design of the terminal
 
