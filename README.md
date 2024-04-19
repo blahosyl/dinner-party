@@ -152,7 +152,7 @@ The list of dishes changes dynamically, so only dishes that have not yet been ad
 
 The pantry checker flow only asks inpu for dishes that hau been added to the shopping list.
 
-##### Alphbetization
+##### Alphabetization 
 
 All lists shown to the user are alphabetized, which aids visual processing.
 
@@ -162,7 +162,7 @@ When a user enters an invalid input, the input is repeated in the error message.
 
 ##### Tailored error messages
 
-Error messages also show the reason why user input is rejected (not a valid number, out of range, not "Y"or "N"), and remind the user what type of input is accepted for the question onthe screen.
+Error messages also show the reason why user input is rejected (not a valid number, out of range, not "Y"or "N"), and remind the user what type of input is accepted for the question on the screen.
 
 #### CRUD functionalities
 
@@ -200,6 +200,13 @@ The matrix of dishes, ingredients and quantities are stored in this [Google Shee
 A new test Google account was created for this purpose for security reasons, as I did not consider it good practice to use my real-life credentials for developing my first app of this kind, where the potential for human error is large. 
 
 However, the contents of the database are actually recipes I routinely use, so this app does not only simulate a real-life process, it actually **is** usable in real life.
+
+The database was designed with extensibility in mind, and already contains data structures for features outdie the MVP:
+
+- [viewing dishes according to dish type](https://github.com/blahosyl/dinner-party/discussions/landing)
+- [getting links to recipes](https://github.com/blahosyl/dinner-party/issues/51)
+
+The app interfaces with the database in a way that does not rely on the order of elements. This means that the Google worksheet remains usable, and can be modified or sorted without affecting the interaction with the app.
 
 ### Visual design of the terminal
 
@@ -350,11 +357,8 @@ The start screen displays the name of the app in a large font styled with ASCII 
 
 "start again" message at the end
 
-functional use of colors/ASCII art
 
-visual separation into screens
 
-as little typing as possible
 
 list of ingredients is
 
@@ -365,9 +369,6 @@ list of ingredients is
 
 flow ends when we run out of ingredients
 
-don't rely on order of ingredients or dishes
-
-written with scalability in mind, already planning for integrating more features (e.g. dish types)
 
 ![Start screen](assets/readme-pics/flow-feature-screens/start-screen.png)
 
