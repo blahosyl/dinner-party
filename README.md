@@ -385,8 +385,11 @@ The paired colors have the following contrasts:
 
 ### Development process
 
-tools used
-GitHub Projects, Issues, branches (deleted when completed)
+The project was developed with [Pycharm](https://www.jetbrains.com/pycharm/), using [GitHub](https://github.com/) for version control.
+
+[GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) and [Issues](https://github.com/features/issues) were used to track project development, new features and bugs. 
+
+Significant changes to the codebase were developed on separate branches, which were deleted when the addition/change was completed and tested.
 
 ## Deployment
 
