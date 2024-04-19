@@ -166,11 +166,11 @@ This flow ensures an intuitive progression through the process, and eliminates t
 
 ### Database
 
-The matrix of dishes, ingredients and quantities are store in this [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
+The matrix of dishes, ingredients and quantities are stored in this [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing).
 
-A new test Google account was created for this purpose, for security reasons, as I did not consider it good practice to use my real-life credentials for developing my first app of this kind, where the potential for human error is large. 
+A new test Google account was created for this purpose for security reasons, as I did not consider it good practice to use my real-life credentials for developing my first app of this kind, where the potential for human error is large. 
 
-However, the contents of the database are actually recipes I routinely use, so this app does not only simulate a real-life process, it actually **is** usable in real life.##
+However, the contents of the database are actually recipes I routinely use, so this app does not only simulate a real-life process, it actually **is** usable in real life.
 
 ### Visual design of the terminal
 
@@ -196,14 +196,14 @@ I used ASCII art to signify the beginning and end of the program.
 
 The main colors chosen (magenta and green) harmonize with the [background image](#background-image) of the site.
 
-In addition, red is used for validation messages.
+In addition, red is used for validation error messages.
 
 However, the use of color in this project goes beyond aesthetic purposes: it also serves to aid the user experience, and is deliberately used to distinguish different functional elements from each other:
 
 |style					|function|
 |---					|---|
 |colored background 	|user input needed |
-|red				 	|user entered invalid data|
+|red background		 	|user entered invalid data|
 |green text			|information that the user needs to proceed|
 |magenta ASCII text	|start and end of program|
 
