@@ -134,23 +134,30 @@ The current program flow can be summarised as follows:
 
 #### CRUD functionalities
 
-Create
+##### Create
 
 - dataset from Google Sheets
 - list of dishes
 - shopping list
+- human-readable version of shopping list
+- human-readable version of ingredients
 
-Read
+##### Read
+
 - dataset from Google Sheets
 - list of dishes
 - shopping list
 - ingredients of a dish
 
-Update
-- list of dishes
-- shopping list
+#### Update
 
-Delete
+- list of dishes
+- shopping list quantities
+- shopping list items
+
+
+##### Delete
+
 - items from the shopping list
 
 
