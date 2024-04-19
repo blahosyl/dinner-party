@@ -257,6 +257,7 @@ However, the use of color in this project goes beyond aesthetic purposes: it als
 |green text			|information that the user needs to proceed|
 |magenta ASCII text	|start and end of program|
 
+In addition, important information within messages is highlighted with a contrasting color.
 
 ### Website design
 
