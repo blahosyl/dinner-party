@@ -35,7 +35,7 @@ As an avid cook and dinner party host, I maintain several recipe databases in Go
 
 As it is not uncommon that I host a series of dinner parties within the same week, it is paramount to be able to pool all the ingredients needed for all these parties together, so that they can be purchased in a single grocery run or delivery.
 
-Google Sheets is very well suited for storing data in a structured way, but it is much less capable of producing a shopping list tailored for a specific occasions. While it is technically possible to create such a list using conditionals, filtering and sorting, it is a cumbersome process prone to manual error.
+Google Sheets is very well suited for storing data in a structured way, but it is much less capable of producing a shopping list tailored for a specific occasion. While it is technically possible to create such a list using conditionals, filtering and sorting, it is a cumbersome process prone to manual error.
 
 The Dinner Party Planner app aims to solve this problem. It provides a structured flow with step-by-step questions that are straightforward to answer, does all necessary calculations in the background, and produces a tailor-made list depending on the ingredients needed and also taking existing stock into account.
 
@@ -194,7 +194,7 @@ However, the use of color in this project goes beyond aesthetic purposes: it als
 |colored background 	|user input needed |
 |red				 	|user entered invalid data|
 |green test			|information that the user needs to proceed|
-|magenta ASCII text	|start and end of prorgam|
+|magenta ASCII text	|start and end of program|
 
 
 ### Website design
@@ -242,7 +242,7 @@ Iasmina Pal](https://github.com/useriasminna) in implementing the changes above.
 I made some additional changes based on the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/) that I have decided to reroll: although the modified `layout.html` file passed validation, the deployed page did not.
 
 <details>
-<summary>Click to see the details of the rerolll</summary>
+<summary>Click to see the details of the reroll</summary>
 
 In addition to some styling in the `head` element, the [American Pizza Order System project](https://github.com/useriasminna/american_pizza_order_system/)
 added the following code to `@body` in `layout.html`:
