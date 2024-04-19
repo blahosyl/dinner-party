@@ -596,10 +596,10 @@ All text content was written by me.
 
 #### Images
 
-[Background image](assets/images/sweet-potatoes.webp) by me, coverted to `webp` with [CloudConvert]((https://cloudconvert.com/jpeg-to-webp)
+[Background image](assets/images/sweet-potatoes.webp) by me, converted to `webp` with [CloudConvert]((https://cloudconvert.com/jpeg-to-webp)
 ).
 
-[Image](assets/images/wine-glasses.webp) for the favicon and logo from [Vecteezy](https://www.vecteezy.com/vector-art/2602820-wine-cups-glasses-toasting-line-style-icon), converted to `png` format with Preview, converted to `ico` format with [Favicon.io](https://favicon.io/), coverted to `webp` with [CloudConvert](https://cloudconvert.com/jpeg-to-webp).
+[Image](assets/images/wine-glasses.webp) for the favicon and logo from [Vecteezy](https://www.vecteezy.com/vector-art/2602820-wine-cups-glasses-toasting-line-style-icon), converted to `png` format with Preview, converted to `ico` format with [Favicon.io](https://favicon.io/), converted to `webp` with [CloudConvert](https://cloudconvert.com/jpeg-to-webp).
 
 ### Readme
 
