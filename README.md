@@ -61,9 +61,10 @@ The same set of goals was determined for all users of the app regardless of whet
 - [CR3] I want to make use of Object Oriented Programming
 - [CR4] I want to reduce code redundancy as much as possible
 - [CR5] I want the app to handle all possible user input
-- [CR4] I want pre-empt unexpected user input that the application cannot handle
-- [CR5] I want the user to always be sure how to interact with the program
-- [CR6] I want the app to be as visually appealing as possible under the given constraints of the template
+- [CR5] I want pre-empt unexpected user input that the application cannot handle
+- [CR6] I want the user to always be sure how to interact with the program
+- [CR7] I want the app to be as visually appealing as possible under the given constraints of the template
+- [CR8] I want to write code with future extendability and scalability in mind
 
 ## Design
 
@@ -363,7 +364,7 @@ written with scalability in mind, already planning for integrating more features
 ![Start screen](assets/readme-pics/flow-feature-screens/pantry-start.png)
 
 
-![Start screen](assets/readme-pics/flow-feature-screens/shopping-list.png)
+![Start screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
 
 ![Start screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
 
