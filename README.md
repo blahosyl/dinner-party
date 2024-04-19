@@ -160,6 +160,10 @@ All lists shown to the user are alphabetized, which aids visual processing.
 
 When a user enters an invalid input, the input is repeated in the error message. This improves user interaction, and also avoids misunderstanding that could result from a [user entering input before the propmt apppears](https://github.com/blahosyl/dinner-party/issues/39).
 
+##### Tailored error messages
+
+Error messages also show the reason why user input is rejected (not a valid number, out of range, not "Y"or "N"), and remind the user what type of input is accepted for the question onthe screen.
+
 #### CRUD functionalities
 
 ##### Create
