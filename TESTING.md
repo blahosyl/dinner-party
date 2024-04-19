@@ -13,7 +13,7 @@ This document describes the testing procedures for the [Dinner Party app](README
 
 ### PEP8 validation
 
-All 3 Python files written for this project were tested with the build-in PyCharm linter and the [Code Institute PEP8 Linter](https://pep8ci.herokuapp.com/#) thoughout development.
+All 4 Python files written for this project were tested with the build-in PyCharm linter and the [Code Institute PEP8 Linter](https://pep8ci.herokuapp.com/#) thoughout development.
 
 In the current version, no errors were found.
 
@@ -27,7 +27,11 @@ In the current version, no errors were found.
 
 #### `utilities.py` validation
 
-![`utilities.py.py` validated with the CI PEP8 linter](testing/pep8-validation/pep8-utilities.png)
+![`utilities.py` validated with the CI PEP8 linter](testing/pep8-validation/pep8-utilities.png)
+
+#### `gsheet.py` validation
+
+![`gsheet.py` validated with the CI PEP8 linter](testing/pep8-validation/pep8-gsheet.png)
 
 
 ### HTML/CSS validation
