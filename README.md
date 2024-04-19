@@ -475,6 +475,21 @@ Significant changes to the codebase were developed on separate branches, which w
 
 ## Deployment
 
+### Create a database
+
+Create a worksheet in Google Sheets following [this template]([Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)).
+
+Make sure to keep the foloowing format:
+
+ - dishes are in the 2nd row
+ - ingredients are in the 1st column
+ - quantity cells only contain floats
+ - each ingredient cell contains `(` and `)`
+
+### Connect to Google Drive & Google Sheets API
+
+Follow [the process described in the Love Sandwiches walkthough project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/071036790a5642f9a6f004f9888b6a45/), helpfully replicated [here](https://github.com/amylour/BakeStock/tree/main?tab=readme-ov-file#creation--deployment).
+
 ### Fork the repository
 
 You can fork the repository by following these steps:
@@ -596,5 +611,7 @@ All text content was written by me.
 - [Travel World](https://github.com/PedroCristo/portfolio_project_1/) by Pedro Cristo
 - [Sourdough Bakes](https://github.com/siobhanlgorman) by Siobhan Gorman
 - [Horizon Photo](https://github.com/Ri-Dearg/horizon-photo/blob/master/README.md#mobile-testing) by Rory Patrick Sheridan
+- [BackeStock](https://github.com/amylour/BakeStock/) by [Amy Richardson](https://github.com/amylour)
+- [American Pizza Order System](https://github.com/useriasminnaamerican_pizza_order_system/) by [Iasmina Pal](https://github.com/useriasminna)
 - [The README of my first Code Institute project](https://github.com/blahosyl/academic-publishing)
 - [The README of my second Code Institute project](https://github.com/blahosyl/operator-game)
