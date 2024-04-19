@@ -1,12 +1,14 @@
 # Dinner Party Planner
 
-This app creates shopping lists for dinner parties from a recipe database. 
+This app **creates shopping lists for dinner parties from a recipe database**. 
 
-It provides a structured flow with step-by-step questions that are straightforward to answer, does all necessary calculations in the background, and produces a tailor-made list depending on the ingredients needed, while also taking existing stock into account.
+It provides a **structured flow** with **step-by-step** questions that are straightforward to answer, does all necessary calculations in the background, and produces a **tailor-made list** depending on the ingredients needed, while also **taking existing stock into account**.
 
-The result is more user-friendly and less prone to errors than using Google Sheet's built-in filtering and sorting for the same purpose.
+The result is **more user-friendly and less prone to errors** than using Google Sheet's built-in filtering and sorting for the same purpose.
 
-It was developed as the first Python project for my coursework for [Code Institute](https://codeinstitute.net/) (Portfolio Project 3).
+The database contains recipes I routinely use, so this app does not only simulate a real-life process, it actually **is usable in real life**.
+
+It was developed as my first Python project, as a requirement for my coursework for [Code Institute](https://codeinstitute.net/) (Portfolio Project 3).
 
 Developer: [Dr. Sylvia Blaho](https://www.linkedin.com/in/blahosylvia/)
 
@@ -39,16 +41,33 @@ The Dinner Party Planner app aims to solve this problem. It provides a structure
 
 ### User goals
 
-- [UX1] I want to see what recipes are available
-- [UX2] I want to choose one or more recipes to shop for
-- [UX3] I want to see the ingredients for the dish I selected
-- [UX4] I want to get a shopping list of all ingredients correctly added
+The same set of goals was determined for all users of the app regardless of whether they are first-time or returning users.
+
+- [UX1] I want to have a user-friendly and easy to use shopping list generator.
+- [UX2] I want to see what recipes are available at each stage of planning
+- [UX3] I want to choose one or more recipes to shop for
+- [UX4] I want to see the ingredients for the dish I selected
+- [UX5] I want to get a shopping list of all ingredients correctly added
+- [UX6] I want to adjust the shopping list based on the ingredients I already have
+- [UX7] I want clear instructions on the next step at each stage of the process
+- [UX8] I want to only see relevant information on the screen at each step of the process
+- [UX9] I want to be able to visually distinguish diffeerent kinds of information on the screen
+- [UX10] I want to know the result of each step/choice in the process
 
 ### Creator goals
 
-
+- [CR1] I want to create my first Python application
+- [CR2] I want to create an application that fills a real-life need
+- [CR3] I want to make use of Object Oriented Programming
+- [CR4] I want to reduce code redundancy as much as possible
+- [CR5] I want the app to handle all possible user input
+- [CR4] I want pre-empt unexpected user input that the application cannot handle
+- [CR5] I want the user to always be sure how to interact with the program
+- [CR6] I want the app to be as visually appealing as possible under the given constraints of the template
 
 ## Design
+
+### Scope
 
 ### Flow
 
@@ -118,7 +137,7 @@ Delete
 
 [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
 
-A new test account was created for this purpose, for security reasons.
+A new test account was created for this purpose, for security reasons. However, the contents of the database are actually recipes I routinely use, so this app does not only simulate a real-life process, it actually **is** usable in real life.
 
 ### Visual design of the terminal
 
