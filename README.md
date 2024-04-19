@@ -322,6 +322,56 @@ don't rely on order of ingredients or dishes
 
 written with scalability in mind, already planning for integrating more features (e.g. dish types)
 
+![Start screen](assets/readme-pics/flow-feature-screens/start-screen.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/initial-question-y.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/initial-question-n.png)
+
+
+![Start screen](assets/readme-pics/flow-feature-screens/dish-selection-start.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/dish-selection-confirmation.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/dish-list-again.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/dish-ingredients.png)
+
+
+![Start screen](assets/readme-pics/flow-feature-screens/last-dish.png)
+![Start screen](assets/readme-pics/flow-feature-screens/all-dishes-pantry-validation.png)
+![Start screen](assets/readme-pics/flow-feature-screens/all-dishes.png)
+
+
+
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-starting-question-yes.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-start-no.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-progress.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-no-items-needed-pause.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-no-items-needed-end.png)
+
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-fist-item.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-done.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-start.png)
+
+
+![Start screen](assets/readme-pics/flow-feature-screens/shopping-list.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
+
+![Start screen](assets/readme-pics/flow-feature-screens/end-screen.png)
+
+
+
+
 ### Not part of the MVP
 
 #### OOP
