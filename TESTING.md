@@ -16,7 +16,7 @@ The same set of goals was determined for all users of the app regardless of whet
 - [UX6] I want to adjust the shopping list based on the ingredients I already have
 - [UX7] I want clear instructions on the next step at each stage of the process
 - [UX8] I want to only see relevant information on the screen at each step of the process
-- [UX9] I want to be able to visually distinguish diffeerent kinds of information on the screen
+- [UX9] I want to be able to visually distinguish different kinds of information on the screen
 - [UX10] I want to know the result of each step/choice in the process
 
 ### Creator goals
@@ -29,7 +29,7 @@ The same set of goals was determined for all users of the app regardless of whet
 - [CR5] I want pre-empt unexpected user input that the application cannot handle
 - [CR6] I want the user to always be sure how to interact with the program
 - [CR7] I want the app to be as visually appealing as possible under the given constraints of the template
-- [CR8] I want to write code with future extendability and scalability in mind
+- [CR8] I want to write code with future extensibility and scalability in mind
 
 ## Code validation
 
@@ -42,7 +42,7 @@ The same set of goals was determined for all users of the app regardless of whet
 
 ### PEP8 validation
 
-All 4 Python files written for this project were tested with the build-in PyCharm linter and the [Code Institute PEP8 Linter](https://pep8ci.herokuapp.com/#) thoughout development.
+All 4 Python files written for this project were tested with the build-in PyCharm linter and the [Code Institute PEP8 Linter](https://pep8ci.herokuapp.com/#) throughout development.
 
 In the current version, no errors were found.
 
@@ -83,7 +83,7 @@ As I decided to add some CSS styling to the HTML style provided in the project t
 
 - [Initial question](#initial-question)
 - [Add more dishes question](#add-more-dishes-question)
-- [Check pantry question](#check-pantr-question)
+- [Check pantry question](#check-pantry-question)
 
 #### Initial question
 
@@ -336,7 +336,7 @@ This input method accepts floats that are positive, including 0.
 
 ## Flow testing
 
-The summarised program flow is repeated here for convenience:
+The summarized program flow is repeated here for convenience:
 
 - if the user answers `Y` to the initial question: start planning loop
 - if the user answers `N` to the 1st question: end with message
@@ -361,35 +361,35 @@ The summarised program flow is repeated here for convenience:
 - if there are shopping list items left, print shopping list
 - end program with message
 
-All events in the flow work as excpected.
+All events in the flow work as expected.
 
-On the flowchart below, I marked the crucial places in the flow that have beed manually tested. The table below  the flowchart summarizes the event and the behaviour that is expected to follow it, along with the test results.
+On the flowchart below, I marked the crucial places in the flow that have been manually tested. The table below  the flowchart summarizes the event and the behavior that is expected to follow it, along with the test results.
 
-All events in the flow work as excpected.
+All events in the flow work as expected.
 
 ![Flow testing chart](assets/readme-pics/testing-flow-dinner-party.jpg)
 
-|Nr		|Event|Excpected behaviour	|Result|
+|Nr		|Event|expected behavior	|Result|
 |---:	|---|	---					|:---:|	
 |1		|Input not valid| Error message, new input|✅|
 |2		|Input valid| Proceed|✅|
 |3		|Input `N`| End program with message|✅|
 |4		|Input `Y`| Display dishes, start planning loop|✅|
-|5		|Input `N`ot valid| Error message, new input|✅|
+|5		|Input not valid| Error message, new input|✅|
 |6		|Input valid| Confirm selection|✅|
 |7		|Input valid| Add ingredients to shopping list|✅|
 |8		|Ingredients added to shopping list| Unify quantities in shopping list|✅|
 |9		|No dishes left	|Ask to check pantry|✅|
-|10		|Input `N`ot valid| Error message, new input|✅|
+|10		|Input not valid| Error message, new input|✅|
 |11		|Input valid| Proceed|✅|
 |12		|Input `Y`| Display dishes, repeat planning loop|✅|
 |13		|Input `N`| Ask to check pantry |✅|
-|14		|Input `N`ot valid| Error message, new input|✅|
+|14		|Input not valid| Error message, new input|✅|
 |15		|Input valid| Proceed|✅|
 |16		|Input `N`| Print shopping list, End program with message|✅|
 |17		|Input `Y`| Start pantry loop, ask quantity of ingredient|✅|
 |18		|Input not valid| Error message, new input|✅|
-|19		|Input valid| Comfirm message, subtract `number` from shopping list|✅|
+|19		|Input valid| Confirm message, subtract `number` from shopping list|✅|
 |20		|`number < 0`| remove item from shopping list|✅|
 |21		|There are more quantities to check| repeat pantry loop|✅|
 |22		|There are no more quantities to check| proceed|✅|
