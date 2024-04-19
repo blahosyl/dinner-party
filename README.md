@@ -503,7 +503,7 @@ You can fork the repository by following these steps:
 >[!TIP]
 >If you do rename the repository, make sure to keep the [GitHub naming conventions](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Naming-Repos.md) in mind.
 
-### Deployment to Heroku
+### Deploy to Heroku
 
 1. Create a list of requirements by going to the terminal and typing `pip3 freeze > requirements.txt`. This popuplates your `requirements.txt` file with the list of required files.<br>
 Push your changes to GitHub.
