@@ -130,7 +130,9 @@ The current program flow can be summarized as follows:
 	- subtract answer from quantity on shopping list
 		- if resulting quantity is 0 or less, remove item from the list
 - if there are shopping list items left, print shopping list
-- end program with message
+- end program with messagemessage
+
+This flow ensures an intuitive progression through the process, and eliminates the need for complicated navigation.
 
 
 #### CRUD functionalities
@@ -172,14 +174,23 @@ However, the contents of the database are actually recipes I routinely use, so t
 
 ### Visual design of the terminal
 
+Since using a terminal-based app can be daunting for people who are not used to it, I took extra care to structure and time the appearance of the information presented to the user.
+
 #### Clear screen
 
+I cleared the screen after each step, so that the user is not distracted by information no longer relevant to them.
 
 #### Pause
 
-Rather than 
+I inserted pauses after confirmation messages, so that the user has enough time to read them.
+
+#### Emojis
+
+I added emojis to confirmation messages to break up the monotony and aid visual recognition.
 
 #### ASCII art
+
+I used ASCII art to signify the beginning and end of the program.
 
 #### Color
 
@@ -193,7 +204,7 @@ However, the use of color in this project goes beyond aesthetic purposes: it als
 |---					|---|
 |colored background 	|user input needed |
 |red				 	|user entered invalid data|
-|green test			|information that the user needs to proceed|
+|green text			|information that the user needs to proceed|
 |magenta ASCII text	|start and end of program|
 
 
