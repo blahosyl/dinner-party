@@ -339,14 +339,14 @@ This input method accepts floats that are positive, including 0.
 The summarized program flow is repeated here for convenience:
 
 - if the user answers `Y` to the initial question: start planning loop
-- if the user answers `N` to the 1st question: end with message
+- if the user answers `N` to the initial question: end with message
 - when the user selects a dish:
 	- remove it from the list of dishes
 	- display its name and ingredients
 	- add its ingredients to the shopping list
 - if the shopping list already contains an ingredient that is added: combine two items into one, sum the ingredient quantity
 - if the user wants to continue adding an ingredient: rerun planning loop
-- if the user does not want to  add more ingredients: 
+- if the user does not want to add more ingredients: 
 	- end planning loop
 	- ask if they want to check their pantry
 - if the user selects all dishes: 

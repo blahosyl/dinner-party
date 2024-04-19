@@ -70,7 +70,7 @@ The same set of goals was determined for all users of the app regardless of whet
 
 ### Flow 
 
-####Scope
+#### Scope
 
 From the outset, I had three main goals in mind: ease of use, proper error handling, and scalability.
 
@@ -81,14 +81,14 @@ The diagram below shows the Minimum Viable Product flow for the app. As discusse
 The MVP program flow can be summarized as follows:
 
 - if the user answers `Y` to the initial question: start planning loop
-- if the user answers `N` to the 1st question: end with message
+- if the user answers `N` to the initial question: end with message
 - when the user selects a dish:
 	- remove it from the list of dishes
 	- display its name and ingredients
 	- add its ingredients to the shopping list
 - if the shopping list already contains an ingredient that is added: combine two items into one, sum the ingredient quantity
 - if the user wants to continue adding an ingredient: rerun planning loop
-- if the user does not want to  add more ingredients: 
+- if the user does not want to add more ingredients: 
 	- end planning loop
 	- print shopping list, end program
 - if the user selects all dishes: 
@@ -110,14 +110,14 @@ The current version of the program flow is as follows ([click here to view the f
 The current program flow can be summarized as follows:
 
 - if the user answers `Y` to the initial question: start planning loop
-- if the user answers `N` to the 1st question: end with message
+- if the user answers `N` to the initial question: end with message
 - when the user selects a dish:
 	- remove it from the list of dishes
 	- display its name and ingredients
 	- add its ingredients to the shopping list
 - if the shopping list already contains an ingredient that is added: combine two items into one, sum the ingredient quantity
 - if the user wants to continue adding an ingredient: rerun planning loop
-- if the user does not want to  add more ingredients: 
+- if the user does not want to add more ingredients: 
 	- end planning loop
 	- ask if they want to check their pantry
 - if the user selects all dishes: 
