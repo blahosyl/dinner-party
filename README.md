@@ -145,6 +145,21 @@ Yes/no questions only require a single character as an answer.
 The list of dishes is presented as a numbered list, so that users only need to enter the dish number, rather than type the whole name of the dish.
 
 The pantry checker function only requires the user to enter a number for each ingredient checked.
+
+##### Information is adjusted for each step
+
+The list of dishes changes dynamically, so only dishes that have not yet been added to the shopping list are shown to the user at each point.
+
+The pantry checker flow only asks inpu for dishes that hau been added to the shopping list.
+
+##### Alphbetization
+
+All lists shown to the user are alphabetized, which aids visual processing.
+
+##### Input in error messages 
+
+When a user enters an invalid input, the input is repeated in the error message. This improves user interaction, and also avoids misunderstanding that could result from a [user entering input before the propmt apppears](https://github.com/blahosyl/dinner-party/issues/39).
+
 #### CRUD functionalities
 
 ##### Create
