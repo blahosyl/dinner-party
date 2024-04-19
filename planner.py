@@ -253,7 +253,7 @@ class ShoppingList:
         """
         # confirm starting pantry check
         print("\nLet's check your pantry, then! 👍\n")
-        # sleep for 0.5 seconds after printing output
+        # sleep for 1.5 seconds after printing output
         sleep(1.5)
 
         clear()
@@ -302,8 +302,8 @@ class ShoppingList:
             print(
                 f'Got it, you have {have:g} {unit_name} of {ingredient_text}\n'
                 )
-            # sleep for 0.5 seconds after printing output
-            sleep(0.5)
+            # sleep for 1.5 seconds after printing output
+            sleep(1.5)
 
             # deduct the quantity in the pantry
             # from the quantity on the shopping list

@@ -171,11 +171,12 @@ However, the contents of the database are actually recipes I routinely use, so t
 
 ### Visual design of the terminal
 
+#### Clear screen
+
+
 #### Pause
 
 Rather than 
-
-#### Clear screen
 
 #### ASCII art
 
