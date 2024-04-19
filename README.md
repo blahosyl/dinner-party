@@ -31,11 +31,11 @@ See the development progress and further plans on [GitHub Projects](https://gith
 
 ## User Experience (UX)
 
-As an avid cook and dinner party host, I maintain several recipe databases in Google Sheets for different occassions, seasons and dietary preferences. These contain a range of dishes, ingrediets and substitutions.
+As an avid cook and dinner party host, I maintain several recipe databases in Google Sheets for different occasions, seasons and dietary preferences. These contain a range of dishes, ingredients and substitutions.
 
 As it is not uncommon that I host a series of dinner parties within the same week, it is paramount to be able to pool all the ingredients needed for all these parties together, so that they can be purchased in a single grocery run or delivery.
 
-Google Sheets is very well suited for storing data in a structured way, but it is much less capable of producing a shopping list tailored for a specific occassions. While it is technically possible to create such a list using conditionals, filtering and sorting, it is a cumbersome process prone to manual error.
+Google Sheets is very well suited for storing data in a structured way, but it is much less capable of producing a shopping list tailored for a specific occasions. While it is technically possible to create such a list using conditionals, filtering and sorting, it is a cumbersome process prone to manual error.
 
 The Dinner Party Planner app aims to solve this problem. It provides a structured flow with step-by-step questions that are straightforward to answer, does all necessary calculations in the background, and produces a tailor-made list depending on the ingredients needed and also taking existing stock into account.
 
@@ -51,7 +51,7 @@ The same set of goals was determined for all users of the app regardless of whet
 - [UX6] I want to adjust the shopping list based on the ingredients I already have
 - [UX7] I want clear instructions on the next step at each stage of the process
 - [UX8] I want to only see relevant information on the screen at each step of the process
-- [UX9] I want to be able to visually distinguish diffeerent kinds of information on the screen
+- [UX9] I want to be able to visually distinguish different kinds of information on the screen
 - [UX10] I want to know the result of each step/choice in the process
 
 ### Creator goals
@@ -64,7 +64,7 @@ The same set of goals was determined for all users of the app regardless of whet
 - [CR5] I want pre-empt unexpected user input that the application cannot handle
 - [CR6] I want the user to always be sure how to interact with the program
 - [CR7] I want the app to be as visually appealing as possible under the given constraints of the template
-- [CR8] I want to write code with future extendability and scalability in mind
+- [CR8] I want to write code with future extensibility and scalability in mind
 
 ## Design
 
@@ -78,7 +78,7 @@ The diagram below shows the Minimum Viable Product flow for the app. As discusse
 
 ![Program flowchart: initial plan](assets/readme-pics/initial-flow-dinner-party.jpg)
 
-The MVP program flow can be summarised as follows:
+The MVP program flow can be summarized as follows:
 
 - if the user answers `Y` to the initial question: start planning loop
 - if the user answers `N` to the 1st question: end with message
@@ -107,7 +107,7 @@ The current version of the program flow is as follows ([click here to view the f
 ![Program flowchart: initial plan](assets/readme-pics/current-flow-dinner-party.jpg)
 
 
-The current program flow can be summarised as follows:
+The current program flow can be summarized as follows:
 
 - if the user answers `Y` to the initial question: start planning loop
 - if the user answers `N` to the 1st question: end with message
@@ -164,7 +164,7 @@ The current program flow can be summarised as follows:
 
 ### Database
 
-The matrix of dishes, ingredietns and quantities are store in this [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
+The matrix of dishes, ingredients and quantities are store in this [Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)
 
 A new test Google account was created for this purpose, for security reasons, as I did not consider it good practice to use my real-life credentials for developing my first app of this kind, where the potential for human error is large. 
 
@@ -191,10 +191,10 @@ However, the use of color in this project goes beyond aesthetic purposes: it als
 
 |style					|function|
 |---					|---|
-|colored backgroud 	|user input needed |
+|colored background 	|user input needed |
 |red				 	|user entered invalid data|
 |green test			|information that the user needs to proceed|
-|magenta ASCII text	|start and end of progam|
+|magenta ASCII text	|start and end of prorgam|
 
 
 ### Website design
@@ -478,7 +478,7 @@ Significant changes to the codebase were developed on separate branches, which w
 
 Create a worksheet in Google Sheets following [this template]([Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)).
 
-Make sure to keep the foloowing format:
+Make sure to keep the following format:
 
  - dishes are in the 2nd row
  - ingredients are in the 1st column
@@ -507,7 +507,7 @@ You can fork the repository by following these steps:
 1. Create a list of requirements by going to the terminal and typing `pip3 freeze > requirements.txt`. This popuplates your `requirements.txt` file with the list of required files.<br>
 Push your changes to GitHub.
 2. Under **Settings > Config Vars** in Heroku, add  a new var  with the key `CREDS` and the value equal to the contents of your `creds.json` file.
-3. Under **Settings > Config Vars** in Heroku, add  a new var  with the key  `PORT` witht the key `PORT` and the value `8000`.
+3. Under **Settings > Config Vars** in Heroku, add  a new var  with the key  `PORT` with the key `PORT` and the value `8000`.
 4. Under **Settings > Buildpacks** in Heroku, add Python to Heroku Buildpacks.
 5. Under **Settings > Buildpacks** in Heroku, add NodeJS to Heroku Buildpacks.
 6. Under **Deploy > Deployment method** in Heroku, select **GitHub** and connect Heroku to your GitHub account.<br>
@@ -516,7 +516,7 @@ Type in your repository name, then click **Search**. When your repository appear
 Once the process is finished, the following message will appear:<br>
 _Your app was successfully deployed_<br>
 Click **View** under the message, and a new tab will appear with your deployed app.
-8. (optional) Under **Deploy > Automatic deploy** in Heroku, select **Enable Automatic Deploys** if your want your app to be rebuild each time you push to the `main` branch of your GitHub repository.
+8. (optional) Under **Deploy > Automatic deploy** in Heroku, select **Enable Automatic Deploys** if you want your app to be rebuilt each time you push to the `main` branch of your GitHub repository.
 
 
 ## Testing
@@ -542,7 +542,7 @@ The following resources were used to learn/double check general, atomic function
 - [`try`/`except`](https://www.w3schools.com/python/python_try_except.asp)
 - [Errors and exceptions](https://docs.python.org/3/tutorial/errors.html)
 - [Input validation: integer in range (did not work)](https://stackoverflow.com/questions/11594605/python-excepting-input-only-if-in-range)
-- [Insert a substring before/after a certain characted in a string](https://stackoverflow.com/a/30232424/24248624)
+- [Insert a substring before/after a certain character in a string](https://stackoverflow.com/a/30232424/24248624)
 - [Delete a character from a string](https://builtin.com/software-engineering-perspectives/python-remove-character-from-string)
 - [Fix `TERM environment variable not set` error](https://stackoverflow.com/a/65161315/24248624)
 - [Clear the terminal](https://www.geeksforgeeks.org/clear-screen-python/)
@@ -557,7 +557,7 @@ The following resources were used to learn/double check general, atomic function
 - [`partition` method example ](https://stackoverflow.com/a/54608451/24248624)
 - [`partition` method on W3Schools](https://www.w3schools.com/python/ref_string_partition.asp)
 - [`colorama` documentation](https://pypi.org/project/colorama/)
-- [Escape special characters in ACII art](https://code-institute-room.slack.com/archives/C027C3S3TEU/p1636456674153400?thread_ts=1636388878.151000&cid=C027C3S3TEU
+- [Escape special characters in ASCII art](https://code-institute-room.slack.com/archives/C027C3S3TEU/p1636456674153400?thread_ts=1636388878.151000&cid=C027C3S3TEU
 )
 - [String literals with `r`](https://stackoverflow.com/a/4780104/24248624)
 - [Web-safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php)
@@ -585,7 +585,7 @@ Iasmina Pal](https://github.com/useriasminna) (see the section [Rerolled design 
 
 @nobe4 also gave me valuable advice on organizing code, and helped me solve the [bug in displaying the correct user input in a `try/except` block](https://github.com/blahosyl/dinner-party/issues/41).
 
-Finally, I would like to thank an enthusiastic apha tester who wished to remain anonymous.
+Finally, I would like to thank an enthusiastic alpha tester who wished to remain anonymous.
 
 
 ### Content
