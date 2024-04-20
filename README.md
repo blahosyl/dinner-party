@@ -716,15 +716,15 @@ The following resources were used to learn/double check general, atomic function
 - [String literals with `r`](https://stackoverflow.com/a/4780104/24248624)
 - [Web-safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php)
 - [Verdana properties](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).)
-- [not capitalizing "daiquiri"](https://www.latimes.com/socal/daily-pilot/opinion/tn-hbi-et-1231-casagrande-20151231-story.html)
-- [not capitalizin "bloody mary"](https://www.latimes.com/socal/daily-pilot/opinion/story/2020-08-04/a-word-please-lowercase-treatment-in-newswriting-can-humble-important-words#:~:text=But%20since%20the%20drink%20was,drink%20names%20are%20more%20flexible.)
+- [Not capitalizing "daiquiri"](https://www.latimes.com/socal/daily-pilot/opinion/tn-hbi-et-1231-casagrande-20151231-story.html)
+- [Not capitalizin "bloody mary"](https://www.latimes.com/socal/daily-pilot/opinion/story/2020-08-04/a-word-please-lowercase-treatment-in-newswriting-can-humble-important-words#:~:text=But%20since%20the%20drink%20was,drink%20names%20are%20more%20flexible.)
 - [`pyfiglet` usage](https://medium.com/@parcelmaiyo/text-styling-in-python-using-pyfiglet-824c498dfff5)
-- [sort list of lists](https://stackoverflow.com/a/54116034/24248624)
-- [problems with removing list items in a loop and some solutions (not used)](https://stackoverflow.com/a/6260097/24248624)
-- [fix list comprehension error with indices (not used)](https://codinggear.org/list-indices-must-be-integers-or-slices-not-list/#:~:text=The%20Python%20Typeerror%3A%20list%20indices,index%20instead%20of%20a%20list.)
+- [Sort list of lists](https://stackoverflow.com/a/54116034/24248624)
+- [Problems with removing list items in a loop and some solutions (not used)](https://stackoverflow.com/a/6260097/24248624)
+- [Fix list comprehension error with indices (not used)](https://codinggear.org/list-indices-must-be-integers-or-slices-not-list/#:~:text=The%20Python%20Typeerror%3A%20list%20indices,index%20instead%20of%20a%20list.)
 - [`isnumeric`: only allow numeric values](https://stackoverflow.com/a/72488576/24248624)
-- [infinity](https://www.geeksforgeeks.org/python-infinity/)
-- [defining functions with optional arguments](https://realpython.com/python-optional-arguments/)
+- [Infinity](https://www.geeksforgeeks.org/python-infinity/)
+- [Defining functions with optional arguments](https://realpython.com/python-optional-arguments/)
 
 ### Code credits
 
