@@ -214,11 +214,11 @@ Developing [the pantry checker functionaliy](https://github.com/blahosyl/dinner-
 A relatively easy piece of refactoring involved creating [a general-purpose Y/N question validator function](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py#L15-L35). This takes a single parameter, the prompt text to be shown in the `input` block, and only accepts "Y" or "N" (and their lowercase versions) as valid inputs.
 
 Because I am using extensive color effects in this project, the content of the prompt can be quite complicated when it includes the `colorama` declarations.
-Handling it as a string resulted in a lot of uninteden errors and bad human readability. This is why I chose the `prompt` parameter of this function to be defined as a single-item list instead of a string, which eliminated these errors.
+Handling it as a string resulted in a lot of uninteded errors and bad human readability. This is why I chose the `prompt` parameter of this function to be defined as a single-item list instead of a string, which eliminated these errors.
 
 #### Range validatior function made general purpose
 
-[The range validator function](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py#L38-L97) was much more labour intensive to generalize, as this also involved handling both integers and floats, ranges without an upper bound, and extensive customization of the out put message.
+[The range validator function](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py#L38-L97) was much more labour intensive to generalize, as this also involved handling both integers and floats, ranges without an upper bound, and extensive customization of the output message.
 
 The range validation function in its current form takes the following parameters:
 - `prompt` - same function and usage as with the Y/N validator
