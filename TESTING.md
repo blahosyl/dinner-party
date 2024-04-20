@@ -1,5 +1,49 @@
 This document describes the testing procedures for the [Dinner Party app](README.md).
 
+## Table of Contents
+
+- [User story testing](#user-story-testing)
+  * [User goals](#user-goals)
+  * [Creator goals](#creator-goals)
+- [Code validation](#code-validation)
+  * [Naming conventions used](#naming-conventions-used)
+  * [PEP8 validation](#pep8-validation)
+    + [`run.py` validation](#-runpy--validation)
+    + [`planning.py` validation](#-planningpy--validation)
+    + [`utilities.py` validation](#-utilitiespy--validation)
+    + [`gsheet.py` validation](#-gsheetpy--validation)
+  * [HTML/CSS validation](#html-css-validation)
+- [Feature testing](#feature-testing)
+- [User input validation](#user-input-validation)
+  * [Y/N questions](#y-n-questions)
+    + [Initial question](#initial-question)
+    + [Single-step test cases](#single-step-test-cases)
+    + [Double-step test cases](#double-step-test-cases)
+    + [Add more dishes question](#add-more-dishes-question)
+    + [Single-step test cases](#single-step-test-cases-1)
+    + [Double-step test cases](#double-step-test-cases-1)
+    + [Check pantry question](#check-pantry-question)
+    + [Single-step test cases](#single-step-test-cases-2)
+    + [Double-step test cases](#double-step-test-cases-2)
+  * [Number from a range](#number-from-a-range)
+    + [Integer from a range (bounded)](#integer-from-a-range--bounded-)
+      - [Single-step test cases](#single-step-test-cases-3)
+      - [Double-step test cases](#double-step-test-cases-3)
+    + [Float from a range](#float-from-a-range)
+      - [Single-step test cases](#single-step-test-cases-4)
+      - [Double-step test cases](#double-step-test-cases-4)
+- [Flow testing](#flow-testing)
+  * [Database data validation](#database-data-validation)
+    + [Devices & browsers](#devices---browsers)
+      - [Devices](#devices)
+      - [Browsers](#browsers)
+- [Bugs](#bugs)
+    + [Known bugs](#known-bugs)
+    + [Solved bugs](#solved-bugs)
+
+<small><i><a href='http://github.com/3kh0/readme-toc/'>Table of contents generated with readme-toc</a></i></small>
+
+
 ## User story testing
 
 The user stories from [README.md](README.md) are repeated here for convenience.
