@@ -444,13 +444,16 @@ The website was tested on the following devices:
 
  - Macbook Air M2, Mac OS Sonoma 14.3.1 
  - Macbook Air M1, Mac OS Sonoma 14.3.1
+ - Lenovo Tab M10 (3rd gen)
+ - Lenovo ThinkPad
 
  ##### Browsers
 
 The site was tested on the following browsers:
 
 - Google Chrome
-- Microsoft Edge 
+- Microsoft Edge
+- Firefox
 
 ## Bugs
 
