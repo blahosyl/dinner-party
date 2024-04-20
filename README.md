@@ -588,7 +588,7 @@ The paired colors have the following contrasts:
 - `gspread`: get data from Google Sheets
 - `google.oauth2.service_account`: authenticate with Google Sheets
 - `itertools`: get combinations from a list
-- `colorama`: add color to the terminal text, both for design and UX purposes (see[the section Color](#color) for more detail)
+- `colorama`: add color to the terminal text, both for design and UX purposes (see [the section Color](#color) for more detail)
 - `pyfiglet`: display text using ASCII art
 
 
