@@ -185,8 +185,18 @@ When revising and refactorig code, I devoted special attention to code design, b
 
 #### OOP
 
-The first version of the app consisted of independent functions being called in sequence. While this worked as intended, it lacked organization and scalability, so I decided to recfactor it by creating a module with 2 classes, `DishList` and `ShoppingList`, along with their respective methods and related (but independent) functions.
-These can be viewed in [`planner.py`](https://github.com/blahosyl/dinner-party/blob/main/planner.py).
+The first version of the app consisted of independent functions being called in sequence. While this worked as intended, it lacked organization and scalability, so I decided to recfactor it by creating a module with 2 classes, `DishList` and `ShoppingList`, along with their respective methods and related (but independent) functions:
+
+- the `DishList` class creates a list of dishes as an object. It has the following methods:
+	- [`print_enum()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L32-L45): prints `DishList` as an enumerated list
+   	- [`select_dish()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L47-L75): lets the user select a dish to be added to the shopping list
+- the `ShoppingList` class creates a list of list, consisting of an ingredient & measurement unit  and a quantity. It has the following methods:
+	- [`get_ingredients()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L180-L213): gets the ingredients of the selected dish from the database, adds them to the shopping list and prints them out
+   	- [`unify_ingredients()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L215-L246): checks the shopping list for items with the same ingredient and unifies these
+- the [`parse_string()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L78-L121) function replaces the abbreviation of measurement units with their full name, and also returns some other information crucial for text transformation (see the docstring for details)
+- the [`print_formatted`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#124-L166) transforms the database string to be printed in a user-friendly format
+
+These classes can be viewed in [`planner.py`](https://github.com/blahosyl/dinner-party/blob/main/planner.py).
 
 #### Pantry checker
 
@@ -222,6 +232,16 @@ The range validation function in its current form takes the following parameters
 At the suggestion of my mentor and @nobe4, I split up my `run.py` file further, and created 2 dedicated files:
 - [`utilities.py`](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py) containing general-purpose functions (the input validators and `clear`)
 - [`gsheet.py`](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/gsheet.py) containing all functionalities related to interfacing with Google Sheets.
+
+#### Docstrings and code comments
+
+Having worked in Technical Writing for nearly a decade, and with IT security teams for over half of that time, I have seen that proper and sufficient documentation not only helps development and collaboration, but also does a lot to eliminate the human error factor from security vulnerabilities. 
+Furthermore, I have also learned that the "proper" and "sufficient" level of code documentation very much depends on the expertise of those working on said code.
+
+Since this is my very first Python project after having started to learn the language just a few days before development started, I have consciously erred on the side of caution when documenting code. 
+Each function has docstrings with parameter types and descriptions.
+In addition, individual lines are also commented with what exactly they do and why.
+This has proven to be very beneficial when refactoring code and modifying functionalities during the project.
 
 
 #### CRUD functionalities
