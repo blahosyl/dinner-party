@@ -2,7 +2,8 @@
 
 This app **creates shopping lists for dinner parties from a recipe database**. 
 
-It provides a **structured flow** with **step-by-step** questions that are straightforward to answer, does all necessary calculations in the background, and produces a **tailor-made list** depending on the ingredients needed, while also **taking existing stock into account**.
+It provides a **structured flow** with **step-by-step** questions that are straightforward to answer, does all necessary calculations in the background,
+and produces a **tailor-made list** depending on the ingredients needed, while also **taking existing stock into account**.
 
 The result is **more user-friendly and less prone to errors** than using Google Sheets' built-in filtering and sorting for the same purpose.
 
@@ -177,6 +178,42 @@ When a user enters an invalid input, the input is repeated in the error message.
 ##### Tailored error messages
 
 Error messages also show the reason why user input is rejected (not a valid number, out of range, not "Y"or "N"), and remind the user what type of input is accepted for the question on the screen.
+
+### Code design
+
+When revising and refactorig code, I devote special attention to code design, beyond merely getting the functionalities to work. I worked to reduce redundancy and improve readability by utilizing Object Oriented Programming (OOP), reusing functions/methods and splitting up code into separate files where warranted.
+
+#### OOP
+
+The first version of the app consisted of independent functions being called in sequence. While this worked as intended, it lacked organization and scalability, so I decided to recfactor it by creating a module with 2 classes, `DishList` and `ShoppingList`, along with their respective methods and related (but independent) functions.
+These can be viewed in [`planner.py`](https://github.com/blahosyl/dinner-party/blob/main/planner.py).
+
+#### Pantry checker
+
+Developing [the pantry checker functionaliy](https://github.com/blahosyl/dinner-party/blob/main/planner.py#L248-L321) inspired a lot of restructuring, refactoring, splitting up functions and rethinking the logic. On the one hand, this significantly expanded the scope of the project compared to the MVP, but it had the added benefit of much cleaner and better code as a result, on top of the actual functionality (which is very relevant to real-life usage).
+
+##### Pantry checker features
+
+- handles floats without upper bound
+- measurements names are shown instead of abbreviations
+- removes ingredients with quantity less than 0
+- handles singular/plural quantities in the output message
+
+#### Y/N validator functions made general-purpose
+
+A relatively easy piece of refactoring involved creating [a general-purpose Y/N question validator function](https://github.com/blahosyl/dinner-party/blob/main/utilities.py#L15-L35). This takes a single parameter, the prompt text to be shown in the `input` block, and only accepts "Y" or "N" (and their lowercase versions) as valid inputs.
+
+
+#### Range validatior function made general purpose
+
+[The range validator function](https://github.com/blahosyl/dinner-party/blob/main/utilities.py#L38-L97) was much more labour intensive to generalize, as this also involved handling both integers and floats, ranges without an upper bound, and extensive customization of the out put message.
+
+#### File organization
+
+At the suggestion of my mentor and @nobe4, I split up my `run.py` file further, and created 2 dedicated files:
+- [`utilities.py`](https://github.com/blahosyl/dinner-party/blob/main/utilities.py) containing general-purpose functions (the input validators and `clear`)
+- [`gsheet.py`](https://github.com/blahosyl/dinner-party/blob/main/g.sheetpy) containing all functionalities related to interfacing with Google Sheets
+
 
 #### CRUD functionalities
 
@@ -479,28 +516,6 @@ Because the "run program" button is outside the terminal, the end screen also in
 
 
 ![End screen](assets/readme-pics/flow-feature-screens/end-screen.png)
-
-
-
-
-#### OOP
-
-#### Validator functions made general-purpose
-
-
-
-
-#### Pantry checker
-
-This inspired a lot of restructuring, refactoring, splitting up functions and rethinking the logic, so it had the added benefit of much cleaner and better code as a result, on top of the actual functionality (which is super relevant to real life)
-
-list of such refactoring
-
-pantry checker features:
-- handles floats without upper bound
-- measurements names are shown instead of abbreviations
-- removes ingredients with quantity less than 0
-- handles singular/plural
 
 ### Future features
 
