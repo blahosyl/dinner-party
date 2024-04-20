@@ -620,6 +620,8 @@ The paired colors have the following contrasts:
 
 The project was developed with [Pycharm](https://www.jetbrains.com/pycharm/), using [GitHub](https://github.com/) for version control.
 
+The README was written with [MacDown](https://macdown.uranusjr.com/), [Spck](https://spck.io) and [GitHub web editor](https://github.com/).
+
 [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) and [Issues](https://github.com/features/issues) were used to track project development, new features and bugs. 
 
 Significant changes to the codebase were developed on separate branches, which were deleted when the addition/change was completed and tested.
