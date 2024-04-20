@@ -294,7 +294,7 @@ The crucial properties of the database in terms of compatibility with the app ar
  - each ingredient cell contains `(` and `)`
  - quantity cells only contain floats
 
-### Visual design of the terminal
+### Visual design
 
 Since using a terminal-based app can be daunting for people who are not used to it, I took extra care to structure and time the appearance of the information presented to the user.
 
