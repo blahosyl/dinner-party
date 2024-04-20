@@ -381,104 +381,104 @@ The start screen displays the name of the app in a large font styled with ASCII 
 
 If the user answers "N" to the initial question, the corresponding confirmation message appears, before clearing the screen and showing the end screen.
 
-![Start screen](assets/readme-pics/flow-feature-screens/initial-question-n.png)
+![End the planning flow](assets/readme-pics/flow-feature-screens/initial-question-n.png)
 
 ### "Start planning" confirmation
 
 If the user answers "Y" to the initial question, the corresponding confirmation message appears, before clearing the screen and starting the planning loop.
 
-![Start screen](assets/readme-pics/flow-feature-screens/initial-question-y.png)
+![Start the planning flow](assets/readme-pics/flow-feature-screens/initial-question-y.png)
 
 ### Dish selection screen
 
 This shows the the available dishes in an alphabetized list. The user can choose a dish by selecting the corresponding number.
 
-![Start screen](assets/readme-pics/flow-feature-screens/dish-selection-start.png)
+![Showing the list of dishes, alphabetized](assets/readme-pics/flow-feature-screens/dish-selection-start.png)
 
 ### Dish selection confirmation
 
 Once the user selected a dish, a confirmation message appears showing the name of the dish.
 
-![Start screen](assets/readme-pics/flow-feature-screens/dish-selection-confirmation.png)
+![Confirming the selected dish](assets/readme-pics/flow-feature-screens/dish-selection-confirmation.png)
 
 ### Selected dish and ingredients
 
 The next screen shows the ingredients of the selected dish, followed by the question asking the user if they want to select another dish.
 
-![Start screen](assets/readme-pics/flow-feature-screens/dish-ingredients.png)
+![The ingredients of the selected dish](assets/readme-pics/flow-feature-screens/dish-ingredients.png)
 
 ### Modified list of dishes
 
 If the user answers "Y" to the previous question, the modified list of dishes is shown with the corresponding confirmation message. The new list does not contain dishes that have previously been selected.
 
-![Start screen](assets/readme-pics/flow-feature-screens/dish-list-again.png)
+![Show the modified list of dishes](assets/readme-pics/flow-feature-screens/dish-list-again.png)
 
 ### Automatically end planning loop after last dish
 
 
 The planning flow automatically ends when we run out of dishes to select. 
 
-![Start screen](assets/readme-pics/flow-feature-screens/last-dish.png)
+![The last dish on the list](assets/readme-pics/flow-feature-screens/last-dish.png)
 
 In this case, the following message is shown:
 
-![Start screen](assets/readme-pics/flow-feature-screens/all-dishes.png)
+![The user has selected all dishes](assets/readme-pics/flow-feature-screens/all-dishes.png)
 
 ### Continue without checking the pantry
 
 If the user chooses not to check their pantry for ingredients, a confirmation message appears, followed by the shopping list.
 
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-start-no.png)
+![Don't start pantry check](assets/readme-pics/flow-feature-screens/pantry-start-no.png)
 
 ### Start checking the pantry
 
 If the user chooses to start the pantry tracking flow, the following conformation message appears.
 
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-starting-question-yes.png)
+![Start pantry check](assets/readme-pics/flow-feature-screens/pantry-starting-question-yes.png)
 
 ### Pantry check
 
-The program them goes through all the ingredients on the shopping list, and asks the user how much they have.
+The program then goes through all the ingredients on the shopping list, and asks the user how much they have.
 
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-progress.png)
+![Pantry check in progress](assets/readme-pics/flow-feature-screens/pantry-progress.png)
 
 ### Pantry check done
 
-after all ingredients on the shopping list have been checked, the following confirmation message appears:
+After all ingredients on the shopping list have been checked, the following confirmation message appears:
 
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-done.png)
+![Pantry check done](assets/readme-pics/flow-feature-screens/pantry-done.png)
 
 
 ### No items needed
 
-If the user has all the required ingredients insufficient quantities, following message appears:
+If the user has all the required ingredients in sufficient quantities, the following message appears:
 
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-no-items-needed-pause.png)
+![No items needed after pantry check](assets/readme-pics/flow-feature-screens/pantry-no-items-needed-pause.png)
 
-this is followed by the end screen.
+This is followed by the end screen.
 
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-no-items-needed-end.png)
+![No items needed after pantry check and end screen](assets/readme-pics/flow-feature-screens/pantry-no-items-needed-end.png)
 
 
 ### Shopping list
 
-if there are items that the user needs to buy, the shopping list appears after checking the pantry.
+If there are items that the user needs to buy, the shopping list appears after checking the pantry.
 
-![Start screen](assets/readme-pics/flow-feature-screens/shopping-list.png)
+![Shopping list](assets/readme-pics/flow-feature-screens/shopping-list.png)
 
 ### End screen
 
-After a short pause, the shopping list is followed by the end screen, I think the user known that the program has ended.
+After a short pause, the shopping list is followed by the end screen, to let the user know that the program has ended.
 
-![Start screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
+![Shopping list with end screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
 
 
 ### "Start again" message
 
-because the "run program" button is outside the terminal, the end screen also includes instructions on how to start the program again.
+Because the "run program" button is outside the terminal, the end screen also includes instructions on how to start the program again.
 
 
-![Start screen](assets/readme-pics/flow-feature-screens/end-screen.png)
+![End screen](assets/readme-pics/flow-feature-screens/end-screen.png)
 
 
 
