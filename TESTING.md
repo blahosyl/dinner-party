@@ -29,7 +29,7 @@ The same set of goals was determined for all users of the app regardless of whet
 |UX5	|[`ShoppingList`](README.md/#oop) objects and methods|
 |UX6	|[Pantry checker function](README.md/#pantry-checker)|
 |UX7	|[Interaction design](README.md/#interaction-design)|
-|UX8	|[Clear screen](README.md/#interaction-design)|
+|UX8	|[Clear screen](README.md/#clear-screen)|
 |UX9	|[Visual design](README.md/#visual-design)|
 |UX10	|[Confirmation messages](README.md/#interaction-design)|
 
