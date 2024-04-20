@@ -404,12 +404,12 @@ The database in Google Sheets was manually checked for the following:
 
 |Check											|Result|
 |---											|:---:|
-| dishes are in the 2nd row|✅|
-| ingredients are in the 1st column|✅|
+| dishes are in the second row|✅|
+| ingredients are in the first column|✅|
+| each ingredient cell contains `(` and `)`|✅|
 | capitalization (none)|✅|
 | spelling|✅|
 | quantity cells only contain floats|✅|
-| each ingredient cell contains `(` and `)`|✅|
 
 #### Devices & browsers
 

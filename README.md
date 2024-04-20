@@ -195,7 +195,7 @@ Error messages also show the reason why user input is rejected (not a valid numb
 - shopping list
 - ingredients of a dish
 
-#### Update
+##### Update
 
 - list of dishes
 - shopping list quantities
@@ -221,6 +221,13 @@ The database was designed with extensibility in mind, and already contains data 
 - [getting links to recipes](https://github.com/blahosyl/dinner-party/issues/51)
 
 The app interfaces with the database in a way that does not rely on the order of elements. This means that the Google worksheet remains usable, and can be modified or sorted without affecting the interaction with the app.
+
+The crucial properties of the database in terms of compatibility with the app are only the following:
+
+ - dishes are in the second row
+ - ingredients are in the first column
+ - each ingredient cell contains `(` and `)`
+ - quantity cells only contain floats
 
 ### Visual design of the terminal
 
@@ -514,6 +521,7 @@ The paired colors have the following contrasts:
 - [GitPod](https://gitpod.io/) – Integrated Development Environment (only used for testing setup/requirements)
 - [Image color picker](https://imagecolorpicker.com/) – color picker from image
 - [MacDown](https://macdown.uranusjr.com/) – Markdown editor
+- [Miro](https://miro.com) - create the flowchart 
 - [Preview](https://support.apple.com/guide/preview/welcome/mac) – cropping and annotating images
 - [PyCharm](https://www.jetbrains.com/pycharm/) - code editor used for development
 - [PythonTutor](https://pythontutor.com/) – debugging Code
@@ -538,10 +546,10 @@ Create a worksheet in Google Sheets following [this template]([Google Sheet](htt
 
 Make sure to keep the following format:
 
- - dishes are in the 2nd row
- - ingredients are in the 1st column
- - quantity cells only contain floats
+ - dishes are in the second row
+ - ingredients are in the first column
  - each ingredient cell contains `(` and `)`
+ - quantity cells only contain floats
 
 ### Connect to Google Drive & Google Sheets API
 
