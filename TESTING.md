@@ -26,7 +26,7 @@ The same set of goals was determined for all users of the app regardless of whet
 |UX2	|[List of dishes adjusted for each step](README.md/#interaction-design)|
 |UX3	|[Users can decide after adding each recipe if they want to add more](README.md/#interaction-design)|
 |UX4	|[Selected dish and ingredients screen](README.md/#selected-dish-and-ingredients)|
-|UX5	|[`ShoppingList`](README/oop) objects and methods|
+|UX5	|[`ShoppingList`](README.md/#oop) objects and methods|
 |UX6	|[Pantry checker function](README.md/#pantry-checker)|
 |UX7	|[Interaction design](README.md/#interaction-design)|
 |UX8	|[Clear screen](README.md/#interaction-design)|
