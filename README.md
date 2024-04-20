@@ -172,7 +172,7 @@ Both are
 
 ##### Input in error messages 
 
-When a user enters an invalid input, the input is repeated in the error message. This improves user interaction, and also avoids misunderstanding that could result from a [user entering input before the prompt apppears](https://github.com/blahosyl/dinner-party/issues/39).
+When a user enters an invalid input, the input is repeated in the error message. This improves user interaction, and also avoids misunderstanding that could result from a [user entering input before the prompt appears](https://github.com/blahosyl/dinner-party/issues/39).
 
 ##### Tailored error messages
 
@@ -180,16 +180,16 @@ Error messages also show the reason why user input is rejected (not a valid numb
 
 ### Code design
 
-When revising and refactorig code, I devoted special attention to code design, beyond merely getting the functionalities to work. I worked to reduce redundancy and improve readability by utilizing Object Oriented Programming (OOP), reusing functions/methods, and splitting up code into separate files where warranted.
+When revising and refactoring code, I devoted special attention to code design, beyond merely getting the functionalities to work. I worked to reduce redundancy and improve readability by utilizing Object Oriented Programming (OOP), reusing functions/methods, and splitting up code into separate files where warranted.
 
 #### OOP
 
-The first version of the app consisted of independent functions being called in sequence. While this worked as intended, it lacked organization and scalability, so I decided to recfactor it by creating a module with 2 classes, `DishList` and `ShoppingList`, along with their respective methods and related (but independent) functions:
+The first version of the app consisted of independent functions being called in sequence. While this worked as intended, it lacked organization and scalability, so I decided to refactor it by creating a module with 2 classes, `DishList` and `ShoppingList`, along with their respective methods and related (but independent) functions:
 
 - the `DishList` class creates a list of dishes as an object. It has the following methods:
 	- [`print_enum()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L32-L45): prints `DishList` as an enumerated list
    	- [`select_dish()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L47-L75): lets the user select a dish to be added to the shopping list
-- the `ShoppingList` class creates a list of list, consisting of an ingredient & measurement unit  and a quantity. It has the following methods:
+- the `ShoppingList` class creates a list of lists, consisting of an ingredient & measurement unit  and a quantity. It has the following methods:
 	- [`get_ingredients()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L180-L213): gets the ingredients of the selected dish from the database, adds them to the shopping list and prints them out
    	- [`unify_ingredients()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L215-L246): checks the shopping list for items with the same ingredient and unifies these
 - the [`parse_string()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L78-L121) function replaces the abbreviation of measurement units with their full name, and also returns some other information crucial for text transformation (see the docstring for details)
@@ -199,7 +199,7 @@ These classes can be viewed in [`planner.py`](https://github.com/blahosyl/dinner
 
 #### Pantry checker
 
-Developing [the pantry checker functionaliy](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/planner.py#L248-L321) inspired a lot of restructuring, refactoring, splitting up functions and rethinking the logic. On the one hand, this significantly expanded the scope of the project compared to the MVP, but it had the added benefit of resulting in much cleaner and better code, on top of the actual functionality (which is very relevant to real-life usage).
+Developing [the pantry checker functionality](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/planner.py#L248-L321) inspired a lot of restructuring, refactoring, splitting up functions and rethinking the logic. On the one hand, this significantly expanded the scope of the project compared to the MVP, but it had the added benefit of resulting in much cleaner and better code, on top of the actual functionality (which is very relevant to real-life usage).
 
 ##### Pantry checker features
 
@@ -213,11 +213,11 @@ Developing [the pantry checker functionaliy](https://github.com/blahosyl/dinner-
 A relatively easy piece of refactoring involved creating [a general-purpose Y/N question validator function](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py#L15-L35). This takes a single parameter, the prompt text to be shown in the `input` block, and only accepts "Y" or "N" (and their lowercase versions) as valid inputs.
 
 Because I am using extensive color effects in this project, the content of the prompt can be quite complicated when it includes the `colorama` declarations.
-Handling it as a string resulted in a lot of uninteded errors and bad human readability. This is why I chose the `prompt` parameter of this function to be defined as a single-item list instead of a string, which eliminated these errors.
+Handling it as a string resulted in a lot of unintended errors and bad human readability. This is why I chose the `prompt` parameter of this function to be defined as a single-item list instead of a string, which eliminated these errors.
 
-#### Range validatior function made general purpose
+#### Range validator function made general purpose
 
-[The range validator function](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py#L38-L97) was much more labour intensive to generalize, as this also involved handling both integers and floats, ranges without an upper bound, and extensive customization of the output message.
+[The range validator function](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py#L38-L97) was much more labor intensive to generalize, as this also involved handling both integers and floats, ranges without an upper bound, and extensive customization of the output message.
 
 The range validation function in its current form takes the following parameters:
 - `prompt` - same function and usage as with the Y/N validator
@@ -456,7 +456,7 @@ If the user answers "Y" to the initial question, the corresponding confirmation 
 
 ### Dish selection screen
 
-This shows the the available dishes in an alphabetized list. The user can choose a dish by selecting the corresponding number.
+This shows the available dishes in an alphabetized list. The user can choose a dish by selecting the corresponding number.
 
 ![Showing the list of dishes, alphabetized](assets/readme-pics/flow-feature-screens/dish-selection-start.png)
 
