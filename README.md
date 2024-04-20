@@ -140,7 +140,7 @@ This flow ensures an intuitive progression through the process, and eliminates t
 
 The app is designed to work with as little typing as possible. 
 
-Yes/no questions only require a single character as an answer.
+Yes/no questions only require a single character as an answer. They accept both capital and lowercase answers.
 
 The list of dishes is presented as a numbered list, so that users only need to enter the dish number, rather than type the whole name of the dish.
 
@@ -401,62 +401,93 @@ Once the user selected a dish, a confirmation message appears showing the name o
 
 ![Start screen](assets/readme-pics/flow-feature-screens/dish-selection-confirmation.png)
 
-### "Another dish" question
+### Selected dish and ingredients
 
-![Start screen](assets/readme-pics/flow-feature-screens/dish-list-again.png)
+The next screen shows the ingredients of the selected dish, followed by the question asking the user if they want to select another dish.
 
 ![Start screen](assets/readme-pics/flow-feature-screens/dish-ingredients.png)
 
+### Modified list of dishes
+
+If the user answers "Y" to the previous question, the modified list of dishes is shown with the corresponding confirmation message. The new list does not contain dishes that have previously been selected.
+
+![Start screen](assets/readme-pics/flow-feature-screens/dish-list-again.png)
+
+### Automatically end planning loop after last dish
+
+
+The planning flow automatically ends when we run out of dishes to select. 
 
 ![Start screen](assets/readme-pics/flow-feature-screens/last-dish.png)
 
-flow ends when we run out of ingredients
+In this case, the following message is shown:
 
-
-![Start screen](assets/readme-pics/flow-feature-screens/all-dishes-pantry-validation.png)
 ![Start screen](assets/readme-pics/flow-feature-screens/all-dishes.png)
 
+### Continue without checking the pantry
 
-
-
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-starting-question-yes.png)
+If the user chooses not to check their pantry for ingredients, a confirmation message appears, followed by the shopping list.
 
 ![Start screen](assets/readme-pics/flow-feature-screens/pantry-start-no.png)
 
+### Start checking the pantry
+
+If the user chooses to start the pantry tracking flow, the following conformation message appears.
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-starting-question-yes.png)
+
+### Pantry check
+
+The program them goes through all the ingredients on the shopping list, and asks the user how much they have.
+
 ![Start screen](assets/readme-pics/flow-feature-screens/pantry-progress.png)
 
+### Pantry check done
+
+after all ingredients on the shopping list have been checked, the following confirmation message appears:
+
+![Start screen](assets/readme-pics/flow-feature-screens/pantry-done.png)
+
+
+### No items needed
+
+If the user has all the required ingredients insufficient quantities, following message appears:
+
 ![Start screen](assets/readme-pics/flow-feature-screens/pantry-no-items-needed-pause.png)
+
+this is followed by the end screen.
 
 ![Start screen](assets/readme-pics/flow-feature-screens/pantry-no-items-needed-end.png)
 
 
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-fist-item.png)
+### Shopping list
 
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-done.png)
-
-![Start screen](assets/readme-pics/flow-feature-screens/pantry-start.png)
-
+if there are items that the user needs to buy, the shopping list appears after checking the pantry.
 
 ![Start screen](assets/readme-pics/flow-feature-screens/shopping-list.png)
 
+### End screen
+
+After a short pause, the shopping list is followed by the end screen, I think the user known that the program has ended.
+
 ![Start screen](assets/readme-pics/flow-feature-screens/shopping-list-end-screen.png)
 
-"start again" message at the end
+
+### "Start again" message
+
+because the "run program" button is outside the terminal, the end screen also includes instructions on how to start the program again.
 
 
 ![Start screen](assets/readme-pics/flow-feature-screens/end-screen.png)
 
 
 
-### Not part of the MVP
 
 #### OOP
 
 #### Validator functions made general-purpose
 
-#### Show input in error messages
 
-Error message text also changes depending on function parameters (int/float), upper bound or no
 
 
 #### Pantry checker
