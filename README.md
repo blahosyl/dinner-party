@@ -181,7 +181,7 @@ Error messages also show the reason why user input is rejected (not a valid numb
 
 ### Code design
 
-When revising and refactorig code, I devote special attention to code design, beyond merely getting the functionalities to work. I worked to reduce redundancy and improve readability by utilizing Object Oriented Programming (OOP), reusing functions/methods and splitting up code into separate files where warranted.
+When revising and refactorig code, I devoted special attention to code design, beyond merely getting the functionalities to work. I worked to reduce redundancy and improve readability by utilizing Object Oriented Programming (OOP), reusing functions/methods, and splitting up code into separate files where warranted.
 
 #### OOP
 
@@ -190,29 +190,38 @@ These can be viewed in [`planner.py`](https://github.com/blahosyl/dinner-party/b
 
 #### Pantry checker
 
-Developing [the pantry checker functionaliy](https://github.com/blahosyl/dinner-party/blob/main/planner.py#L248-L321) inspired a lot of restructuring, refactoring, splitting up functions and rethinking the logic. On the one hand, this significantly expanded the scope of the project compared to the MVP, but it had the added benefit of much cleaner and better code as a result, on top of the actual functionality (which is very relevant to real-life usage).
+Developing [the pantry checker functionaliy](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/planner.py#L248-L321) inspired a lot of restructuring, refactoring, splitting up functions and rethinking the logic. On the one hand, this significantly expanded the scope of the project compared to the MVP, but it had the added benefit of resulting in much cleaner and better code, on top of the actual functionality (which is very relevant to real-life usage).
 
 ##### Pantry checker features
 
-- handles floats without upper bound
-- measurements names are shown instead of abbreviations
-- removes ingredients with quantity less than 0
-- handles singular/plural quantities in the output message
+- handle floats without upper bound
+- shown measurement names instead of abbreviations
+- remove ingredients with a quantity less than 0
+- handle singular/plural quantities in the output message
 
 #### Y/N validator functions made general-purpose
 
-A relatively easy piece of refactoring involved creating [a general-purpose Y/N question validator function](https://github.com/blahosyl/dinner-party/blob/main/utilities.py#L15-L35). This takes a single parameter, the prompt text to be shown in the `input` block, and only accepts "Y" or "N" (and their lowercase versions) as valid inputs.
+A relatively easy piece of refactoring involved creating [a general-purpose Y/N question validator function](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py#L15-L35). This takes a single parameter, the prompt text to be shown in the `input` block, and only accepts "Y" or "N" (and their lowercase versions) as valid inputs.
 
+Because I am using extensive color effects in this project, the content of the prompt can be quite complicated when it includes the `colorama` declarations.
+Handling it as a string resulted in a lot of uninteden errors and bad human readability. This is why I chose the `prompt` parameter of this function to be defined as a single-item list instead of a string, which eliminated these errors.
 
 #### Range validatior function made general purpose
 
-[The range validator function](https://github.com/blahosyl/dinner-party/blob/main/utilities.py#L38-L97) was much more labour intensive to generalize, as this also involved handling both integers and floats, ranges without an upper bound, and extensive customization of the out put message.
+[The range validator function](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py#L38-L97) was much more labour intensive to generalize, as this also involved handling both integers and floats, ranges without an upper bound, and extensive customization of the out put message.
+
+The range validation function in its current form takes the following parameters:
+- `prompt` - same function and usage as with the Y/N validator
+- `num_type` - whether the input must be an integer or a float
+- `lower` - the lower bound of the allowed range (inclusive)
+- `upper` - the upper bound of the allowed range (inclusive) - optional parameter, default is infinity
+
 
 #### File organization
 
 At the suggestion of my mentor and @nobe4, I split up my `run.py` file further, and created 2 dedicated files:
-- [`utilities.py`](https://github.com/blahosyl/dinner-party/blob/main/utilities.py) containing general-purpose functions (the input validators and `clear`)
-- [`gsheet.py`](https://github.com/blahosyl/dinner-party/blob/main/g.sheetpy) containing all functionalities related to interfacing with Google Sheets
+- [`utilities.py`](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/utilities.py) containing general-purpose functions (the input validators and `clear`)
+- [`gsheet.py`](https://github.com/blahosyl/dinner-party/blob/f7e3d565fa0b8a57cd7583a23a8525496cb8b61d/gsheet.py) containing all functionalities related to interfacing with Google Sheets.
 
 
 #### CRUD functionalities
