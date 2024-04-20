@@ -193,7 +193,7 @@ The first version of the app consisted of independent functions being called in 
 	- [`get_ingredients()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L180-L213): gets the ingredients of the selected dish from the database, adds them to the shopping list and prints them out
    	- [`unify_ingredients()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L215-L246): checks the shopping list for items with the same ingredient and unifies these
 - the [`parse_string()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L78-L121) function replaces the abbreviation of measurement units with their full name, and also returns some other information crucial for text transformation (see the docstring for details)
-- the [`print_formatted`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#124-L166) transforms the database string to be printed in a user-friendly format
+- the [`print_formatted()`](https://github.com/blahosyl/dinner-party/blob/275c03330bbf5587c37e2a519b7d6eaea9806076/planner.py#L124-L166) function transforms the database string to be printed in a user-friendly format
 
 These classes can be viewed in [`planner.py`](https://github.com/blahosyl/dinner-party/blob/main/planner.py).
 
