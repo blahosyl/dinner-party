@@ -555,7 +555,7 @@ They are viewable in [GitHub Issues](https://github.com/blahosyl/dinner-party/is
 
 #### Color contrasts
 
-The [WebAIM](https://webaim.org/resources/contrastchecker/) was used to ensure that the text and background color of the heading provides sufficient contrast for legibility.
+The [WebAIM](https://webaim.org/resources/contrastchecker/) contrast checker was used to ensure that the text and background color of the heading provides sufficient contrast for legibility.
 
 The colors used in the project are as follows:
 
