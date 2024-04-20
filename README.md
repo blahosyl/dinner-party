@@ -630,7 +630,7 @@ Significant changes to the codebase were developed on separate branches, which w
 
 ### Create a database
 
-Create a worksheet in Google Sheets following [this template]([Google Sheet](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing)).
+Create a worksheet in Google Sheets following [this template](https://docs.google.com/spreadsheets/d/1LgNPD9jQ0_7QM3arULAzwTUS3EMnfB1aXBNsTJC_POQ/edit?usp=sharing).
 
 Make sure to keep the following format:
 
