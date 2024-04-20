@@ -130,7 +130,7 @@ The current program flow can be summarized as follows:
 	- subtract answer from quantity on shopping list
 		- if resulting quantity is 0 or less, remove item from the list
 - if there are shopping list items left, print shopping list
-- end program with messagemessage
+- end program with message
 
 This flow ensures an intuitive progression through the process, and eliminates the need for complicated navigation.
 
@@ -150,7 +150,7 @@ The pantry checker function only requires the user to enter a number for each in
 
 The list of dishes changes dynamically, so only dishes that have not yet been added to the shopping list are shown to the user at each point.
 
-The pantry checker flow only asks inpu for dishes that hau been added to the shopping list.
+The pantry checker flow only asks input for dishes that have been added to the shopping list.
 
 ##### Alphabetization 
 
@@ -160,7 +160,7 @@ All lists shown to the user are alphabetized, which aids visual processing.
 
 The shopping list is presented twice during the flow of the program: at the end of planning, and during the pantry checking process.
 
-Each of these is very different from each other as well as from how the data is stored, tailored too the specific purpose in the flow.
+Each of these is very different from each other as well as from how the data is stored, tailored to the specific purpose in the flow.
 
 Both are
 
@@ -172,7 +172,7 @@ Both are
 
 ##### Input in error messages 
 
-When a user enters an invalid input, the input is repeated in the error message. This improves user interaction, and also avoids misunderstanding that could result from a [user entering input before the propmt apppears](https://github.com/blahosyl/dinner-party/issues/39).
+When a user enters an invalid input, the input is repeated in the error message. This improves user interaction, and also avoids misunderstanding that could result from a [user entering input before the prompt apppears](https://github.com/blahosyl/dinner-party/issues/39).
 
 ##### Tailored error messages
 
@@ -497,7 +497,7 @@ If the user chooses not to check their pantry for ingredients, a confirmation me
 
 ### Start checking the pantry
 
-If the user chooses to start the pantry tracking flow, the following conformation message appears.
+If the user chooses to start the pantry tracking flow, the following confirmation message appears.
 
 ![Start pantry check](assets/readme-pics/flow-feature-screens/pantry-starting-question-yes.png)
 
@@ -641,7 +641,7 @@ Make sure to keep the following format:
 
 ### Connect to Google Drive & Google Sheets API
 
-Follow [the process described in the Love Sandwiches walkthough project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/071036790a5642f9a6f004f9888b6a45/), helpfully replicated [here](https://github.com/amylour/BakeStock/tree/main?tab=readme-ov-file#creation--deployment).
+Follow [the process described in the Love Sandwiches walkthrough project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/071036790a5642f9a6f004f9888b6a45/), helpfully replicated [here](https://github.com/amylour/BakeStock/tree/main?tab=readme-ov-file#creation--deployment).
 
 ### Fork the repository
 
@@ -717,7 +717,7 @@ The following resources were used to learn/double check general, atomic function
 - [Web-safe fonts](https://www.w3schools.com/cssref/css_websafe_fonts.php)
 - [Verdana properties](https://www.myfonts.com/pages/fontscom-learning-fyti-using-type-tools-fonts-on-the-web#:~:text=The%20Verdana%C2%AE%20typeface%20is,small%20sizes%20(on%20screen).)
 - [Not capitalizing "daiquiri"](https://www.latimes.com/socal/daily-pilot/opinion/tn-hbi-et-1231-casagrande-20151231-story.html)
-- [Not capitalizin "bloody mary"](https://www.latimes.com/socal/daily-pilot/opinion/story/2020-08-04/a-word-please-lowercase-treatment-in-newswriting-can-humble-important-words#:~:text=But%20since%20the%20drink%20was,drink%20names%20are%20more%20flexible.)
+- [Not capitalizing "bloody mary"](https://www.latimes.com/socal/daily-pilot/opinion/story/2020-08-04/a-word-please-lowercase-treatment-in-newswriting-can-humble-important-words#:~:text=But%20since%20the%20drink%20was,drink%20names%20are%20more%20flexible.)
 - [`pyfiglet` usage](https://medium.com/@parcelmaiyo/text-styling-in-python-using-pyfiglet-824c498dfff5)
 - [Sort list of lists](https://stackoverflow.com/a/54116034/24248624)
 - [Problems with removing list items in a loop and some solutions (not used)](https://stackoverflow.com/a/6260097/24248624)
