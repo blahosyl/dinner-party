@@ -739,7 +739,7 @@ Iasmina Pal](https://github.com/useriasminna) (see the section [Rerolled design 
 
 @nobe4 also gave me valuable advice on organizing code, and helped me solve the [bug in displaying the correct user input in a `try/except` block](https://github.com/blahosyl/dinner-party/issues/41).
 
-I am very grateful to an anonymous friend who helped me set up GitHub and Spck on an Android tablet, so I could work on the README while on the go.
+I am very grateful to Peter Litauszki who helped me set up GitHub and Spck on an Android tablet, so I could work on the README while on the go.
 
 Finally, I would like to thank an enthusiastic alpha tester who wished to remain anonymous.
 
