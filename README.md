@@ -377,20 +377,31 @@ The start screen displays the name of the app in a large font styled with ASCII 
 ![Start screen](assets/readme-pics/flow-feature-screens/start-screen.png)
 
 
+### "Stop program" confirmation
 
-
-
-
-![Start screen](assets/readme-pics/flow-feature-screens/start-screen.png)
-
-![Start screen](assets/readme-pics/flow-feature-screens/initial-question-y.png)
+If the user answers "N" to the initial question, the corresponding confirmation message appears, before clearing the screen and showing the end screen.
 
 ![Start screen](assets/readme-pics/flow-feature-screens/initial-question-n.png)
 
+### "Start planning" confirmation
+
+If the user answers "Y" to the initial question, the corresponding confirmation message appears, before clearing the screen and starting the planning loop.
+
+![Start screen](assets/readme-pics/flow-feature-screens/initial-question-y.png)
+
+### Dish selection screen
+
+This shows the the available dishes in an alphabetized list. The user can choose a dish by selecting the corresponding number.
 
 ![Start screen](assets/readme-pics/flow-feature-screens/dish-selection-start.png)
 
+### Dish selection confirmation
+
+Once the user selected a dish, a confirmation message appears showing the name of the dish.
+
 ![Start screen](assets/readme-pics/flow-feature-screens/dish-selection-confirmation.png)
+
+### "Another dish" question
 
 ![Start screen](assets/readme-pics/flow-feature-screens/dish-list-again.png)
 
@@ -527,6 +538,7 @@ The paired colors have the following contrasts:
 - [PythonTutor](https://pythontutor.com/) – debugging Code
 - [Shields.io](https://shields.io/) – add badges to README
 - [Slack](https://slack.com/) – mentor communication
+- [Spck](https://spck.io) - editor & Git client for Android
 - [WebAIM](https://webaim.org/resources/contrastchecker/) – color contrast checking
  
 
